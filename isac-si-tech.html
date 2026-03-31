@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISAC.SI - Capability-Based Learning Platform | MRDI</title>
+  <meta name="description" content="ISAC.SI is MRDI's structured capability-based learning platform for students, tutors, and directors. Track milestones, projects, progress, and real-world skill development in one place."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .si-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(0, 194, 168, 0.18), transparent 34%),
+        linear-gradient(135deg, #09162a 0%, #0f223f 55%, #0a192f 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 96px 40px 82px;
+    }
+    .si-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(circle at center, black 30%, transparent 92%);
+      pointer-events: none;
+    }
+    .si-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .si-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 14px;
+      border: 1px solid rgba(0,194,168,.3);
+      color: #7ef0df;
+      background: rgba(0,194,168,.08);
+      font-family: var(--S);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .si-badge::before {
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #00c2a8;
+      box-shadow: 0 0 14px rgba(0,194,168,.7);
+    }
+    .si-title {
+      font-family: var(--H);
+      font-size: clamp(2.6rem, 6vw, 5.3rem);
+      line-height: .95;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .si-title em {
+      font-style: normal;
+      color: #00c2a8;
+    }
+    .si-sub {
+      max-width: 640px;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(204,214,246,.84);
+      margin-bottom: 30px;
+    }
+    .si-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .btn-teal {
+      display: inline-block;
+      padding: 13px 32px;
+      background: #00c2a8;
+      color: #07131f;
+      font-family: var(--S);
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: 2px solid #00c2a8;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn-teal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0,194,168,.28);
+      background: #24d4bd;
+    }
+    .si-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .meta-chip {
+      padding: 8px 12px;
+      background: rgba(17,34,64,.9);
+      border: 1px solid rgba(0,194,168,.16);
+      color: #d7eef0;
+      font-family: var(--S);
+      font-size: .78rem;
+      letter-spacing: .6px;
+    }
+    .si-panel {
+      background: rgba(17,34,64,.9);
+      border: 1px solid rgba(0,194,168,.16);
+      box-shadow: 0 18px 50px rgba(3, 9, 20, .28);
+      padding: 30px;
+    }
+    .si-brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .si-brand-lockup img {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+      border-radius: 18px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 8px;
+      flex-shrink: 0;
+    }
+    .si-brand-text span {
+      display: block;
+      font-family: var(--S);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7ef0df;
+      margin-bottom: 6px;
+    }
+    .si-brand-text strong {
+      display: block;
+      font-family: var(--H);
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+    .si-panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .si-panel-head h2 {
+      font-family: var(--H);
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .si-status {
+      padding: 6px 10px;
+      background: rgba(0,194,168,.14);
+      color: #7ef0df;
+      border: 1px solid rgba(0,194,168,.24);
+      font-family: var(--S);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .si-metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .si-metric {
+      padding: 18px;
+      background: rgba(10,25,47,.9);
+      border: 1px solid var(--border);
+    }
+    .si-metric strong {
+      display: block;
+      font-family: var(--H);
+      font-size: 1.65rem;
+      color: #00c2a8;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .si-metric span {
+      font-family: var(--S);
+      font-size: .75rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .si-flow {
+      display: grid;
+      gap: 12px;
+    }
+    .si-flow-step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+    }
+    .si-flow-step:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+    .si-flow-step b {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      background: rgba(0,194,168,.12);
+      border: 1px solid rgba(0,194,168,.24);
+      color: #7ef0df;
+      font-family: var(--H);
+      font-size: 1.1rem;
+    }
+    .si-flow-step h3 {
+      font-family: var(--H);
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .si-flow-step p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .section-alt {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 46px;
+    }
+    .feature-card {
+      background: var(--surface);
+      padding: 28px 26px;
+      border-top: 3px solid transparent;
+      transition: transform .25s, border-color .25s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: #00c2a8;
+    }
+    .feature-kicker {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #7ef0df;
+      font-family: var(--S);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .feature-card h3 {
+      font-family: var(--H);
+      font-size: 1.08rem;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      font-size: .88rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .info-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 26px 24px;
+      margin-top: 24px;
+    }
+    .info-box h3 {
+      font-family: var(--H);
+      font-size: 1.02rem;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .info-box p,
+    .info-box li {
+      font-size: .9rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .info-box ul {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .info-box li {
+      position: relative;
+      padding-left: 18px;
+    }
+    .info-box li::before {
+      content: '';
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00c2a8;
+    }
+    .journey-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .journey-item {
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 18px 0;
+      border-top: 1px solid var(--border);
+    }
+    .journey-item:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+    .journey-num {
+      font-family: var(--H);
+      font-size: 1.9rem;
+      color: rgba(0,194,168,.34);
+      line-height: 1;
+    }
+    .journey-item h3 {
+      font-family: var(--H);
+      color: var(--white);
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin-bottom: 7px;
+    }
+    .journey-item p {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.75;
+    }
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 42px;
+    }
+    .role-card {
+      background: var(--surface);
+      padding: 28px 24px;
+    }
+    .role-card h3 {
+      font-family: var(--H);
+      font-size: 1.05rem;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .role-card p {
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .role-card ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+    }
+    .role-card li {
+      color: #cfd8f2;
+      font-size: .86rem;
+      line-height: 1.6;
+    }
+    .role-card li::before {
+      content: '+ ';
+      color: #00c2a8;
+      font-weight: 700;
+    }
+    .cta-band {
+      padding: 90px 40px;
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(0,194,168,.13), transparent 42%),
+        linear-gradient(180deg, #081321 0%, #0a192f 100%);
+    }
+    .cta-band .wrap {
+      max-width: 860px;
+    }
+    .cta-band h2 {
+      font-family: var(--H);
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: .98;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .cta-band p {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: .96rem;
+      line-height: 1.8;
+    }
+    .cta-band .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 980px) {
+      .si-hero-inner,
+      .split-grid,
+      .feature-grid,
+      .role-grid {
+        grid-template-columns: 1fr;
+      }
+      .si-metric-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .si-hero {
+        padding: 76px 22px 64px;
+      }
+      .si-hero-inner,
+      .split-grid {
+        gap: 30px;
+      }
+      .si-actions,
+      .cta-band .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .si-metric-grid {
+        grid-template-columns: 1fr;
+      }
+      .journey-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="topbar">New Batch Starting Soon! &nbsp;<a href="enquiry.html">Enquire Now -></a>&nbsp;|&nbsp; <a href="tel:+918905636766">+91 8905636766</a></div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI Logo" onerror="this.style.display='none'"/>
+      <div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div>
+    </a>
+    <nav>
+      <div class="nav-item"><a href="programs.html">Programs</a><div class="dropdown"><a href="programs.html">Programs Offered</a><a href="enquiry.html">Enquiry</a></div></div>
+      <div class="nav-item"><a href="online-session.html">Online Session</a></div>
+      <div class="nav-item"><a href="knowledge-lab.html">Knowledge Lab</a></div>
+      <div class="nav-item"><a href="innovation-hub.html">Innovation Hub</a><div class="dropdown"><a href="innovation-hub.html">Project Showcase</a><a href="success-stories.html">Success Stories</a></div></div>
+      <div class="nav-item"><a href="blog.html">Blog</a></div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+      <a href="enquiry.html" class="nav-cta">Enroll Now</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<section class="si-hero">
+  <div class="si-hero-inner">
+    <div class="reveal">
+      <div class="si-badge">MRDI Platform • ISAC.SI</div>
+      <div class="si-brand-lockup">
+        <img src="isac-si-logo.png" alt="ISAC.SI logo"/>
+        <div class="si-brand-text">
+          <span>Capability Platform</span>
+          <strong>ISAC.SI</strong>
+        </div>
+      </div>
+      <h1 class="si-title">Structured Capability Learning with <em>ISAC.SI</em></h1>
+      <p class="si-sub">ISAC.SI is MRDI's internal capability-based learning platform built for active cohorts. It helps students, tutors, and directors track progress beyond attendance and marks by mapping actual learning milestones, project execution, and workshop readiness.</p>
+      <div class="si-actions">
+        <a href="enquiry.html" class="btn-teal">Enquire for Access</a>
+        <a href="isac-systems-page.html" class="btn-outline">Back to ISAC Systems</a>
+      </div>
+      <div class="si-meta">
+        <div class="meta-chip">Cohort-based delivery</div>
+        <div class="meta-chip">Tutor-verified milestones</div>
+        <div class="meta-chip">Capability tracking</div>
+        <div class="meta-chip">LCI-aligned learning flow</div>
+      </div>
+    </div>
+    <div class="si-panel reveal rd2">
+      <div class="si-panel-head">
+        <h2>Inside the Platform</h2>
+        <span class="si-status">Active at MRDI</span>
+      </div>
+      <div class="si-metric-grid">
+        <div class="si-metric"><strong>Students</strong><span>Track modules and milestones</span></div>
+        <div class="si-metric"><strong>Tutors</strong><span>Review, verify, guide, assign</span></div>
+        <div class="si-metric"><strong>Projects</strong><span>Progress linked to real work</span></div>
+        <div class="si-metric"><strong>Directors</strong><span>See cohort health and outcomes</span></div>
+      </div>
+      <div class="si-flow">
+        <div class="si-flow-step">
+          <b>1</b>
+          <div><h3>Assign Modules</h3><p>Students receive structured learning blocks aligned to workshop skills, diagnostics, systems understanding, and project work.</p></div>
+        </div>
+        <div class="si-flow-step">
+          <b>2</b>
+          <div><h3>Execute and Upload</h3><p>Learning is connected to real assignments, submissions, milestone completion, and capability evidence.</p></div>
+        </div>
+        <div class="si-flow-step">
+          <b>3</b>
+          <div><h3>Review and Improve</h3><p>Tutors validate progress, identify gaps, and help students move from theory consumption to repeatable execution.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <p class="sec-label reveal">Why ISAC.SI</p>
+    <h2 class="sec-title reveal">A learning platform built for doing, not just studying</h2>
+    <p class="sec-desc reveal">Traditional systems track attendance, marks, and content completion. ISAC.SI is different. It follows how learners progress through capability-based modules, practical tasks, workshop behavior, and project readiness inside MRDI's structured programs.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="feature-kicker">Feature 01</span>
+        <h3>Capability-Based LMS</h3>
+        <p>Each module is tied to practical skill development, not just lecture consumption. Students move through outcomes that can be observed, practiced, and verified.</p>
+      </div>
+      <div class="feature-card reveal rd2">
+        <span class="feature-kicker">Feature 02</span>
+        <h3>Tutor Verification Layer</h3>
+        <p>Progress is reviewed by tutors, giving MRDI a stronger picture of readiness than self-reported completion or test marks alone.</p>
+      </div>
+      <div class="feature-card reveal rd3">
+        <span class="feature-kicker">Feature 03</span>
+        <h3>Linked to Real Projects</h3>
+        <p>Students do not learn in isolation. ISAC.SI connects modules, assignments, and workshop execution with the projects they help build.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-kicker">Feature 04</span>
+        <h3>Director Dashboard</h3>
+        <p>Leadership can see cohort movement, pending verifications, and training progress across batches without manually collecting updates.</p>
+      </div>
+      <div class="feature-card reveal rd2">
+        <span class="feature-kicker">Feature 05</span>
+        <h3>Structured Learning Discipline</h3>
+        <p>The platform creates clarity around what to learn next, what has been completed, and where intervention is needed to keep momentum.</p>
+      </div>
+      <div class="feature-card reveal rd3">
+        <span class="feature-kicker">Feature 06</span>
+        <h3>LCI-Aligned Growth</h3>
+        <p>ISAC.SI supports the same capability philosophy behind MRDI's broader ISAC ecosystem, helping learning behavior become measurable over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad section-alt">
+  <div class="wrap split-grid">
+    <div class="reveal">
+      <p class="sec-label">Learning Journey</p>
+      <h2 class="sec-title">How students move through ISAC.SI</h2>
+      <p class="sec-desc">The platform mirrors MRDI's training flow so every learner knows where they stand, what comes next, and how their practical growth is being measured.</p>
+      <div class="journey-list">
+        <div class="journey-item">
+          <div class="journey-num">01</div>
+          <div><h3>Onboard into cohort</h3><p>Students enter their program with defined modules, training phases, and tutor visibility from day one.</p></div>
+        </div>
+        <div class="journey-item">
+          <div class="journey-num">02</div>
+          <div><h3>Complete module work</h3><p>They work through structured content, practical tasks, and milestone-based assignments linked to the program timeline.</p></div>
+        </div>
+        <div class="journey-item">
+          <div class="journey-num">03</div>
+          <div><h3>Get reviewed by tutors</h3><p>Tutors verify progress and intervene where learning quality, execution, or consistency needs support.</p></div>
+        </div>
+        <div class="journey-item">
+          <div class="journey-num">04</div>
+          <div><h3>Build readiness for projects and placements</h3><p>The learning record becomes part of how MRDI understands real capability progression inside active batches.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal rd2">
+      <div class="info-box">
+        <h3>What ISAC.SI helps MRDI manage</h3>
+        <ul>
+          <li>Module progression across students and batches</li>
+          <li>Milestone completion with tutor confirmation</li>
+          <li>Practical assignment visibility and follow-up</li>
+          <li>Student consistency, pace, and training readiness</li>
+          <li>Project-linked learning evidence for internal review</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>Who it is for</h3>
+        <p>ISAC.SI is designed for enrolled MRDI students and the internal training team. It is not an open public tool like ISAC.XP. Access is tied to MRDI's active learning ecosystem.</p>
+      </div>
+      <div class="info-box">
+        <h3>Why it matters</h3>
+        <p>When learning is structured and visible, coaching becomes faster, accountability improves, and students get clearer support on their route from beginner to execution-ready engineer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <p class="sec-label reveal">Platform Roles</p>
+    <h2 class="sec-title reveal">One system, three working views</h2>
+    <p class="sec-desc reveal">ISAC.SI is useful because each stakeholder sees the right layer of the learning process without losing connection to the same student journey.</p>
+    <div class="role-grid">
+      <div class="role-card reveal">
+        <h3>Student View</h3>
+        <p>Students see what to learn, what is pending, and which milestones are already verified.</p>
+        <ul>
+          <li>Assigned modules and tasks</li>
+          <li>Progress status and pending work</li>
+          <li>Clear next steps in the training plan</li>
+        </ul>
+      </div>
+      <div class="role-card reveal rd2">
+        <h3>Tutor View</h3>
+        <p>Tutors can monitor learning consistency and respond early when students need intervention.</p>
+        <ul>
+          <li>Milestone review and verification</li>
+          <li>Student-wise learning visibility</li>
+          <li>Better coaching and accountability</li>
+        </ul>
+      </div>
+      <div class="role-card reveal rd3">
+        <h3>Director View</h3>
+        <p>Leadership gets a broader operational view of how cohorts are moving and where support is required.</p>
+        <ul>
+          <li>Cohort progress visibility</li>
+          <li>Training quality oversight</li>
+          <li>Structured data for planning and review</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap reveal">
+    <p class="sec-label" style="justify-content:center;">MRDI Access</p>
+    <h2>Want to learn through ISAC.SI?</h2>
+    <p>ISAC.SI is available as part of MRDI's structured programs. If you want access to the platform, the right first step is to enquire about joining an MRDI cohort.</p>
+    <div class="cta-actions">
+      <a href="enquiry.html" class="btn-teal">Enquire Now</a>
+      <a href="isac-systems-page.html" class="btn-outline">Compare with ISAC.XP</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI" style="height:40px;" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a>
+      <p>Master Research &amp; Development Institute - skill development for automotive maintenance, prototyping, and EV innovation in Surat, Gujarat.</p>
+      <div class="footer-socials"><a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank">></a><a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank">f</a><a href="https://www.linkedin.com/company/mrdi-llp" target="_blank">in</a><a href="https://www.instagram.com/mrdi_skills" target="_blank">ig</a></div>
+    </div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">6-Month Skill Program</a></li><li><a href="programs.html">PSP Program</a></li><li><a href="online-session.html">Online Sessions</a></li><li><a href="enquiry.html">Enquiry</a></li></ul></div>
+    <div class="footer-col"><h4>Innovation Hub</h4><ul><li><a href="innovation-hub.html">Project Showcase</a></li><li><a href="success-stories.html">Success Stories</a></li><li><a href="knowledge-lab.html">Knowledge Lab</a></li>
+<li><a href="isac-systems-page.html">ISAC Systems</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="tel:+918905636766">+91 8905636766</a></li><li><a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></li><li><a href="https://api.whatsapp.com/send?phone=918905636766" target="_blank">WhatsApp Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Master Research &amp; Development Institute (MRDI). All rights reserved.</p><p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p></div>
+</footer>
+<script src="mrdi.js"></script>
+</body>
+</html>
+
+

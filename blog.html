@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – MRDI | Automotive Knowledge & Innovation</title>
+  <meta name="description" content="Read the MRDI blog — articles on automotive engineering, skill development, machinery, EV innovation and career guidance for aspiring engineers."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .blog-layout { display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: start; }
+    .blog-article { background: var(--surface); border: 1px solid var(--border); padding: 48px; }
+    .article-meta { display: flex; align-items: center; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; }
+    .article-cat { font-family: var(--S); font-size: .62rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); border: 1px solid rgba(232,93,4,.3); padding: 3px 10px; }
+    .article-date { font-family: var(--S); font-size: .72rem; color: var(--muted); letter-spacing: 1px; }
+    .blog-article h1 { font-family: var(--H); font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 28px; line-height: 1.05; }
+    .blog-article h2 { font-family: var(--H); font-size: 1.4rem; font-weight: 600; text-transform: uppercase; color: var(--text2); margin: 36px 0 14px; }
+    .blog-article p { font-size: .93rem; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+    .blog-article img { width: 100%; margin: 28px 0; border: 1px solid var(--border); filter: brightness(.85); }
+    .blog-article blockquote { border-left: 3px solid var(--orange); padding: 16px 20px; background: rgba(232,93,4,.04); margin: 28px 0; font-family: var(--S); font-size: 1rem; font-weight: 500; color: var(--text); line-height: 1.6; }
+    /* sidebar */
+    .sidebar-widget { background: var(--surface); border: 1px solid var(--border); padding: 28px; margin-bottom: 24px; }
+    .sidebar-widget h3 { font-family: var(--H); font-size: .9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--white); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: .85rem; color: var(--muted); transition: color .2s, padding-left .2s; }
+    .sidebar-link:last-child { border-bottom: none; }
+    .sidebar-link:hover { color: var(--orange); padding-left: 8px; }
+    .sidebar-link .slbl { font-family: var(--S); font-size: .62rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); display: block; margin-bottom: 2px; }
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { display: inline-block; padding: 5px 12px; background: var(--bg2); border: 1px solid var(--border); font-family: var(--S); font-size: .68rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); transition: border-color .2s, color .2s; }
+    .tag:hover { border-color: var(--orange); color: var(--orange); }
+    @media(max-width:900px){ .blog-layout{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+<div class="topbar">🏍️ New Batch Starting Soon! &nbsp;<a href="enquiry.html">Enquire Now →</a>&nbsp;|&nbsp; 📞 <a href="tel:+918905636766">+91 8905636766</a></div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI Logo" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a>
+    <nav>
+      <div class="nav-item"><a href="programs.html">Programs ▾</a><div class="dropdown"><a href="programs.html">Programs Offered</a><a href="enquiry.html">Enquiry</a></div></div>
+      <div class="nav-item"><a href="online-session.html">Online Session</a></div>
+      <div class="nav-item"><a href="knowledge-lab.html">Knowledge Lab</a></div>
+      <div class="nav-item"><a href="isac-systems-page.html">ISAC Systems</a></div>
+      <div class="nav-item"><a href="innovation-hub.html">Innovation Hub ▾</a><div class="dropdown"><a href="innovation-hub.html">Project Showcase</a><a href="success-stories.html">Success Stories</a></div></div>
+      <div class="nav-item"><a href="blog.html" class="active">Blog</a></div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+      <a href="enquiry.html" class="nav-cta">Enroll Now</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Blog</span></div>
+    <h1 class="page-title">Blog</h1>
+    <p class="page-subtitle">Articles on automotive engineering, skill development, machinery, EV innovation and career guidance.</p>
+  </div>
+</div>
+
+<section class="section-pad">
+<div class="wrap">
+<div class="blog-layout">
+
+  <!-- MAIN ARTICLE -->
+  <main>
+    <article class="blog-article reveal">
+      <div class="article-meta">
+        <span class="article-cat">Featured Article</span>
+        <span class="article-date">February 2025</span>
+      </div>
+      <h1>The Art of Machineries: A Tribute to the Art of Commuting</h1>
+
+      <p>Machinery is more than just a tool; it is an expression of human ingenuity, creativity, and the relentless pursuit of progress. It is an art form that pays tribute to our need for mobility, a testament to our desire to build and shape the world around us. The machines we create are not just modes of transportation but extensions of our imagination, serving as both functional tools and canvases for artistic expression.</p>
+
+      <img src="https://i0.wp.com/mrdiskills.wordpress.com/wp-content/uploads/2025/02/image_editor_output_image1349835046-17395388528979022260919630522397.jpg" alt="Machinery Art" onerror="this.src='https://placehold.co/700x400/112240/e85d04?text=The+Art+of+Machinery'"/>
+
+      <h2>The Art Behind Commutation</h2>
+      <p>From the earliest wheels to the most advanced automobiles, our need for commuting has been the driving force behind countless innovations. Whether it's a bicycle, a motorcycle, a car, or a high-speed train, each mode of transportation is a product of engineering, design, and artistic vision. Every curve, every component, and every mechanism reflects the thought, effort, and craftsmanship that go into making these machines efficient, reliable, and aesthetically appealing.</p>
+      <p>Machinery fulfills a fundamental need — our need for movement. But beyond mere utility, it represents freedom, passion, and the thrill of exploration. A motorcycle roaring down an open highway, a sports car gliding effortlessly around a curve, or a train speeding across vast landscapes — each of these moments captures the essence of motion as an art form.</p>
+
+      <img src="https://i0.wp.com/mrdiskills.wordpress.com/wp-content/uploads/2025/02/wp_20160130_0056698188611574668697.jpg" alt="Motorcycle Art" onerror="this.src='https://placehold.co/700x400/112240/e85d04?text=Motorcycle+Engineering'"/>
+
+      <h2>Building to Express: Machinery as a Creative Outlet</h2>
+      <p>Engineering is often seen as a technical discipline, but at its core, it is an art. Every machine is a physical manifestation of an idea, a concept turned into reality through innovation and craftsmanship. When we build machinery, we are not just constructing tools; we are expressing our creativity, shaping the future of mobility, and designing experiences that enhance our daily lives.</p>
+      <p>For designers and engineers, every creation is a reflection of their passion. The sleek lines of a sports car, the rugged build of an off-road vehicle, or the elegant efficiency of an electric scooter — all of these represent unique expressions of creativity. Machinery is not just about moving from point A to point B; it's about making the journey memorable, enjoyable, and meaningful.</p>
+
+      <img src="https://i0.wp.com/mrdiskills.wordpress.com/wp-content/uploads/2025/02/img-20191207-wa01101504028639445568563.jpg" alt="Engineering Art" onerror="this.src='https://placehold.co/700x400/112240/e85d04?text=Engineering+as+Art'"/>
+
+      <h2>Machinery: A Gateway to Freedom and Exploration</h2>
+      <p>The ability to travel has always been a source of inspiration and empowerment. The machines we create give us the freedom to explore new places, connect with people, and experience the world in ways that were once unimaginable. Whether it's a solo motorcycle ride across scenic landscapes, a road trip with friends, or a flight to a distant land, our machines open up endless possibilities.</p>
+      <p>Beyond personal freedom, machinery plays a crucial role in global progress. It enables businesses to operate efficiently, connects distant communities, and fuels industries that drive economic growth. From the delivery trucks that bring goods to our doorstep to the high-speed trains that connect cities, machinery is the backbone of modern civilization.</p>
+
+      <img src="https://i0.wp.com/mrdiskills.wordpress.com/wp-content/uploads/2025/02/img-20171204-wa00193887469044489852160.jpg" alt="Machinery Freedom" onerror="this.src='https://placehold.co/700x400/112240/e85d04?text=Freedom+Through+Machines'"/>
+
+      <h2>Conclusion: The Art of Motion and Innovation</h2>
+      <p>The art of machineries is a tribute to human creativity, engineering excellence, and the relentless pursuit of mobility. It is about more than just machines — it is about the emotions, aspirations, and stories behind them. Every vehicle, every engine, and every design element speaks of our desire to push boundaries, break barriers, and create something extraordinary.</p>
+
+      <blockquote>As we continue to innovate and redefine the future of commuting, let us celebrate the art of machinery — not just as a necessity, but as an expression of our dreams, passion, and the limitless potential of human creativity.</blockquote>
+
+      <img src="https://i0.wp.com/mrdiskills.wordpress.com/wp-content/uploads/2025/02/pxl_20221203_1103470781979902870297586427.jpg" alt="MRDI Motorcycle" onerror="this.src='https://placehold.co/700x400/112240/e85d04?text=MRDI+Motorcycle+Build'"/>
+
+      <div style="margin-top:36px;padding:28px;background:rgba(232,93,4,.05);border:1px solid rgba(232,93,4,.2);">
+        <p style="font-family:var(--S);font-size:.95rem;font-weight:600;color:var(--text2);margin-bottom:14px;">🚀 Watch out for our new Daily Learning Content!</p>
+        <a href="knowledge-lab.html" class="btn-orange">Visit Knowledge Lab →</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-widget reveal rd1">
+      <h3>Quick Links</h3>
+      <a href="programs.html" class="sidebar-link"><span class="slbl">Flagship</span>6-Month Skill Development Program</a>
+      <a href="programs.html" class="sidebar-link"><span class="slbl">Prototyping</span>PSP Program</a>
+      <a href="online-session.html" class="sidebar-link"><span class="slbl">Online</span>Live Learning Sessions</a>
+      <a href="knowledge-lab.html" class="sidebar-link"><span class="slbl">Content</span>Knowledge Lab Videos</a>
+      <a href="innovation-hub.html" class="sidebar-link"><span class="slbl">Projects</span>Innovation Hub Showcase</a>
+      <a href="success-stories.html" class="sidebar-link"><span class="slbl">Stories</span>Student Success Stories</a>
+    </div>
+
+    <div class="sidebar-widget reveal rd2">
+      <h3>Topics Covered</h3>
+      <div class="tag-cloud">
+        <span class="tag">Engine Oil</span>
+        <span class="tag">Hydraulics</span>
+        <span class="tag">EV</span>
+        <span class="tag">Prototyping</span>
+        <span class="tag">Suspension</span>
+        <span class="tag">Disc Brakes</span>
+        <span class="tag">Piston Rings</span>
+        <span class="tag">Workshop SOP</span>
+        <span class="tag">Torque</span>
+        <span class="tag">4-Stroke</span>
+        <span class="tag">Coolants</span>
+        <span class="tag">Repair Orders</span>
+      </div>
+    </div>
+
+    <div class="sidebar-widget reveal rd3">
+      <h3>Contact MRDI</h3>
+      <p style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:20px;">Ready to start your automotive career? Get in touch with us today.</p>
+      <a href="tel:+918905636766" style="display:block;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);font-family:var(--S);font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:8px;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='var(--border)'">📞 +91 8905636766</a>
+      <a href="mailto:mrdi.development@gmail.com" style="display:block;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);font-family:var(--S);font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:16px;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='var(--border)'">✉️ mrdi.development@gmail.com</a>
+      <a href="enquiry.html" class="btn-orange" style="display:block;text-align:center;">Enroll Now →</a>
+    </div>
+
+    <div class="sidebar-widget reveal rd3">
+      <h3>Follow Us</h3>
+      <a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank" class="sidebar-link">📺 YouTube — Project Videos</a>
+      <a href="https://www.instagram.com/mrdi_skills" target="_blank" class="sidebar-link">📸 Instagram — @mrdi_skills</a>
+      <a href="https://www.linkedin.com/company/mrdi-llp" target="_blank" class="sidebar-link">💼 LinkedIn — MRDI LLP</a>
+      <a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank" class="sidebar-link">👥 Facebook — Community</a>
+    </div>
+  </aside>
+
+</div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI" style="height:40px;" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a><p>Master Research & Development Institute — skill development for automotive maintenance, prototyping, and EV innovation in Surat, Gujarat.</p><div class="footer-socials"><a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank">▶</a><a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank">f</a><a href="https://www.linkedin.com/company/mrdi-llp" target="_blank">in</a><a href="https://www.instagram.com/mrdi_skills" target="_blank">📸</a></div></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">6-Month Skill Program</a></li><li><a href="programs.html">PSP Program</a></li><li><a href="online-session.html">Online Sessions</a></li><li><a href="enquiry.html">Enquiry</a></li></ul></div>
+    <div class="footer-col"><h4>Innovation Hub</h4><ul><li><a href="innovation-hub.html">Project Showcase</a></li><li><a href="success-stories.html">Success Stories</a></li><li><a href="knowledge-lab.html">Knowledge Lab</a></li>
+<li><a href="isac-systems-page.html">ISAC Systems</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="tel:+918905636766">+91 8905636766</a></li><li><a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></li><li><a href="https://api.whatsapp.com/send?phone=918905636766" target="_blank">WhatsApp Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Master Research & Development Institute (MRDI). All rights reserved.</p><p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p></div>
+</footer>
+<script src="mrdi.js"></script>
+</body>
+</html>
+
+

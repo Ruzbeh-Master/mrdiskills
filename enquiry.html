@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enquiry – MRDI | Enroll in Automotive Skill Development Program</title>
+  <meta name="description" content="Enquire about MRDI programs — 6-Month Automotive Skill Development, PSP Prototyping, and more. Fill out the form and we'll get back to you."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .enquiry-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 56px; align-items: start; }
+    .enquiry-form { background: var(--surface); border: 1px solid var(--border); padding: 42px; }
+    .enquiry-form h2 { font-family: var(--H); font-size: 1.5rem; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 14px; }
+    .enquiry-intro { font-size: .92rem; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+    .form-3col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .submit-btn { width: 100%; padding: 16px; background: var(--orange); color: #fff; font-family: var(--S); font-size: .95rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: pointer; margin-top: 12px; transition: background .2s, transform .2s; }
+    .submit-btn:hover { background: var(--orange2); transform: translateY(-1px); }
+    .success-msg { display: none; background: rgba(37,211,102,.1); border: 1px solid rgba(37,211,102,.3); padding: 20px 24px; font-family: var(--S); font-size: 1rem; font-weight: 600; color: #25d366; margin-top: 20px; text-align: center; }
+    .enquiry-side { display: grid; gap: 20px; }
+    .enquiry-card { background: var(--surface); border: 1px solid var(--border); padding: 30px; transition: border-color .3s, transform .3s; }
+    .enquiry-card:hover { border-color: rgba(232,93,4,.35); transform: translateY(-3px); }
+    .ec-kicker { font-family: var(--S); font-size: .64rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+    .enquiry-card h3 { font-family: var(--H); font-size: 1.16rem; text-transform: uppercase; color: var(--white); margin-bottom: 10px; line-height: 1.15; }
+    .enquiry-card p { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+    .journey-points { display: grid; gap: 16px; margin-top: 22px; }
+    .journey-point { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
+    .journey-point b { display: grid; place-items: center; width: 40px; height: 40px; background: rgba(232,93,4,.1); border: 1px solid rgba(232,93,4,.25); font-family: var(--H); font-size: 1rem; color: var(--orange); }
+    .journey-point strong { display: block; font-family: var(--H); font-size: .96rem; text-transform: uppercase; color: var(--white); margin-bottom: 4px; }
+    .journey-point span { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+    .benefit-grid { display: grid; gap: 14px; }
+    .benefit-pill { display: flex; align-items: flex-start; gap: 14px; background: var(--bg2); border: 1px solid var(--border); padding: 18px; }
+    .benefit-pill .ip-icon { font-size: 1.4rem; line-height: 1; }
+    .benefit-pill h4 { font-family: var(--H); font-size: .92rem; text-transform: uppercase; color: var(--white); margin-bottom: 5px; }
+    .benefit-pill p { font-size: .81rem; color: var(--muted); line-height: 1.6; }
+    .quick-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .quick-links a { padding: 10px 14px; background: var(--bg2); border: 1px solid var(--border); font-family: var(--S); font-size: .74rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); transition: border-color .2s, color .2s; }
+    .quick-links a:hover { border-color: var(--orange); color: var(--orange); }
+    @media(max-width:900px){ .enquiry-grid,.form-3col,.form-2col{grid-template-columns:1fr;} }
+    @media(max-width:768px){ .enquiry-form{padding:32px 24px;} .enquiry-card{padding:24px;} }
+  </style>
+</head>
+<body>
+
+<div class="topbar">🏍️ New Batch Starting Soon! &nbsp;<a href="enquiry.html">Enquire Now →</a>&nbsp;|&nbsp; 📞 <a href="tel:+918905636766">+91 8905636766</a></div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI Logo" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a>
+    <nav>
+      <div class="nav-item"><a href="programs.html" class="active">Programs ▾</a><div class="dropdown"><a href="programs.html">Programs Offered</a><a href="enquiry.html">Enquiry</a></div></div>
+      <div class="nav-item"><a href="online-session.html">Online Session</a></div>
+      <div class="nav-item"><a href="knowledge-lab.html">Knowledge Lab</a></div>
+      <div class="nav-item"><a href="isac-systems-page.html">ISAC Systems</a></div>
+      <div class="nav-item"><a href="innovation-hub.html">Innovation Hub ▾</a><div class="dropdown"><a href="innovation-hub.html">Project Showcase</a><a href="success-stories.html">Success Stories</a></div></div>
+      <div class="nav-item"><a href="blog.html">Blog</a></div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+      <a href="enquiry.html" class="nav-cta">Enroll Now</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="programs.html">Programs</a><span>›</span><span>Enquiry</span></div>
+    <h1 class="page-title">Program Enquiry</h1>
+    <p class="page-subtitle">Fill in your details and we'll get back to you within 24 hours to help you choose the right program.</p>
+  </div>
+</div>
+
+<section class="section-pad">
+<div class="wrap">
+<div class="enquiry-wrap">
+
+  <!-- Why MRDI pills -->
+  <div class="info-pills">
+    <div class="info-pill reveal">
+      <div class="ip-icon">🔧</div>
+      <h3>Hands-on Training</h3>
+      <p>Real workshop experience with live vehicles from day one</p>
+    </div>
+    <div class="info-pill reveal rd1">
+      <div class="ip-icon">💼</div>
+      <h3>Job Placement</h3>
+      <p>Direct connections to OEM workshops and automotive companies</p>
+    </div>
+    <div class="info-pill reveal rd2">
+      <div class="ip-icon">⚡</div>
+      <h3>EV Ready</h3>
+      <p>Gain skills in electric vehicles and future automotive tech</p>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="enquiry-form reveal">
+    <h2>Tell Us About Yourself</h2>
+    <form id="enquiry-form">
+      <div class="form-3col">
+        <div class="form-group">
+          <label>Full Name <span>*</span></label>
+          <input type="text" name="name" class="form-control" placeholder="Your full name" required/>
+        </div>
+        <div class="form-group">
+          <label>Email <span>*</span></label>
+          <input type="email" name="email" class="form-control" placeholder="your@email.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Phone <span>*</span></label>
+          <input type="tel" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" required/>
+        </div>
+      </div>
+
+      <div class="form-2col">
+        <div class="form-group">
+          <label>Program Interested? <span>*</span></label>
+          <select name="program" class="form-control" required>
+            <option value="">Select one option…</option>
+            <option>3-Month Project Program</option>
+            <option>6-Month Skill Program</option>
+            <option>2-Month Basic Skill Program</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Academics?</label>
+          <select name="academics" class="form-control">
+            <option value="">Select one option…</option>
+            <option>10th Pass</option>
+            <option>Industrial Training Institute's (ITI)</option>
+            <option>Diploma</option>
+            <option>Graduate</option>
+            <option>Post Graduate</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-2col">
+        <div class="form-group">
+          <label>Interests?</label>
+          <select name="interest" class="form-control">
+            <option value="">Select one option…</option>
+            <option>Basics of AI Learning</option>
+            <option>Automotive</option>
+            <option>Mechanical</option>
+            <option>Electrical</option>
+            <option>Project Management</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>How did you hear about us?</label>
+          <select name="source" class="form-control">
+            <option value="">Select one option…</option>
+            <option>Newspaper</option>
+            <option>Social Media</option>
+            <option>Seminar</option>
+            <option>Friends or Family</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Other Platforms (Specify)</label>
+        <input type="text" name="other_platform" class="form-control" placeholder="e.g. YouTube, LinkedIn, Google…"/>
+      </div>
+
+      <div class="form-group">
+        <label>Queries / Questions</label>
+        <textarea name="queries" class="form-control" rows="4" placeholder="Any specific questions or things you'd like to know about the program…"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Enquiry via WhatsApp →</button>
+      <div class="success-msg" id="success-msg">✅ Thank you for your response! We'll contact you within 24 hours.</div>
+      <p style="font-size:.75rem;color:var(--muted);margin-top:12px;text-align:center;">Your enquiry will be sent via WhatsApp. We reply within 24 hours.</p>
+    </form>
+  </div>
+
+</div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI" style="height:40px;" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a><p>Master Research & Development Institute — skill development for automotive maintenance, prototyping, and EV innovation in Surat, Gujarat.</p><div class="footer-socials"><a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank">▶</a><a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank">f</a><a href="https://www.linkedin.com/company/mrdi-llp" target="_blank">in</a><a href="https://www.instagram.com/mrdi_skills" target="_blank">📸</a></div></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">6-Month Skill Program</a></li><li><a href="programs.html">PSP Program</a></li><li><a href="online-session.html">Online Sessions</a></li><li><a href="enquiry.html">Enquiry</a></li></ul></div>
+    <div class="footer-col"><h4>Innovation Hub</h4><ul><li><a href="innovation-hub.html">Project Showcase</a></li><li><a href="success-stories.html">Success Stories</a></li><li><a href="knowledge-lab.html">Knowledge Lab</a></li>
+<li><a href="isac-systems-page.html">ISAC Systems</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="tel:+918905636766">+91 8905636766</a></li><li><a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></li><li><a href="https://api.whatsapp.com/send?phone=918905636766" target="_blank">WhatsApp Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Master Research & Development Institute (MRDI). All rights reserved.</p><p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p></div>
+</footer>
+
+<script>
+document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const f = this;
+  const name     = f.querySelector('[name="name"]').value.trim();
+  const email    = f.querySelector('[name="email"]').value.trim();
+  const phone    = f.querySelector('[name="phone"]').value.trim();
+  const program  = f.querySelector('[name="program"]').value;
+  const acad     = f.querySelector('[name="academics"]').value;
+  const interest = f.querySelector('[name="interest"]').value;
+  const source   = f.querySelector('[name="source"]').value;
+  const queries  = f.querySelector('[name="queries"]').value.trim();
+
+  if (!name || !phone || !program) {
+    alert('Please fill in Name, Phone and Program Interested.');
+    return;
+  }
+
+  let msg = `Hi, I would like to enquire about MRDI programs.\n\n`;
+  msg += `*Name:* ${name}\n`;
+  msg += `*Email:* ${email || 'Not provided'}\n`;
+  msg += `*Phone:* ${phone}\n`;
+  msg += `*Program Interested:* ${program}\n`;
+  if (acad)     msg += `*Academics:* ${acad}\n`;
+  if (interest) msg += `*Interest:* ${interest}\n`;
+  if (source)   msg += `*Found us via:* ${source}\n`;
+  if (queries)  msg += `\n*Queries:* ${queries}`;
+
+  const url = `https://api.whatsapp.com/send?phone=918905636766&text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+
+  document.getElementById('success-msg').style.display = 'block';
+  f.reset();
+});
+</script>
+<script src="mrdi.js"></script>
+</body>
+</html>
+
+

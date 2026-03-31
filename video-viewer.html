@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MRDI Video Viewer</title>
+  <meta name="description" content="Watch MRDI video content from Knowledge Lab, Innovation Hub, and Success Stories."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .viewer-hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 40px 54px;
+    }
+    .viewer-shell {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 38px;
+      align-items: start;
+    }
+    .video-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .video-embed {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      border: none;
+      background: #08101e;
+    }
+    .video-card-body,
+    .viewer-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 28px;
+    }
+    .viewer-kicker {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--orange);
+      font-family: var(--S);
+      font-size: .64rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .viewer-title {
+      font-family: var(--H);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.02;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .viewer-desc,
+    .viewer-copy,
+    .viewer-panel li {
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.8;
+    }
+    .viewer-copy {
+      margin-top: 18px;
+    }
+    .viewer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .viewer-panel h3 {
+      font-family: var(--H);
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .viewer-panel ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+    .viewer-panel li {
+      padding-left: 18px;
+      position: relative;
+    }
+    .viewer-panel li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange);
+      position: absolute;
+      top: 11px;
+      left: 0;
+    }
+    .viewer-thumb {
+      width: 100%;
+      border: 1px solid var(--border);
+      margin-top: 18px;
+      filter: brightness(.86);
+    }
+    .viewer-empty {
+      text-align: center;
+      padding: 90px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+    .viewer-empty h2 {
+      font-family: var(--H);
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .viewer-empty p {
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 24px;
+      line-height: 1.8;
+    }
+    @media (max-width: 900px) {
+      .viewer-shell { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="topbar">New Batch Starting Soon! &nbsp;<a href="enquiry.html">Enquire Now -></a>&nbsp;|&nbsp; <a href="tel:+918905636766">+91 8905636766</a></div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI Logo" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a>
+    <nav>
+      <div class="nav-item"><a href="programs.html">Programs ▾</a><div class="dropdown"><a href="programs.html">Programs Offered</a><a href="enquiry.html">Enquiry</a></div></div>
+      <div class="nav-item"><a href="online-session.html">Online Session</a></div>
+      <div class="nav-item"><a href="knowledge-lab.html">Knowledge Lab</a></div>
+      <div class="nav-item"><a href="isac-systems-page.html">ISAC Systems</a></div>
+      <div class="nav-item"><a href="innovation-hub.html">Innovation Hub ▾</a><div class="dropdown"><a href="innovation-hub.html">Project Showcase</a><a href="success-stories.html">Success Stories</a></div></div>
+      <div class="nav-item"><a href="blog.html">Blog</a></div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+      <a href="enquiry.html" class="nav-cta">Enroll Now</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="viewer-hero">
+  <div class="page-hero-inner" style="max-width:1200px;">
+    <div class="breadcrumb" id="viewer-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Video Viewer</span></div>
+    <h1 class="page-title" id="viewer-page-title">MRDI Video Viewer</h1>
+    <p class="page-subtitle" id="viewer-subtitle">Opening MRDI video content.</p>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div id="viewer-app"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI" style="height:40px;" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a><p>Master Research & Development Institute - skill development for automotive maintenance, prototyping, and EV innovation in Surat, Gujarat.</p><div class="footer-socials"><a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank">></a><a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank">f</a><a href="https://www.linkedin.com/company/mrdi-llp" target="_blank">in</a><a href="https://www.instagram.com/mrdi_skills" target="_blank">ig</a></div></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">6-Month Skill Program</a></li><li><a href="programs.html">PSP Program</a></li><li><a href="online-session.html">Online Sessions</a></li><li><a href="enquiry.html">Enquiry</a></li></ul></div>
+    <div class="footer-col"><h4>Innovation Hub</h4><ul><li><a href="innovation-hub.html">Project Showcase</a></li><li><a href="success-stories.html">Success Stories</a></li><li><a href="knowledge-lab.html">Knowledge Lab</a></li><li><a href="isac-systems-page.html">ISAC Systems</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="tel:+918905636766">+91 8905636766</a></li><li><a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></li><li><a href="https://api.whatsapp.com/send?phone=918905636766" target="_blank">WhatsApp Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Master Research & Development Institute (MRDI). All rights reserved.</p><p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p></div>
+</footer>
+
+<script>
+  const VIDEOS = {
+    'engine-oil-numbers': {
+      title: 'Decoding Engine Oil Numbers',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'Learn how to decode engine oil grades, viscosity labels, and maintenance implications in a quick MRDI Knowledge Lab video.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/image_editor_output_image1349835046-17395388528979022260919630522397.jpg',
+      query: 'MRDI Decoding Engine Oil Numbers',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=DECODING%20ENGINE%20OIL%20NUMBERS'
+    },
+    'vehicle-ergonomics': {
+      title: 'Learning the Ergonomics Responsible for Handling of the Vehicle',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'A focused MRDI session on ergonomics, control positioning, and how rider or driver setup affects handling.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Vehicle+Ergonomics',
+      query: 'MRDI ergonomics responsible for handling of the vehicle',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=LEARNING%20THE%20ERGONOMICS%20RESPONSIBLE%20FOR%20HANDLING%20OF%20THE%20VEHICLE'
+    },
+    'hydraulics-system': {
+      title: 'Ever Heard About Hydraulics and How Does Its System Work?',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'Explore the fundamentals of hydraulics and how the system works in real automotive applications.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Hydraulics',
+      query: 'MRDI Hydraulics system works',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=EVER%20HEARD%20ABOUT%20HYDRAULICS%20AND%20HOW%20DOES%20ITS%20SYSTEM%20WORK'
+    },
+    'language-of-engines': {
+      title: 'Want to Master the Language of Engines?',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'MRDI breaks down CC, RPM, horsepower, BHP, torque, and the language engineers need to understand engine behavior.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Language+of+Engines',
+      query: 'MRDI master the language of engines',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=WANT%20TO%20MASTER%20THE%20LANGUAGE%20OF%20ENGINES'
+    },
+    'four-stroke-engine': {
+      title: 'Ever Wondered How a 4-Stroke Engine Works?',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'A practical walkthrough of the intake, compression, combustion, and exhaust cycle of a 4-stroke engine.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=4-Stroke+Engine',
+      query: 'MRDI 4 stroke engine works',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=EVER%20WONDERED%20HOW%20A%204-STROKE%20ENGINE%20WORKS'
+    },
+    'workshop-sops': {
+      title: 'Mastering Workshop SOPs',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'A workshop-focused video on safety, consistency, and why standard operating procedures matter in automotive careers.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Workshop+SOPs',
+      query: 'MRDI Mastering Workshop SOPs',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=Mastering%20Workshop%20SOPs%3A%20The%20Key%20to%20a%20Successful%20Automotive%20Career'
+    },
+    'coolant-101': {
+      title: 'Coolant 101',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'Understand coolant types, their job inside the engine, and how to make smarter maintenance choices.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Coolant+101',
+      query: 'MRDI Coolant 101',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=COOLANT%20101'
+    },
+    'master-repair-orders': {
+      title: 'Master Repair Orders',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'A quick MRDI explainer on repair orders, workshop flow, and why documentation matters on the job floor.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Repair+Orders',
+      query: 'MRDI Master Repair Orders',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=MASTER%20REPAIR%20ORDERS'
+    },
+    'piston-rings': {
+      title: 'How Piston Rings Power Your Engine',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'See how compression, oil control, and wiper rings support engine sealing, lubrication, and performance.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Piston+Rings',
+      query: 'MRDI piston rings power your engine',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=HOW%20PISTON%20RINGS%20POWER%20YOUR%20ENGINE'
+    },
+    'front-suspension': {
+      title: 'Front Suspension Inspection and Replacement',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'A workshop skills video showing front shocker inspection and replacement using OEM-style practice.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Front+Suspension',
+      query: 'MRDI front suspension inspection replacement',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=FRONT%20SUSPENSION%20INSPECTION%20%26%20REPLACEMENT'
+    },
+    'disc-brake-rotors': {
+      title: 'How Disc Brake Rotors Are Measured',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'Learn how rotor thickness and condition are measured properly in workshop practice.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Disc+Brake+Rotors',
+      query: 'MRDI disc brake rotors measured',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=MASTER%20THE%20SKILL%3A%20HOW%20DISC%20BRAKE%20ROTORS%20ARE%20MEASURED'
+    },
+    'wheel-bearing': {
+      title: 'Wheel Bearing Inspection and Replacement',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'An MRDI workshop video on wheel bearing inspection, replacement steps, and safe repair habits.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=Wheel+Bearing',
+      query: 'MRDI wheel bearing inspection replacement',
+      youtubeUrl: 'https://www.youtube.com/watch?v=4ubPGJmE59k'
+    },
+    'mrdi-skill-learning-platform': {
+      title: 'MRDI Skill Based Learning Platform',
+      category: 'Knowledge Lab',
+      sourcePage: 'knowledge-lab.html',
+      description: 'A high-level video introducing MRDI, its practical learning model, and the path from theory to employability.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=MRDI+Learning+Platform',
+      query: 'MRDI skill based learning platform',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=MRDI%20Skill%20Based%20Learning%20Platform'
+    },
+    'electro-mechanical-centre-stand': {
+      title: 'Electro-Mechanical Centre Stand',
+      category: 'Innovation Hub',
+      sourcePage: 'innovation-hub.html',
+      description: 'A project spotlight on MRDI’s automatic two-wheeler centre stand concept and the engineering behind it.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/pxl_20221203_1103470784721489014944663889.webp',
+      query: 'MRDI electro mechanical centre stand',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=Electro%20Mechanical%20Centre%20Stand%20for%20Two-wheeled%20Vehicles'
+    },
+    'motorcycle-built-from-scratch': {
+      title: 'Motorcycle Built from Scratch',
+      category: 'Innovation Hub',
+      sourcePage: 'innovation-hub.html',
+      description: 'Follow the concept, fabrication, assembly, and testing journey of a motorcycle built by MRDI students.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG_20200417_210032_148hd.webp',
+      query: 'MRDI motorcycle built from scratch',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=From%20Concept%20to%20Creation%3A%20The%20Complete%20Bobber%20Build'
+    },
+    'jawa-solar-ev': {
+      title: '1965 Jawa to Solar EV Motorcycle',
+      category: 'Innovation Hub',
+      sourcePage: 'innovation-hub.html',
+      description: 'A restoration and EV-conversion story that takes a vintage Jawa platform into a solar-powered future.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG-20200114-WA0029.jpg',
+      query: 'MRDI Jawa solar EV motorcycle',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=1965%20Jawa%20Restored%20as%20Solar-Powered%20EV%20by%20Students'
+    },
+    'bobber-build': {
+      title: 'Custom Bobber Build',
+      category: 'Innovation Hub',
+      sourcePage: 'innovation-hub.html',
+      description: 'See the MRDI custom bobber build that earned praise at India Bike Week.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/11/IMG_20171219_120811_393-1.webp',
+      query: 'MRDI custom bobber build India Bike Week',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=Reliving%20the%20Bobber%20Build%3A%20Students%27%20Masterpiece%20at%20India%20Bike%20Week'
+    },
+    'hub-centric-steering': {
+      title: 'Electric Motorcycle with Hub-Centric Steering',
+      category: 'Innovation Hub',
+      sourcePage: 'innovation-hub.html',
+      description: 'A concept-to-creation video page for the MRDI electric motorcycle project with hub-centric steering.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/pxl_20221203_1103470784721489014944663889.webp',
+      query: 'MRDI electric motorcycle hub centric steering',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=How%20we%20Built%20an%20Electric%20Motorcycle%20with%20Hub-Centric%20Steering'
+    },
+    'from-passion-to-profession': {
+      title: 'From Passion to Profession',
+      category: 'Success Stories',
+      sourcePage: 'success-stories.html',
+      description: 'The founder story behind MRDI and the belief that practical capability can transform careers.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG-20200114-WA0029.jpg',
+      query: 'MRDI from passion to profession',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=FROM%20PASSION%20TO%20PROFESSION'
+    },
+    'mrdi-transformation': {
+      title: 'The MRDI Transformation',
+      category: 'Success Stories',
+      sourcePage: 'success-stories.html',
+      description: 'An inspiring transformation story showing how MRDI turns raw interest into industry-ready skill.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG_20200417_210032_148hd.webp',
+      query: 'MRDI transformation passion to profession',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=From%20Passion%20to%20Profession%20The%20MRDI%20Transformation'
+    },
+    'awd-motorcycle': {
+      title: 'All Wheel Drive Motorcycle Build',
+      category: 'Success Stories',
+      sourcePage: 'success-stories.html',
+      description: 'A build story around transforming a Maruti 800 engine into an all-wheel-drive motorcycle.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/11/IMG_20171219_120811_393-1.webp',
+      query: 'MRDI all wheel drive motorcycle build',
+      youtubeUrl: 'https://www.youtube.com/watch?v=mrQmsiqmdlc'
+    },
+    'ev-design-mrdi': {
+      title: 'Build and Innovate: Learn EV Design at MRDI',
+      category: 'Success Stories',
+      sourcePage: 'success-stories.html',
+      description: 'A success-story style video destination focused on EV design, hub-centric steering, and build culture at MRDI.',
+      image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/pxl_20221203_1103470784721489014944663889.webp',
+      query: 'MRDI build and innovate learn EV design',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=BUILD%20AND%20INNOVATE%3A%20Learn%20EV%20Design%20at%20MRDI'
+    },
+    'mrdi-seminars': {
+      title: 'MRDI Seminars at Engineering Institutions',
+      category: 'Success Stories',
+      sourcePage: 'success-stories.html',
+      description: 'A video-style destination around MRDI outreach, college seminars, and engineering community impact.',
+      image: 'https://placehold.co/1200x675/112240/e85d04?text=MRDI+Seminars',
+      query: 'MRDI seminars engineering institutions',
+      youtubeUrl: 'https://www.youtube.com/@MRDI_LLP/search?query=Full%20House.%20Full%20Energy.%20Future%20Engineers%20in%20Action'
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const item = id ? VIDEOS[id] : null;
+  const app = document.getElementById('viewer-app');
+
+  if (!item) {
+    app.innerHTML = `
+      <div class="viewer-empty">
+        <h2>Video Not Found</h2>
+        <p>The requested MRDI video could not be opened. Please go back to the page you came from and choose another item.</p>
+        <a href="knowledge-lab.html" class="btn-orange">Open Knowledge Lab</a>
+      </div>
+    `;
+  } else {
+    document.title = `${item.title} | MRDI Video Viewer`;
+    document.getElementById('viewer-page-title').textContent = item.title;
+    document.getElementById('viewer-subtitle').textContent = `${item.category} video content from MRDI.`;
+    document.getElementById('viewer-breadcrumb').innerHTML = `<a href="index.html">Home</a><span>›</span><a href="${item.sourcePage}">${item.category}</a><span>›</span><span>${item.title}</span>`;
+
+    const officialUrlMap = {
+      'knowledge-lab.html': 'https://mrdiskills.com/content/',
+      'innovation-hub.html': 'https://mrdiskills.com/innovation-hub/',
+      'success-stories.html': 'https://mrdiskills.com/success-stories/'
+    };
+    const officialUrl = officialUrlMap[item.sourcePage] || 'https://mrdiskills.com/';
+    const youtubeUrl = item.youtubeUrl || `https://www.youtube.com/@MRDI_LLP/search?query=${encodeURIComponent(item.title)}`;
+    const watchMatch = youtubeUrl.match(/[?&]v=([^&]+)/);
+    const directEmbedUrl = watchMatch ? `https://www.youtube.com/embed/${watchMatch[1]}` : '';
+    const isLocalFile = window.location.protocol === 'file:';
+    const canEmbedDirectly = Boolean(directEmbedUrl) && !isLocalFile;
+
+    app.innerHTML = `
+      <div class="viewer-shell">
+        <div>
+          <div class="video-frame reveal in">
+            ${canEmbedDirectly
+              ? `<iframe class="video-embed" src="${directEmbedUrl}" title="${item.title}" allowfullscreen loading="lazy"></iframe>`
+              : isLocalFile
+              ? `<div class="viewer-empty" style="padding:48px 24px;">
+                   <h2 style="font-size:1.6rem;">Open Video on YouTube</h2>
+                   <p>Embedded playback is blocked in local file mode, so this item opens directly on your YouTube channel to show the correct video without the MRDI page wrapper.</p>
+                   <a href="${youtubeUrl}" target="_blank" class="btn-orange">Watch Video</a>
+                 </div>`
+              : `<div class="viewer-empty" style="padding:48px 24px;">
+                   <h2 style="font-size:1.6rem;">Open Video on YouTube</h2>
+                   <p>This item is linked to the matching video on your YouTube channel. Use the button below to open the exact channel result for this title.</p>
+                   <a href="${youtubeUrl}" target="_blank" class="btn-orange">Watch Video</a>
+                 </div>`
+            }
+          </div>
+          <div class="video-card-body reveal in" style="margin-top:18px;">
+            <span class="viewer-kicker">${item.category}</span>
+            <h2 class="viewer-title">${item.title}</h2>
+            <p class="viewer-desc">${item.description}</p>
+            <p class="viewer-copy">${canEmbedDirectly
+              ? 'This item has a verified direct YouTube watch link, so it can be shown here as an embedded video.'
+              : isLocalFile
+              ? 'Because this website is being opened locally, YouTube blocks inline embeds here. Use the YouTube button below and the video will open directly on your channel.'
+              : 'This item is linked to the matching video on your YouTube channel by exact title, so it opens the correct channel result instead of the MRDI page.'}</p>
+            <div class="viewer-actions">
+              <a href="${youtubeUrl}" target="_blank" class="btn-orange">Open on YouTube</a>
+              <a href="${item.sourcePage}" class="btn-outline">Back to ${item.category}</a>
+            </div>
+          </div>
+        </div>
+        <div class="viewer-panel reveal in">
+          <h3>About This Content</h3>
+          <ul>
+            <li>Category: ${item.category}</li>
+            <li>Source page: ${item.sourcePage.replace('.html', '').replace('-', ' ')}</li>
+            <li>Viewer type: direct embedded video</li>
+          </ul>
+          <img class="viewer-thumb" src="${item.image}" alt="${item.title}" onerror="this.style.display='none'"/>
+        </div>
+      </div>
+    `;
+  }
+</script>
+<script src="mrdi.js"></script>
+</body>
+</html>

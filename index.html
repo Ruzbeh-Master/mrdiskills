@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MRDI – Master Research & Development Institute | Automotive Skill Development, Surat</title>
+  <meta name="description" content="MRDI bridges the gap between education and industry through hands-on automotive, EV, and prototyping skill development programs in Surat, Gujarat."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── HERO ──────────────────────────────────── */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero-video-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-video-bg video { width: 100%; height: 100%; object-fit: cover; opacity: .32; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,25,47,.6) 0%, rgba(10,25,47,.15) 50%, rgba(10,25,47,.92) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 10;
+      max-width: 920px; margin: 0 auto;
+      padding: 0 40px; text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: var(--S); font-size: .68rem; font-weight: 700;
+      letter-spacing: 5px; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 28px;
+      opacity: 0; animation: fadeUp .8s .3s forwards;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; width: 36px; height: 1px; background: var(--orange); opacity: .5;
+    }
+    .hero-title {
+      font-family: var(--H);
+      font-size: clamp(2.6rem, 8vw, 6.5rem);
+      font-weight: 700; text-transform: uppercase;
+      line-height: .96; letter-spacing: 1px;
+      color: var(--white); margin-bottom: 26px;
+      opacity: 0; animation: fadeUp .9s .5s forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--orange); display: block; }
+    .hero-sub {
+      font-family: var(--S); font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 500;
+      color: rgba(204,214,246,.8); max-width: 640px; margin: 0 auto 44px;
+      line-height: 1.65;
+      opacity: 0; animation: fadeUp .9s .7s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp .9s .9s forwards;
+    }
+    /* scroll mouse */
+    .scroll-hint {
+      position: absolute; bottom: 140px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 10;
+      opacity: 0; animation: fadeIn 1s 1.3s forwards;
+    }
+    .scroll-hint span { font-family: var(--S); font-size: .6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+    .scroll-mouse {
+      width: 22px; height: 36px; border: 2px solid rgba(136,146,176,.4); border-radius: 11px; position: relative;
+    }
+    .scroll-mouse::after {
+      content: ''; position: absolute; top: 5px; left: 50%; transform: translateX(-50%);
+      width: 3px; height: 7px; background: var(--orange); border-radius: 2px;
+      animation: scrollDot 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollDot { 0%{opacity:1;transform:translateX(-50%) translateY(0)} 80%{opacity:0;transform:translateX(-50%) translateY(12px)} 100%{opacity:0;transform:translateX(-50%) translateY(0)} }
+
+    /* stats bar */
+    .hero-stats {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 10;
+      background: rgba(10,25,47,.88);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: center;
+      opacity: 0; animation: fadeIn 1s 1.2s forwards;
+    }
+    .stat-item {
+      flex: 1; max-width: 260px;
+      padding: 18px 20px;
+      display: flex; align-items: center; gap: 14px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-icon { font-size: 1.7rem; flex-shrink: 0; }
+    .stat-num { font-family: var(--H); font-size: 1.7rem; font-weight: 700; color: var(--orange); line-height: 1; }
+    .stat-lbl { font-family: var(--S); font-size: .66rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+    /* ── ABOUT ────────────────────────────────── */
+    #about { background: var(--bg); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img { width: 100%; height: 460px; object-fit: cover; border: 1px solid var(--border); filter: brightness(.88); }
+    .about-badge {
+      position: absolute; bottom: -18px; right: -18px;
+      background: var(--orange); padding: 18px 22px; text-align: center;
+    }
+    .about-badge .b-num { font-family: var(--H); font-size: 2.2rem; font-weight: 700; color: #fff; line-height: 1; }
+    .about-badge .b-lbl { font-family: var(--S); font-size: .6rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.8); }
+    .feat-pills { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 32px; }
+    .pill {
+      display: flex; align-items: center; gap: 9px;
+      padding: 11px 14px;
+      background: var(--surface); border: 1px solid var(--border);
+      font-family: var(--S); font-size: .78rem; font-weight: 600; color: var(--text);
+      transition: border-color .2s;
+    }
+    .pill:hover { border-color: var(--orange); }
+    .pill .pi { color: var(--orange); }
+
+    /* ── PROGRAMS ─────────────────────────────── */
+    #programs { background: var(--bg2); }
+    .prog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 52px; }
+    .prog-card {
+      background: var(--surface); overflow: hidden;
+      border-top: 3px solid transparent;
+      transition: transform .35s, border-color .3s;
+    }
+    .prog-card:hover { transform: translateY(-5px); border-color: var(--orange); }
+    .prog-card.featured { border-color: var(--orange); }
+    .prog-card .prog-img { overflow: hidden; height: 200px; }
+    .prog-card .prog-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.8) grayscale(20%); transition: transform .5s, filter .5s; }
+    .prog-card:hover .prog-img img { transform: scale(1.05); filter: brightness(.95) grayscale(0); }
+    .prog-body { padding: 26px; }
+    .prog-tag {
+      display: inline-block; font-family: var(--S);
+      font-size: .58rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--orange); border: 1px solid rgba(232,93,4,.3); padding: 2px 9px; margin-bottom: 12px;
+    }
+    .prog-body h3 { font-family: var(--H); font-size: 1.15rem; font-weight: 600; text-transform: uppercase; margin-bottom: 9px; color: var(--text2); }
+    .prog-body p { font-size: .85rem; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
+
+    /* ── PROJECTS ─────────────────────────────── */
+    #projects { background: var(--bg); }
+    .proj-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+    .proj-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .proj-card { position: relative; overflow: hidden; cursor: pointer; }
+    .proj-card.big { grid-column: span 2; }
+    .proj-thumb { position: relative; width: 100%; height: 270px; overflow: hidden; }
+    .proj-card.big .proj-thumb { height: 370px; }
+    .proj-thumb img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.75) grayscale(20%); transition: transform .5s, filter .5s; }
+    .proj-card:hover .proj-thumb img { transform: scale(1.06); filter: brightness(.95) grayscale(0); }
+    .proj-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,25,47,.92) 0%, transparent 60%); }
+    .proj-play {
+      position: absolute; top: 18px; right: 18px;
+      padding: 8px 12px;
+      background: rgba(10,25,47,.8);
+      border: 1px solid rgba(255,255,255,.18);
+      font-family: var(--S); font-size: .64rem; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--white); opacity: 0;
+      transition: opacity .3s, transform .3s, border-color .3s, background .3s;
+      transform: translateY(-6px);
+    }
+    .proj-card:hover .proj-play { opacity: 1; transform: translateY(0); border-color: rgba(232,93,4,.5); background: rgba(232,93,4,.14); }
+    .proj-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 22px 20px; }
+    .proj-num { font-family: var(--S); font-size: .62rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); margin-bottom: 5px; }
+    .proj-title { font-family: var(--H); font-size: .98rem; font-weight: 600; text-transform: uppercase; color: var(--white); line-height: 1.2; }
+    .proj-sub { font-size: .75rem; color: rgba(204,214,246,.65); margin-top: 4px; }
+
+    /* ── SUCCESS ──────────────────────────────── */
+    #success { background: var(--bg2); }
+    .success-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 52px; }
+    .story-card {
+      background: var(--surface); padding: 34px 28px;
+      border-top: 2px solid transparent;
+      transition: border-color .3s, transform .3s;
+    }
+    .story-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+    .story-icon { font-size: 2rem; margin-bottom: 18px; }
+    .story-card h3 { font-family: var(--H); font-size: 1rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px; color: var(--text2); }
+    .story-card p { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── SOCIALS ──────────────────────────────── */
+    #socials { background: var(--bg); border-top: 1px solid var(--border); }
+    .social-row { display: flex; gap: 2px; margin-top: 40px; }
+    .social-card {
+      flex: 1; padding: 28px 20px;
+      background: var(--surface);
+      display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
+      border-bottom: 2px solid transparent;
+      transition: border-color .3s, background .3s;
+    }
+    .social-card:hover { border-color: var(--orange); background: rgba(232,93,4,.04); }
+    .social-card .si { font-size: 1.7rem; }
+    .social-card h4 { font-family: var(--H); font-size: .9rem; font-weight: 600; text-transform: uppercase; color: var(--text2); }
+    .social-card span { font-family: var(--S); font-size: .68rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+
+    /* ── CTA ──────────────────────────────────── */
+    #cta { background: var(--bg); text-align: center; padding: 120px 40px; position: relative; overflow: hidden; }
+    #cta::before {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(232,93,4,.1) 0%, transparent 70%);
+      transform: translate(-50%,-50%); pointer-events: none;
+    }
+    #cta h2 { font-family: var(--H); font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 22px; color: var(--white); position: relative; z-index: 1; }
+    #cta p { font-size: .95rem; color: var(--muted); max-width: 500px; margin: 0 auto 36px; line-height: 1.7; position: relative; z-index: 1; }
+    #cta .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .subscribe-row { display: flex; max-width: 440px; margin: 32px auto 0; }
+    .subscribe-row input { flex: 1; padding: 13px 18px; background: var(--surface); border: 1px solid var(--border); border-right: none; color: var(--text); font-family: var(--B); font-size: .9rem; outline: none; }
+    .subscribe-row input:focus { border-color: var(--orange); }
+    .subscribe-row input::placeholder { color: var(--muted); }
+    .subscribe-row button { padding: 13px 22px; background: var(--orange); color: #fff; font-family: var(--S); font-size: .8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; }
+    .subscribe-row button:hover { background: var(--orange2); }
+
+    @media(max-width:900px){
+      .about-grid,.prog-grid,.proj-grid,.success-grid{grid-template-columns:1fr;}
+      .proj-card.big{grid-column:span 1;}
+      .feat-pills{grid-template-columns:1fr;}
+      .social-row{flex-wrap:wrap;}
+      .social-card{flex:1 1 calc(50% - 1px);}
+      .hero-stats{position:relative;flex-wrap:wrap;}
+      .stat-item{flex:1 1 50%;}
+    }
+    @media(max-width:480px){
+      .stat-item{flex:1 1 100%;}
+      .social-card{flex:1 1 100%;}
+      .hero-actions{flex-direction:column;align-items:stretch;}
+      .about-badge{right:0;bottom:-16px;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  🏍️ New Batch Starting Soon! &nbsp;
+  <a href="enquiry.html">Enquire Now →</a>
+  &nbsp;|&nbsp; 📞
+  <a href="tel:+918905636766">+91 8905636766</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI Logo" onerror="this.style.display='none'"/>
+      <div class="logo-text">
+        <span class="logo-name">MRDI</span>
+        <span class="logo-tag">Bridging Gaps of Learning</span>
+      </div>
+    </a>
+    <nav>
+      <div class="nav-item">
+        <a href="programs.html">Programs ▾</a>
+        <div class="dropdown">
+          <a href="programs.html">Programs Offered</a>
+          <a href="enquiry.html">Enquiry</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="online-session.html">Online Session</a></div>
+      <div class="nav-item"><a href="knowledge-lab.html">Knowledge Lab</a></div>
+      <div class="nav-item"><a href="isac-systems-page.html">ISAC Systems</a></div>
+      <div class="nav-item">
+        <a href="innovation-hub.html">Innovation Hub ▾</a>
+        <div class="dropdown">
+          <a href="innovation-hub.html">Project Showcase</a>
+          <a href="success-stories.html">Success Stories</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="blog.html">Blog</a></div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+      <a href="enquiry.html" class="nav-cta">Enroll Now</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="https://videos.files.wordpress.com/dh8F153Z/mrdi-hero-intro.mp4" type="video/mp4"/>
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Master Research & Development Institute</p>
+    <h1 class="hero-title">Innovating Skills,<br/><em>Building Futures</em></h1>
+    <p class="hero-sub">Empowering students with industry-ready portfolios through hands-on automotive maintenance, prototyping &amp; EV innovation.</p>
+    <div class="hero-actions">
+      <a href="programs.html" class="btn-orange">Explore Programs</a>
+      <a href="isac-systems-page.html" class="btn-outline">ISAC Systems</a>
+      <a href="innovation-hub.html" class="btn-outline">View Our Work</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-mouse"></div><span>Scroll</span></div>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="stat-icon">🎓</div><div><div class="stat-num">6-Month</div><div class="stat-lbl">Skill Program</div></div></div>
+    <div class="stat-item"><div class="stat-icon">🔧</div><div><div class="stat-num">100%</div><div class="stat-lbl">Hands-on Training</div></div></div>
+    <div class="stat-item"><div class="stat-icon">⚡</div><div><div class="stat-num">EV Ready</div><div class="stat-lbl">EV & Automotive</div></div></div>
+    <div class="stat-item"><div class="stat-icon">🏆</div><div><div class="stat-num">IBW</div><div class="stat-lbl">India Bike Week Winner</div></div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-dot">●</span>Automotive Engineering</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>EV Technology</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Prototyping</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Engine Diagnostics</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Fabrication</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>ISAC.SI Platform</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Job Placement</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>India Bike Week</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Automotive Engineering</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>EV Technology</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Prototyping</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Engine Diagnostics</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Fabrication</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>ISAC.SI Platform</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Job Placement</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>India Bike Week</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG_20200417_210032_148hd.webp" alt="MRDI Workshop" onerror="this.src='https://placehold.co/700x460/112240/e85d04?text=MRDI+Workshop'"/>
+        <div class="about-badge"><div class="b-num">MRDI</div><div class="b-lbl">Since 2017</div></div>
+      </div>
+      <div>
+        <p class="sec-label reveal">Who We Are</p>
+        <h2 class="sec-title reveal">A World Filled With<br/>Boundless Potential</h2>
+        <p class="sec-desc reveal">At MRDI, we push the boundaries of innovation, empowering skills and ideas to shape industries. Guided by a vision to inspire creators, we turn imagination into impactful reality.</p>
+        <p class="sec-desc reveal mt-16">We bridge the gap between theoretical knowledge and hands-on expertise, preparing students for real-world careers in the automotive and EV industries.</p>
+        <div class="feat-pills reveal">
+          <div class="pill"><span class="pi">🔧</span> Hands-on Training</div>
+          <div class="pill"><span class="pi">🎓</span> Industry Curriculum</div>
+          <div class="pill"><span class="pi">💼</span> Job Placement</div>
+          <div class="pill"><span class="pi">⚡</span> EV Programs</div>
+          <div class="pill"><span class="pi">🏆</span> India Bike Week</div>
+          <div class="pill"><span class="pi">🤖</span> ISAC AI Platform</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="section-pad">
+  <div class="wrap">
+    <p class="sec-label reveal">What We Offer</p>
+    <h2 class="sec-title reveal">Our Programs</h2>
+    <p class="sec-desc reveal">Your pathway to a career in the automotive &amp; EV industry.</p>
+    <div class="prog-grid">
+      <div class="prog-card featured reveal">
+        <div class="prog-img"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG-20200114-WA0029.jpg" alt="6-Month Program" onerror="this.src='https://placehold.co/600x200/112240/e85d04?text=6-Month+Program'"/></div>
+        <div class="prog-body">
+          <span class="prog-tag">⭐ Flagship</span>
+          <h3>6-Month Skill Development Program</h3>
+          <p>Intensive hands-on training covering engine maintenance, diagnostics, electrical systems and automotive career readiness.</p>
+          <ul class="feature-list" style="margin-bottom:20px;">
+            <li>Practical, Hands-on Training</li>
+            <li>Industry-Relevant Curriculum</li>
+            <li>Job Placement Assistance</li>
+            <li>Upskilling Opportunities</li>
+          </ul>
+          <a href="programs.html" class="btn-ghost">Learn More & Enroll →</a>
+        </div>
+      </div>
+      <div class="prog-card reveal rd1">
+        <div class="prog-img"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG_20200417_210032_148hd.webp" alt="PSP Program" onerror="this.src='https://placehold.co/600x200/112240/e85d04?text=PSP+Program'"/></div>
+        <div class="prog-body">
+          <span class="prog-tag">Prototyping</span>
+          <h3>PSP – Prototyping Skills Program</h3>
+          <p>Expert mentorship and practical skill development. Includes ₹2000 discount on the 6-Month Program.</p>
+          <ul class="feature-list" style="margin-bottom:20px;">
+            <li>Expert Mentorship</li>
+            <li>Practical Skill Development</li>
+            <li>Group Collaboration</li>
+            <li>Discount on Main Program</li>
+          </ul>
+          <a href="programs.html" class="btn-ghost">Learn More →</a>
+        </div>
+      </div>
+      <div class="prog-card reveal rd2">
+        <div class="prog-img"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/10/new-gemini-1.png" alt="Online Session" onerror="this.src='https://placehold.co/600x200/112240/e85d04?text=Online+Session'"/></div>
+        <div class="prog-body">
+          <span class="prog-tag">Online</span>
+          <h3>Online Learning Sessions</h3>
+          <p>Expert-led automotive and EV theory sessions with interactive Q&A and recorded replays.</p>
+          <ul class="feature-list" style="margin-bottom:20px;">
+            <li>Live Expert Sessions</li>
+            <li>EV & Automotive Content</li>
+            <li>Interactive Q&A</li>
+            <li>Recorded Replays</li>
+          </ul>
+          <a href="online-session.html" class="btn-ghost">Join a Session →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-pad">
+  <div class="wrap">
+    <div class="proj-header">
+      <div>
+        <p class="sec-label reveal">Innovation Hub</p>
+        <h2 class="sec-title reveal">Check Out Our Work</h2>
+        <p class="sec-desc reveal">Concept to creation — real projects built by our students.</p>
+      </div>
+      <a href="innovation-hub.html" class="btn-outline reveal">View All Projects</a>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card big reveal" data-href="video-viewer.html?id=hub-centric-steering">
+        <div class="proj-thumb">
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/pxl_20221203_1103470784721489014944663889.webp" alt="Electric Motorcycle" onerror="this.src='https://placehold.co/800x370/112240/e85d04?text=Electric+Motorcycle'"/>
+          <div class="proj-overlay"></div><div class="proj-play">View Project</div>
+          <div class="proj-info">
+            <div class="proj-num">PROJECT 01</div>
+            <h3 class="proj-title">Electric Motorcycle with Hub-Centric Steering</h3>
+            <p class="proj-sub">Showcased at India Bike Week — designed & built by MRDI students</p>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal rd1" data-href="video-viewer.html?id=motorcycle-built-from-scratch">
+        <div class="proj-thumb">
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG_20200417_210032_148hd.webp" alt="Concept to Creation" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Concept+to+Creation'"/>
+          <div class="proj-overlay"></div><div class="proj-play">View Project</div>
+          <div class="proj-info">
+            <div class="proj-num">PROJECT 02</div>
+            <h3 class="proj-title">Motorcycle Built from Scratch</h3>
+            <p class="proj-sub">Design → Fabrication → Assembly → Testing</p>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal rd1" data-href="video-viewer.html?id=jawa-solar-ev">
+        <div class="proj-thumb">
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG-20200114-WA0029.jpg" alt="Jawa EV" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Jawa+Solar+EV'"/>
+          <div class="proj-overlay"></div><div class="proj-play">View Project</div>
+          <div class="proj-info">
+            <div class="proj-num">PROJECT 03</div>
+            <h3 class="proj-title">1965 Jawa → Solar EV Motorcycle</h3>
+            <p class="proj-sub">Vintage restoration + solar-powered conversion</p>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal rd2" data-href="video-viewer.html?id=bobber-build">
+        <div class="proj-thumb">
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/11/IMG_20171219_120811_393-1.webp" alt="Custom Bobber" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Custom+Bobber'"/>
+          <div class="proj-overlay"></div><div class="proj-play">View Project</div>
+          <div class="proj-info">
+            <div class="proj-num">PROJECT 04</div>
+            <h3 class="proj-title">Custom Bobber Build</h3>
+            <p class="proj-sub">Praised at India Bike Week 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal rd2" data-href="isac-si-tech.html">
+        <div class="proj-thumb">
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2026/01/Screenshots.png" alt="ISAC" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=ISAC+Platform'"/>
+          <div class="proj-overlay"></div>
+          <div class="proj-info">
+            <div class="proj-num">PROJECT 05</div>
+            <h3 class="proj-title">ISAC.SI – AI Capability Platform</h3>
+            <p class="proj-sub">SSIP 2.0 validated · Built by MRDI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section id="success" class="section-pad">
+  <div class="wrap">
+    <p class="sec-label reveal">Turning Passion to Career</p>
+    <h2 class="sec-title reveal">Success Stories</h2>
+    <p class="sec-desc reveal">From school dropouts to professional engineers — real MRDI transformations.</p>
+    <div class="success-grid">
+      <div class="story-card reveal" data-href="success-stories.html#story-1"><div class="story-icon">🏍️</div><h3>From Passion to Profession</h3><p>Our founder was once a school dropout who found his way through hands-on motorcycle repair, and created MRDI for students just like that.</p></div>
+      <div class="story-card reveal rd1" data-href="success-stories.html#story-3"><div class="story-icon">⚡</div><h3>All-Wheel Drive Motorcycle</h3><p>Students transformed a Maruti 800 engine into an all-wheel-drive motorcycle — tackling frame design, transmission and power distribution.</p></div>
+      <div class="story-card reveal rd2" data-href="success-stories.html#story-4"><div class="story-icon">🔬</div><h3>EV Design & Innovation</h3><p>Students designed an electric motorcycle with hub-centric steering system at India Bike Week, showcasing superior handling and future mobility.</p></div>
+      <div class="story-card reveal" data-href="success-stories.html#story-4"><div class="story-icon">🏆</div><h3>India Bike Week Recognition</h3><p>The custom Bobber built by MRDI students was praised at India's biggest national biking festival, cementing MRDI's excellence.</p></div>
+      <div class="story-card reveal rd1" data-href="success-stories.html#story-5"><div class="story-icon">🎓</div><h3>Engineering College Seminars</h3><p>Full house at CK Pithawalla College — we sparked innovation and inspired hundreds of future engineers across Gujarat.</p></div>
+      <div class="story-card reveal rd2" data-href="success-stories.html"><div class="story-icon">🤝</div><h3>OEM Industry Placement</h3><p>MRDI partnered with Patel Mobility LLP to place graduates directly into OEM dealerships from day one of completion.</p></div>
+    </div>
+    <div class="text-center mt-48"><a href="success-stories.html" class="btn-orange reveal">Read All Stories →</a></div>
+  </div>
+</section>
+
+<!-- SOCIAL LINKS -->
+<section id="socials" class="section-pad" style="padding:60px 0;">
+  <div class="wrap">
+    <p class="sec-label reveal">Find Us Online</p>
+    <div class="social-row">
+      <a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank" class="social-card reveal"><div class="si">📺</div><h4>YouTube</h4><span>Project Videos & Builds</span></a>
+      <a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank" class="social-card reveal rd1"><div class="si">👥</div><h4>Facebook</h4><span>Community & Updates</span></a>
+      <a href="https://www.linkedin.com/company/mrdi-llp" target="_blank" class="social-card reveal rd2"><div class="si">💼</div><h4>LinkedIn</h4><span>Professional Network</span></a>
+      <a href="https://www.instagram.com/mrdi_skills" target="_blank" class="social-card reveal rd3"><div class="si">📸</div><h4>Instagram</h4><span>@mrdi_skills</span></a>
+      <a href="https://api.whatsapp.com/send?phone=918905636766&text=Hi" target="_blank" class="social-card reveal rd4"><div class="si">💬</div><h4>WhatsApp</h4><span>+91 8905636766</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div style="position:relative;z-index:1;">
+    <p class="sec-label" style="justify-content:center;margin-bottom:16px;">Ready to Start?</p>
+    <h2>Craft Your Career.<br/>Build an Impressive Portfolio.</h2>
+    <p>Join MRDI's skill development programs and get hands-on experience in automotive engineering, EV technology, and prototyping.</p>
+    <div class="cta-actions">
+      <a href="https://api.whatsapp.com/send?phone=918905636766&text=Hi%2C%20I%20want%20to%20join%20MRDI" target="_blank" class="btn-orange">Start Your Adventure →</a>
+      <a href="enquiry.html" class="btn-outline">Enquiry Form</a>
+    </div>
+    <div class="subscribe-row">
+      <input type="email" placeholder="Type your email…"/>
+      <button class="subscribe-btn">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI" style="height:40px;" onerror="this.style.display='none'"/>
+        <div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div>
+      </a>
+      <p>Master Research & Development Institute — skill development for automotive maintenance, prototyping, and EV innovation in Surat, Gujarat.</p>
+      <div class="footer-socials">
+        <a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank">▶</a>
+        <a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank">f</a>
+        <a href="https://www.linkedin.com/company/mrdi-llp" target="_blank">in</a>
+        <a href="https://www.instagram.com/mrdi_skills" target="_blank">📸</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Programs</h4><ul>
+      <li><a href="programs.html">6-Month Skill Program</a></li>
+      <li><a href="programs.html">PSP Program</a></li>
+      <li><a href="online-session.html">Online Sessions</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Innovation Hub</h4><ul>
+      <li><a href="innovation-hub.html">Project Showcase</a></li>
+      <li><a href="success-stories.html">Success Stories</a></li>
+      <li><a href="knowledge-lab.html">Knowledge Lab</a></li>
+<li><a href="isac-systems-page.html">ISAC Systems</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="tel:+918905636766">+91 8905636766</a></li>
+      <li><a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=918905636766" target="_blank">WhatsApp Us</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Master Research & Development Institute (MRDI). All rights reserved.</p>
+    <p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p>
+  </div>
+</footer>
+
+<script src="mrdi.js"></script>
+</body>
+</html>
+
+
+
+
+
+
