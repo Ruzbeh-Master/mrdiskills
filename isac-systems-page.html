@@ -49,17 +49,17 @@
 
   <style>
     :root {
-      --black: #0a0a0c;
-      --white: #f5f4f0;
-      --off-white: #eceae3;
+      --black: #102447;
+      --white: #f7fbff;
+      --off-white: #edf5ff;
       --si-teal: #00c2a8;
       --si-teal-dim: #007d6e;
       --xp-amber: #f5a623;
       --xp-amber-dim: #b87510;
-      --mid-gray: #2e2e38;
-      --muted: #7a7a8a;
-      --border: rgba(255,255,255,0.08);
-      --card-bg: #12121a;
+      --mid-gray: #33557f;
+      --muted: #b5c9e6;
+      --border: rgba(255,255,255,0.14);
+      --card-bg: rgba(255,255,255,0.08);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -67,7 +67,10 @@
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--black);
+      background:
+        radial-gradient(circle at top left, rgba(245,166,35,.14) 0%, transparent 24%),
+        radial-gradient(circle at top right, rgba(0,194,168,.14) 0%, transparent 26%),
+        linear-gradient(180deg, #17335e 0%, #102447 100%);
       color: var(--white);
       font-family: 'DM Sans', sans-serif;
       font-weight: 300;
@@ -128,9 +131,9 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 20% 40%, rgba(0,194,168,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(245,166,35,0.09) 0%, transparent 65%),
-        var(--black);
+        radial-gradient(ellipse 60% 50% at 20% 40%, rgba(0,194,168,0.16) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(245,166,35,0.14) 0%, transparent 65%),
+        linear-gradient(135deg, #1c4376 0%, #17335e 60%, #102447 100%);
     }
 
     .hero-grid {
@@ -917,6 +920,87 @@
     }
 
     .footer-links a:hover { color: var(--white); }
+
+    /* ---- LIGHT THEME OVERRIDES ---- */
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(245,166,35,.12) 0%, transparent 22%),
+        radial-gradient(circle at top right, rgba(0,194,168,.12) 0%, transparent 24%),
+        linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+      color: #16345b;
+    }
+    .tag-neutral {
+      background: rgba(16,36,71,0.05);
+      color: rgba(16,36,71,0.55);
+      border: 1px solid rgba(16,36,71,0.1);
+    }
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 40%, rgba(0,194,168,0.14) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(245,166,35,0.14) 0%, transparent 65%),
+        linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
+    }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(16,36,71,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16,36,71,0.04) 1px, transparent 1px);
+    }
+    .hero-brand img,
+    .product-icon,
+    .frame-window,
+    .lci-visual-card,
+    .case-card,
+    .audience-card,
+    .flow-step,
+    .faq-item {
+      background: #ffffff;
+      box-shadow: 0 18px 34px rgba(16,36,71,0.08);
+    }
+    .hero-brand-copy span,
+    .hero-kicker,
+    .hero-desc,
+    .section-header p,
+    .lci-text p,
+    .validation p,
+    .final-cta p,
+    .faq-a,
+    .footer-brand,
+    .footer-links a,
+    .cap-label,
+    .stat-label,
+    .frame-prompt {
+      color: rgba(16,36,71,0.68);
+    }
+    .hero h1,
+    .section-header h2,
+    .final-cta h2,
+    .faq-q,
+    .footer-links a:hover {
+      color: #102447;
+    }
+    .btn-ghost {
+      color: rgba(16,36,71,0.7);
+      border-color: rgba(16,36,71,0.14);
+    }
+    .btn-ghost:hover {
+      color: #102447;
+      border-color: rgba(255,122,26,0.45);
+    }
+    .compare-table th:nth-child(1) {
+      background: #f2f7ff;
+      color: rgba(16,36,71,0.62);
+    }
+    .compare-table td:nth-child(1),
+    .compare-table td:nth-child(2),
+    .compare-table td:nth-child(3),
+    .compare-table tr:nth-child(odd) td {
+      color: rgba(16,36,71,0.74);
+      background: rgba(16,36,71,0.02);
+    }
+    .footer-band {
+      background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+      border-top: 1px solid rgba(16,36,71,0.1);
+    }
 
     /* ---- ANIMATIONS ---- */
     @keyframes fadeUp {
