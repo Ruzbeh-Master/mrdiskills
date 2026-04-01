@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="isac-systems-logo.png" />
-  <link rel="shortcut icon" href="isac-systems-logo.png" />
 
-  <!-- ===== SEO META TAGS ===== -->
+    <link rel="icon" type="image/png" href="mrdi-favicon.png" />
+  <link rel="shortcut icon" href="mrdi-favicon.png" /><!-- ===== SEO META TAGS ===== -->
   <title>ISAC Systems – Intelligent Skill & Capability Intelligence Platform | MRDI</title>
   <meta name="description" content="ISAC by MRDI is a dual-product capability intelligence system — ISAC.SI for structured learning management and ISAC.XP for AI-powered real-world capability mapping. Discover, assess, and develop engineering talent beyond grades." />
   <meta name="keywords" content="ISAC, ISAC.SI, ISAC.XP, capability intelligence, skill development, LMS for engineering students, AI learning platform, LCI, Learning Capability Index, MRDI, engineering education India" />
@@ -941,6 +940,91 @@
       width: 0;
       transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .hero {
+        min-height: auto;
+        padding: 84px 0 72px;
+      }
+      .hero-content {
+        max-width: none;
+      }
+      .hero-brand {
+        gap: 14px;
+      }
+      .hero-brand img {
+        width: 64px;
+        height: 64px;
+      }
+      .hero-desc {
+        font-size: 1rem;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .compare-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .compare-table {
+        min-width: 640px;
+      }
+      .stats-row {
+        gap: 28px;
+      }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-links {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero {
+        padding: 72px 0 60px;
+      }
+      .hero-brand {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-brand img {
+        width: 56px;
+        height: 56px;
+      }
+      .hero h1 {
+        font-size: clamp(2.1rem, 12vw, 3.2rem);
+      }
+      .hero-kicker {
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+      }
+      .btn {
+        padding: 14px 18px;
+        font-size: 0.84rem;
+      }
+      .product-card,
+      .case-card,
+      .audience-card,
+      .lci-visual-card {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+      .stat-num {
+        font-size: 2.2rem;
+      }
+      .footer-links {
+        gap: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1558,6 +1642,7 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
 
 
 
