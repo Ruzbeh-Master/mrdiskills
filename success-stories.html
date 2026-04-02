@@ -53,9 +53,11 @@
     .story-video .yt-play { position: absolute; top: 18px; right: 18px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.18); background: rgba(10,25,47,.8); display: flex; align-items: center; justify-content: center; font-family: var(--S); font-size: .64rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fff; opacity: 0; transform: translateY(-6px); transition: opacity .3s, transform .3s, border-color .3s, background .3s; }
     .story-video:hover .yt-play { opacity: 1; background: rgba(232,93,4,.14); border-color: rgba(232,93,4,.5); transform: translateY(0); }
     .story-num { font-family: var(--H); font-size: 5rem; font-weight: 700; color: rgba(232,93,4,.08); line-height: 1; margin-bottom: -16px; }
-    .story-body h2 { font-family: var(--H); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 14px; line-height: 1.05; }
-    .story-body p { font-size: .92rem; color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
-    .story-highlight { background: var(--surface); border-left: 3px solid var(--orange); padding: 16px 20px; margin: 20px 0; font-family: var(--S); font-size: .95rem; font-weight: 500; color: var(--text); line-height: 1.5; }
+    .story-body h2 { font-family: var(--H); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 700; text-transform: uppercase; color: var(--text2); margin-bottom: 14px; line-height: 1.12; letter-spacing: .2px; }
+    .story-body p { font-size: .98rem; color: #55697f; line-height: 1.82; margin-bottom: 16px; font-family: var(--B); }
+    .story-highlight { background: #f8fafc; border: 1px solid rgba(16,36,71,.08); border-left: 3px solid var(--orange); padding: 18px 22px; margin: 20px 0; font-family: var(--B); font-size: .98rem; font-weight: 500; color: #3f546d; line-height: 1.78; }
+    .story-body .sec-label { color: var(--orange); letter-spacing: 1.1px; font-size: .78rem; }
+    .story-full { border-bottom: 1px solid rgba(16,36,71,.08); }
     @media(max-width:768px){ .story-full,.story-full.flip{grid-template-columns:1fr;direction:ltr;} }
   </style>
   <!-- Vercel Web Analytics -->
@@ -214,6 +216,8 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
+
 
 
 
