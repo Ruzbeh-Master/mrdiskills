@@ -15,7 +15,7 @@
       display: flex;
       align-items: flex-end;
       overflow: hidden;
-      background: #eef5ff;
+      background: #f5f6f8;
     }
     .hero-video-bg { position: absolute; inset: 0; z-index: 0; }
     .hero-video-bg video {
@@ -29,8 +29,8 @@
     .hero-overlay {
       position: absolute; inset: 0;
       background:
-        linear-gradient(90deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.72) 38%, rgba(255,255,255,.2) 72%, rgba(255,255,255,.42) 100%),
-        linear-gradient(180deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 28%, rgba(255,255,255,.3) 100%);
+        linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.8) 38%, rgba(255,255,255,.3) 72%, rgba(255,255,255,.5) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,0) 28%, rgba(255,255,255,.36) 100%);
     }
     .hero-content {
       position: relative;
@@ -119,7 +119,7 @@
     @keyframes fadeIn { from{opacity:0} to{opacity:1} }
 
     /* ── ABOUT ────────────────────────────────── */
-    #about { background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%); }
+    #about { background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .about-img-wrap { position: relative; }
     .about-img-wrap img { width: 100%; height: 460px; object-fit: cover; border: 1px solid var(--border); filter: brightness(.96); box-shadow: 0 22px 44px rgba(9,24,46,.18); }
@@ -141,7 +141,7 @@
     .pill .pi { color: var(--orange); }
 
     /* ── PROGRAMS ─────────────────────────────── */
-    #programs { background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%); }
+    #programs { background: linear-gradient(180deg, #f8f9fb 0%, #f1f3f6 100%); }
     .prog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 52px; }
     .prog-card {
       background: #ffffff; overflow: hidden;
@@ -164,7 +164,7 @@
     .prog-body p { font-size: .96rem; color: var(--muted); line-height: 1.75; margin-bottom: 18px; }
 
     /* ── PROJECTS ─────────────────────────────── */
-    #projects { background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%); }
+    #projects { background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%); }
     .proj-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
     .proj-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
     .proj-card { position: relative; overflow: hidden; cursor: pointer; }
@@ -192,7 +192,7 @@
     .proj-sub { font-size: .75rem; color: rgba(204,214,246,.65); margin-top: 4px; }
 
     /* ── SUCCESS ──────────────────────────────── */
-    #success { background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%); }
+    #success { background: linear-gradient(180deg, #f8f9fb 0%, #f1f3f6 100%); }
     .success-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 52px; }
     .story-card {
       background: #ffffff; padding: 34px 28px;
@@ -206,7 +206,7 @@
     .story-card p { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 
     /* ── SOCIALS ──────────────────────────────── */
-    #socials { background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%); border-top: 1px solid var(--border); }
+    #socials { background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%); border-top: 1px solid var(--border); }
     .social-row { display: flex; gap: 2px; margin-top: 40px; }
     .social-card {
       flex: 1; padding: 28px 20px;
@@ -222,7 +222,7 @@
     .social-card span { font-family: var(--S); font-size: .8rem; color: var(--muted); letter-spacing: .4px; text-transform: uppercase; }
 
     /* ── CTA ──────────────────────────────────── */
-    #cta { background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%); text-align: center; padding: 120px 40px; position: relative; overflow: hidden; }
+    #cta { background: linear-gradient(180deg, #f8f9fb 0%, #f1f3f6 100%); text-align: center; padding: 120px 40px; position: relative; overflow: hidden; }
     #cta::before {
       content: ''; position: absolute; top: 50%; left: 50%;
       width: 700px; height: 700px;
@@ -255,8 +255,8 @@
       #hero{align-items:flex-end;min-height:92vh;}
       .hero-overlay{
         background:
-          linear-gradient(180deg, rgba(255,255,255,.2) 0%, rgba(255,255,255,.42) 34%, rgba(255,255,255,.9) 100%),
-          linear-gradient(90deg, rgba(255,255,255,.78) 0%, rgba(255,255,255,.42) 100%);
+          linear-gradient(180deg, rgba(255,255,255,.26) 0%, rgba(255,255,255,.48) 34%, rgba(255,255,255,.92) 100%),
+          linear-gradient(90deg, rgba(255,255,255,.82) 0%, rgba(255,255,255,.46) 100%);
       }
       .hero-content{padding:124px 22px 60px;}
       .hero-shell{max-width:100%;}

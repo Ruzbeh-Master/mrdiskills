@@ -10,15 +10,15 @@
 
 :root {
   --bg:       #ffffff;
-  --bg2:      #f4f8ff;
+  --bg2:      #f7f8fa;
   --surface:  #ffffff;
-  --surface2: #eef4ff;
-  --border:   rgba(16,36,71,0.12);
+  --surface2: #f1f4f7;
+  --border:   rgba(16,36,71,0.1);
   --orange:   #ff7a1a;
   --orange2:  #ffac33;
-  --text:     #3f628c;
-  --text2:    #102447;
-  --muted:    #6f89a9;
+  --text:     #4f6075;
+  --text2:    #171f2b;
+  --muted:    #66788f;
   --white:    #ffffff;
   --H: 'Oswald', sans-serif;
   --S: 'Rajdhani', sans-serif;
@@ -28,9 +28,9 @@
 html { scroll-behavior: smooth; }
 body {
   background:
-    radial-gradient(circle at top left, rgba(255,172,51,.12) 0%, transparent 22%),
-    radial-gradient(circle at top right, rgba(96,180,255,.12) 0%, transparent 24%),
-    linear-gradient(180deg, #ffffff 0%, #f8fbff 55%, #f2f7ff 100%);
+    radial-gradient(circle at top left, rgba(255,172,51,.08) 0%, transparent 18%),
+    radial-gradient(circle at top right, rgba(96,180,255,.08) 0%, transparent 20%),
+    linear-gradient(180deg, #ffffff 0%, #fafbfd 55%, #f4f6f8 100%);
   color: var(--text);
   font-family: var(--B);
   font-size: 16px;
@@ -72,12 +72,12 @@ body::after {
 ════════════════════════════════ */
 header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,.88);
+  background: rgba(255,255,255,.97);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
   transition: background .3s;
-  box-shadow: 0 10px 30px rgba(16,36,71,.08);
+  box-shadow: 0 10px 24px rgba(23,31,43,.05);
 }
 .header-inner {
   max-width: 1280px; margin: 0 auto;
@@ -113,19 +113,20 @@ nav {
   font-family: var(--S);
   font-size: .9rem; font-weight: 600;
   letter-spacing: .3px; text-transform: uppercase;
-  color: var(--muted);
-  transition: color .2s;
+  color: #48688f;
+  transition: color .2s, background .2s;
   white-space: nowrap;
+  border-radius: 999px;
 }
 .nav-item > a:hover,
-.nav-item > a.active { color: var(--orange); }
+.nav-item > a.active { color: var(--orange); background: rgba(255,122,26,.08); }
 .nav-item:hover .dropdown { display: block; }
 
 .dropdown {
   display: none;
   position: absolute; top: 100%; left: 0;
   min-width: 210px;
-  background: rgba(255,255,255,.98);
+  background: rgba(255,255,255,1);
   border: 1px solid var(--border);
   border-top: 2px solid var(--orange);
   z-index: 500;
@@ -135,12 +136,12 @@ nav {
   display: block; padding: 11px 20px;
   font-family: var(--S);
   font-size: .88rem; font-weight: 500;
-  letter-spacing: .2px; color: var(--muted);
+  letter-spacing: .2px; color: #56779d;
   border-bottom: 1px solid var(--border);
-  transition: color .2s, padding-left .2s;
+  transition: color .2s, padding-left .2s, background .2s;
 }
 .dropdown a:last-child { border-bottom: none; }
-.dropdown a:hover { color: var(--orange); padding-left: 28px; }
+.dropdown a:hover { color: var(--orange); padding-left: 28px; background: #fff7ef; }
 
 .nav-cta {
   margin-left: 10px;
@@ -181,9 +182,9 @@ nav {
 ════════════════════════════════ */
 .page-hero {
   background:
-    radial-gradient(circle at top right, rgba(255,172,51,.18) 0%, transparent 24%),
-    radial-gradient(circle at top left, rgba(96,180,255,.16) 0%, transparent 28%),
-    linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+    radial-gradient(circle at top right, rgba(255,172,51,.12) 0%, transparent 22%),
+    radial-gradient(circle at top left, rgba(96,180,255,.1) 0%, transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
   border-bottom: 1px solid var(--border);
   padding: 80px 40px 60px;
   text-align: center;
@@ -309,7 +310,7 @@ nav {
 ════════════════════════════════ */
 .marquee-wrap {
   overflow: hidden;
-  background: linear-gradient(90deg, #f8fbff 0%, #eef5ff 100%);
+  background: linear-gradient(90deg, #fbfbfc 0%, #f2f5f8 100%);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 17px 0;
@@ -345,7 +346,7 @@ nav {
   cursor: pointer;
   box-shadow: 0 16px 30px rgba(16,36,71,.08);
 }
-.video-card:hover { transform: translateY(-5px); border-color: rgba(255,122,26,.45); box-shadow: 0 22px 40px rgba(16,36,71,.14); background: #fff8f3; }
+.video-card:hover { transform: translateY(-5px); border-color: rgba(255,122,26,.35); box-shadow: 0 20px 36px rgba(23,31,43,.1); background: #fffaf6; }
 .video-thumb {
   position: relative; width: 100%; height: 200px;
   background: var(--bg2);
@@ -413,7 +414,7 @@ nav {
    FOOTER
 ════════════════════════════════ */
 footer {
-  background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f6f7f9 100%);
   border-top: 1px solid var(--border);
   position: relative; z-index: 1;
 }
