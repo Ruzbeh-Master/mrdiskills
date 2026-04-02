@@ -72,7 +72,7 @@ body::after {
 ════════════════════════════════ */
 header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,.97);
+  background: #ffffff;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
@@ -563,7 +563,7 @@ select.form-control { cursor: pointer; }
   .logo-tag { font-size: .62rem; letter-spacing: .6px; }
   nav { display: none; flex-direction: column; position: absolute;
         top: 70px; left: 0; right: 0;
-        background: rgba(255,255,255,.98); padding: 12px 0 20px;
+        background: #ffffff; padding: 12px 0 20px;
         border-bottom: 1px solid var(--border); z-index: 99;
         max-height: calc(100vh - 70px); overflow-y: auto; }
   nav.open { display: flex; }
