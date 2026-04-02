@@ -25,7 +25,11 @@
     .ebook-card:hover .ebook-overlay { opacity: 1; }
     @media(max-width:768px){ .prog-detail,.ebook-grid{grid-template-columns:1fr;} .prog-detail.flip{direction:ltr;} }
   </style>
-  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
