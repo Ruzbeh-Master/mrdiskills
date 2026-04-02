@@ -387,7 +387,7 @@
     /* ---- ISAC ECOSYSTEM ---- */
     .ecosystem {
       padding: 80px 0 100px;
-      background: #0d0d14;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f6f8 100%);
       position: relative;
       overflow: hidden;
     }
@@ -398,7 +398,7 @@
       font-family: 'Syne', sans-serif;
       font-size: clamp(120px, 20vw, 240px);
       font-weight: 800;
-      color: rgba(255,255,255,0.015);
+      color: rgba(16,36,71,0.04);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -424,7 +424,7 @@
       transition: border-color 0.3s;
     }
 
-    .flow-step:hover { border-color: rgba(255,255,255,0.18); }
+    .flow-step:hover { border-color: rgba(255,122,26,0.22); }
 
     .flow-step + .flow-step::before {
       content: '→';
@@ -432,7 +432,7 @@
       left: -16px;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--muted);
+      color: #8aa0ba;
       font-size: 18px;
       z-index: 3;
     }
@@ -442,7 +442,7 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.2em;
-      color: var(--muted);
+      color: #70839b;
       margin-bottom: 14px;
     }
 
@@ -450,11 +450,12 @@
       font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 10px;
+      color: #171f2b;
     }
 
     .flow-step p {
       font-size: 0.88rem;
-      color: rgba(245,244,240,0.5);
+      color: #5f738c;
       line-height: 1.65;
     }
 
@@ -1139,6 +1140,28 @@
     .frame-top {
       background: #f4f6f8;
     }
+    .frame-title,
+    .cap-label,
+    .frame-prompt {
+      color: #4b6079;
+    }
+    .hero-brand-copy span,
+    .hero-kicker {
+      color: #526981;
+    }
+    .hero-brand-copy strong {
+      color: #171f2b;
+    }
+    .hero-desc {
+      color: #4f6075;
+    }
+    .cap-score {
+      color: #d78312;
+    }
+    .frame-prompt em {
+      color: #66788f !important;
+      font-style: italic;
+    }
     .cap-bar-wrap {
       background: rgba(16,36,71,0.08);
     }
@@ -1150,6 +1173,107 @@
     .compare-table td:nth-child(3) {
       color: #4f6075;
     }
+    .try-xp-bg {
+      background:
+        radial-gradient(circle at 50% 18%, rgba(245,166,35,0.12) 0%, rgba(245,166,35,0.04) 22%, transparent 50%),
+        linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(244,247,250,0.38) 100%);
+    }
+    .try-xp-inner .reveal:first-child {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .try-xp h2 {
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      margin: 18px auto 22px;
+    }
+    .try-xp h2 span {
+      color: #f5a623;
+    }
+    .try-xp p {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      color: #5b7088;
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+    .try-frame {
+      background: #ffffff;
+      border: 1px solid rgba(245,166,35,0.18);
+      box-shadow: 0 24px 48px rgba(16,36,71,0.08);
+    }
+    .frame-top {
+      border-bottom: 1px solid rgba(16,36,71,0.08);
+    }
+    .frame-body {
+      padding: 34px 36px 36px;
+    }
+    .capability-check {
+      gap: 16px;
+    }
+    .cap-row {
+      padding: 0;
+      background: transparent;
+      border: 0;
+      gap: 18px;
+    }
+    .cap-label {
+      min-width: 88px;
+      font-size: 1rem;
+      color: #4b6079;
+    }
+    .cap-score {
+      min-width: 28px;
+      text-align: right;
+      font-size: 0.88rem;
+    }
+    .frame-prompt {
+      color: #51657c;
+      line-height: 1.8;
+      margin-top: 10px;
+      margin-bottom: 22px;
+    }
+    .frame-prompt em {
+      color: #5f738c !important;
+      background: transparent !important;
+      font-style: italic;
+    }
+    .footer-socials a {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(16,36,71,0.14);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #304965;
+      background: #ffffff;
+      box-shadow: 0 10px 20px rgba(16,36,71,0.05);
+    }
+    .footer-socials a:hover {
+      border-color: rgba(232,93,4,0.3);
+      color: #e85d04;
+      background: #fff6ee;
+    }
+    .footer-brand p,
+    .footer-col li a,
+    .footer-bottom p {
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .footer-brand p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 500;
+      line-height: 1.7;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #4f6480;
+      max-width: 310px;
+      margin: 16px 0 24px;
+    }
+
 
     /* ---- ANIMATIONS ---- */
     @keyframes fadeUp {
@@ -1218,6 +1342,21 @@
       .footer-links {
         gap: 16px;
       }
+      .try-xp h2 {
+        line-height: 1.02;
+      }
+      .try-xp p {
+        font-size: 1rem;
+      }
+      .frame-body {
+        padding: 28px 22px 26px;
+      }
+      .cap-row {
+        gap: 12px;
+      }
+      .cap-label {
+        min-width: 78px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1257,6 +1396,28 @@
       }
       .footer-links {
         gap: 12px;
+      }
+      .try-xp h2 {
+        line-height: 1.04;
+        letter-spacing: -0.03em;
+      }
+      .try-frame {
+        border-radius: 26px;
+      }
+      .frame-body {
+        padding: 24px 18px 24px;
+      }
+      .cap-row {
+        display: grid;
+        grid-template-columns: 70px 1fr 28px;
+        align-items: center;
+      }
+      .cap-label {
+        min-width: 0;
+        font-size: 0.95rem;
+      }
+      .frame-prompt {
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -1458,12 +1619,10 @@
   <div class="try-xp-bg"></div>
   <div class="container try-xp-inner">
     <div class="reveal">
-      <span class="tag tag-amber">Try It Now — Free</span>
+      <span class="tag tag-amber">Try It Now - Free</span>
       <h2 id="try-heading">What does your<br/><span>capability profile</span> look like?</h2>
-      <p>Answer a few AI-driven questions about your projects, habits, and learning style. ISAC.XP builds your capability map in minutes — no grades required.</p>
-      <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="font-size:16px; padding: 18px 36px;">
-        ⚡ Start Your Free Capability Profile
-      </a>
+      <p>Answer a few AI-driven questions about your projects, habits, and learning style. ISAC.XP builds your capability map in minutes, with a clear visual profile that feels practical and easy to understand.</p>
+      <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="font-size:16px; padding: 18px 36px;">Start Your Free Capability Profile</a>
     </div>
 
     <!-- DEMO PREVIEW CARD -->
@@ -1472,10 +1631,10 @@
         <span class="frame-dot fd1"></span>
         <span class="frame-dot fd2"></span>
         <span class="frame-dot fd3"></span>
-        <span class="frame-title">ISAC.XP — Capability Intelligence Dashboard</span>
+        <span class="frame-title">ISAC.XP - Capability Intelligence Dashboard</span>
       </div>
       <div class="frame-body">
-        <p class="frame-prompt" style="margin-bottom:20px; font-family:'Syne',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile · Automotive Engineering Student</p>
+        <p class="frame-prompt" style="margin-bottom:20px; font-family:'Syne',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile � Automotive Engineering Student</p>
         <div class="capability-check" id="capBars">
           <div class="cap-row">
             <span class="cap-label">Logic</span>
@@ -1508,8 +1667,8 @@
             <span class="cap-score">58</span>
           </div>
         </div>
-        <p class="frame-prompt">AI Summary: <em style="color:rgba(245,244,240,0.6)">"Strong curiosity and learning velocity suggest high potential for R&D and prototyping roles. Execution quotient shows room to grow through structured project completion."</em></p>
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="width:100%; justify-content:center; margin-top:8px;">Build Your Own Profile →</a>
+        <p class="frame-prompt">AI Summary: <em>"Strong curiosity and learning velocity suggest high potential for R&amp;D and prototyping roles. Execution quotient shows room to grow through structured project completion."</em></p>
+        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="width:100%; justify-content:center; margin-top:8px;">Build Your Own Profile -&gt;</a>
       </div>
     </div>
   </div>
@@ -1621,7 +1780,7 @@
           <tr>
             <td>Core Technology</td>
             <td>Supabase, mobile-first web app</td>
-            <td>Gemini AI + LCI Engine</td>
+            <td>Supabase, mobile-first app + LCI Engine</td>
           </tr>
           <tr>
             <td>Output</td>
@@ -1674,7 +1833,7 @@
         <span class="stat-label">Dealership Hiring Partners</span>
       </div>
       <div class="stat" role="listitem">
-        <span class="stat-num amber">4</span>
+        <span class="stat-num amber">6</span>
         <span class="stat-label">LCI Behavioral Dimensions</span>
       </div>
     </div>
@@ -1789,12 +1948,7 @@
         </div>
       </a>
       <p>Master Research &amp; Development Institute - skill development for automotive maintenance, prototyping, and EV innovation in Surat, Gujarat.</p>
-      <div class="footer-socials">
-        <a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank">></a>
-        <a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank">f</a>
-        <a href="https://www.linkedin.com/company/mrdi-llp" target="_blank">in</a>
-        <a href="https://www.instagram.com/mrdi_skills" target="_blank">ig</a>
-      </div>
+      <div class="footer-socials"><a href="https://share.google/kQz0J9D0HDhBzyqcC" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 7.5v9l8-4.5z"/></svg></a><a href="https://share.google/I8fwUlm41RqzXYgzQ" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.3 0-.9-.1-1.8-.1-2.9 0-4.7 1.7-4.7 5V11H7v3h2.5v7z"/></svg></a><a href="https://www.linkedin.com/company/mrdi-llp" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.2 8.3a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6ZM4.9 9.8h2.6V19H4.9zm4.3 0h2.5v1.3h.1c.4-.7 1.4-1.6 2.9-1.6 3 0 3.6 2 3.6 4.6V19h-2.6v-4.2c0-1 0-2.3-1.4-2.3s-1.7 1.1-1.7 2.2V19H9.2z"/></svg></a><a href="https://www.instagram.com/mrdi_skills" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16.8" cy="7.2" r="1.1" fill="currentColor"/></svg></a></div>
     </div>
     <div class="footer-col">
       <h4>Programs</h4>
@@ -1826,8 +1980,8 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Master Research &amp; Development Institute (MRDI). All rights reserved.</p>
-    <p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p>
+    <p>&copy; 2025 Master Research &amp; Development Institute (MRDI). All rights reserved.</p>
+    <p>54-55 Thakornagar Society, Udhana, Surat 394210 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p>
   </div>
 </footer>
 
@@ -1881,6 +2035,10 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
+
+
+
 
 
 

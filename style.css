@@ -426,19 +426,25 @@ footer {
   padding: 72px 40px 52px;
 }
 .footer-brand p {
-  font-size: .95rem; color: var(--muted);
+  font-size: .95rem; color: #55697f;
   line-height: 1.8; max-width: 270px;
   margin: 16px 0 24px;
 }
-.footer-socials { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-socials { display: flex; gap: 12px; flex-wrap: wrap; }
 .footer-socials a {
-  width: 36px; height: 36px;
-  border: 1px solid var(--border);
+  width: 42px; height: 42px;
+  border: 1px solid rgba(16,36,71,.14);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(16,36,71,.05);
   display: flex; align-items: center; justify-content: center;
-  font-size: .85rem; color: var(--muted);
-  transition: border-color .2s, color .2s, background .2s;
+  font-family: var(--S);
+  font-size: .78rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  color: #304965;
+  transition: border-color .2s, color .2s, background .2s, transform .2s, box-shadow .2s;
 }
-.footer-socials a:hover { border-color: var(--orange); color: var(--orange); background: rgba(232,93,4,.08); }
+.footer-socials a:hover { border-color: rgba(232,93,4,.28); color: var(--orange); background: #fff6ee; box-shadow: 0 14px 24px rgba(232,93,4,.12); transform: translateY(-1px); }
+.footer-socials a svg { width: 18px; height: 18px; display: block; }
 .footer-col h4 {
   font-family: var(--H);
   font-size: .9rem; font-weight: 600;
@@ -449,7 +455,7 @@ footer {
 }
 .footer-col li { margin-bottom: 10px; }
 .footer-col li a {
-  font-size: .92rem; color: var(--muted);
+  font-size: .92rem; color: #55697f;
   display: flex; align-items: center; gap: 7px;
   transition: color .2s, gap .2s;
 }
@@ -462,7 +468,7 @@ footer {
   display: flex; justify-content: space-between;
   align-items: center; flex-wrap: wrap; gap: 10px;
 }
-.footer-bottom p { font-size: .84rem; color: var(--muted); }
+.footer-bottom p { font-size: .84rem; color: #5b7088; }
 .footer-bottom a { color: var(--orange); }
 
 /* ════════════════════════════════
@@ -612,3 +618,7 @@ select.form-control { cursor: pointer; }
   .page-title { font-size: clamp(1.9rem, 11vw, 2.8rem); }
   .video-thumb { height: 168px; }
 }
+
+
+
+
