@@ -45,7 +45,7 @@
   window.addEventListener('scroll', () => {
     if (!header) return;
     header.style.background = window.scrollY > 40
-      ? 'rgba(6,14,28,.98)' : 'rgba(10,25,47,.96)';
+      ? '#ffffff' : '#ffffff';
   }, { passive: true });
 
   /* ── Smooth anchor scroll ───────────────── */
