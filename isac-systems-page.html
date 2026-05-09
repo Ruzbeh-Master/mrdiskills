@@ -68,7 +68,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -95,9 +95,10 @@
         radial-gradient(circle at top right, rgba(0,194,168,.14) 0%, transparent 26%),
         linear-gradient(180deg, #17335e 0%, #102447 100%);
       color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      line-height: 1.72;
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
       overflow-x: hidden;
     }
 
@@ -115,10 +116,10 @@
     .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
     .tag {
       display: inline-block;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       padding: 5px 14px;
       border-radius: 2px;
@@ -127,7 +128,7 @@
     .tag-amber { background: rgba(245,166,35,0.12); color: var(--xp-amber); border: 1px solid rgba(245,166,35,0.25); }
     .tag-neutral { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.1); }
 
-    h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
+    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.15; letter-spacing: -0.025em; text-wrap: balance; }
 
     /* ---- NOISE OVERLAY ---- */
     body::before {
@@ -193,17 +194,17 @@
     }
     .hero-brand-copy span {
       display: block;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       color: rgba(245,244,240,0.5);
       margin-bottom: 8px;
     }
     .hero-brand-copy strong {
       display: block;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(1.2rem, 2vw, 1.6rem);
       font-weight: 800;
       letter-spacing: -0.02em;
@@ -248,10 +249,11 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0;
+      line-height: 1.2;
       padding: 15px 28px;
       border-radius: 4px;
       cursor: pointer;
@@ -365,10 +367,10 @@
     .product-card.xp h3 { color: var(--xp-amber); }
 
     .product-card .tagline {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 20px;
@@ -407,6 +409,41 @@
     .dot-teal { background: var(--si-teal); }
     .dot-amber { background: var(--xp-amber); }
 
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .product-actions .btn {
+      min-height: 54px;
+      padding: 0 28px;
+      border-radius: 6px;
+      box-shadow: 0 14px 30px rgba(245,166,35,0.18);
+    }
+
+    .product-hunt-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 54px;
+      line-height: 0;
+      border-radius: 8px;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .product-hunt-badge:hover {
+      transform: translateY(-2px);
+      filter: drop-shadow(0 12px 22px rgba(255,97,87,0.14));
+    }
+
+    .product-hunt-badge img {
+      display: block;
+      width: 250px;
+      max-width: 100%;
+      height: auto;
+    }
+
     /* ---- ISAC ECOSYSTEM ---- */
     .ecosystem {
       padding: 80px 0 100px;
@@ -418,7 +455,7 @@
     .ecosystem::before {
       content: 'ISAC';
       position: absolute;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(120px, 20vw, 240px);
       font-weight: 800;
       color: rgba(16,36,71,0.04);
@@ -461,10 +498,10 @@
     }
 
     .step-num {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.1em;
       color: #70839b;
       margin-bottom: 14px;
     }
@@ -536,10 +573,10 @@
     .lci-visual-label {
       display: inline-block;
       margin-bottom: 12px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       color: var(--xp-amber);
     }
@@ -605,7 +642,7 @@
 
     .frame-title {
       margin-left: 10px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       font-weight: 600;
       color: var(--muted);
@@ -635,7 +672,7 @@
     .cap-label { font-size: 0.9rem; color: rgba(245,244,240,0.7); }
     .cap-bar-wrap { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
     .cap-bar { height: 100%; border-radius: 3px; }
-    .cap-score { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: var(--xp-amber); }
+    .cap-score { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: var(--xp-amber); }
 
     .frame-prompt {
       font-size: 0.9rem;
@@ -735,7 +772,7 @@
     }
 
     .compare-table th {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -797,7 +834,7 @@
     .stat { text-align: center; }
 
     .stat-num {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 2.8rem;
       font-weight: 800;
       letter-spacing: -0.03em;
@@ -807,7 +844,7 @@
     .stat-num.teal { color: var(--si-teal); }
     .stat-num.amber { color: var(--xp-amber); }
 
-    .stat-label { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Syne', sans-serif; margin-top: 6px; display: block; }
+    .stat-label { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Space Grotesk', sans-serif; margin-top: 6px; display: block; }
 
     /* ---- FINAL CTA ---- */
     .final-cta {
@@ -869,7 +906,7 @@
       background: none;
       border: none;
       color: var(--white);
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 1rem;
       font-weight: 600;
       padding: 24px 0;
@@ -919,7 +956,7 @@
     }
 
     .footer-brand {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 13px;
       font-weight: 700;
       color: var(--muted);
@@ -936,7 +973,7 @@
       font-size: 13px;
       color: var(--muted);
       text-decoration: none;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -1281,12 +1318,12 @@
     .footer-brand p,
     .footer-col li a,
     .footer-bottom p {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Manrope', sans-serif;
       letter-spacing: 0;
       text-transform: none;
     }
     .footer-brand p {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-size: 0.98rem;
       font-weight: 500;
       line-height: 1.7;
@@ -1471,7 +1508,14 @@
       </div>
       <div class="nav-item"><a href="online-session.html">Online Session</a></div>
       <div class="nav-item"><a href="knowledge-lab.html">Knowledge Lab</a></div>
-      <div class="nav-item"><a href="isac-systems-page.html" class="active">ISAC Systems</a></div>
+      <div class="nav-item">
+        <a href="isac-systems-page.html" class="active">ISAC Systems</a>
+        <div class="dropdown">
+          <a href="isac-systems-page.html">ISAC Systems</a>
+          <a href="isac-si-tech.html">ISAC.SI</a>
+          <a href="isac-xp.html">ISAC.XP</a>
+        </div>
+      </div>
       <div class="nav-item">
         <a href="innovation-hub.html">Innovation Hub</a>
         <div class="dropdown">
@@ -1510,8 +1554,8 @@
         ISAC is MRDI's capability intelligence ecosystem — two distinct platforms working in tandem to structure learning journeys and map the skills engineers actually carry into the real world.
       </p>
       <div class="hero-ctas">
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" aria-label="Try ISAC.XP free">
-          ⚡ Try ISAC.XP Free
+        <a href="isac-xp.html" class="btn btn-primary-xp" aria-label="Explore ISAC.XP">
+          Explore ISAC.XP Now
         </a>
         <a href="isac-si-tech.html" class="btn btn-outline-si" aria-label="Learn about ISAC.SI">
           Explore ISAC.SI →
@@ -1567,7 +1611,12 @@
           <li><span class="dot dot-amber"></span>Identifies hidden strengths industry actually values</li>
           <li><span class="dot dot-amber"></span>Built on Gemini and other LLM models integration</li>
         </ul>
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp">⚡ Try ISAC.XP Now — It's Free</a>
+        <div class="product-actions">
+          <a href="isac-xp.html" class="btn btn-primary-xp">Explore ISAC.XP Now</a>
+          <a href="https://www.producthunt.com/products/isac-xp?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-isac-xp" target="_blank" rel="noopener noreferrer" class="product-hunt-badge" aria-label="View ISAC.XP on Product Hunt">
+            <img alt="ISAC.XP - Measure what actually matters. Upgrade how you learn. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1141485&amp;theme=light&amp;t=1778309802160"/>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -1621,7 +1670,7 @@
         <h2 id="lci-heading">The Learning Capability Index (LCI)</h2>
         <p>Grades measure what you memorised. The LCI measures how you learn, adapt, and execute — four behavioral dimensions that predict real-world engineering performance.</p>
         <p>Developed by MRDI as an alternative to traditional assessment, LCI powers the ISAC.XP scoring engine. It is designed to scale across corporate L&D and global talent markets.</p>
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="margin-top: 16px;">Discover Your LCI Score →</a>
+        <a href="isac-xp.html" class="btn btn-primary-xp" style="margin-top: 16px;">Explore the LCI Framework -&gt;</a>
       </div>
       <div class="lci-visuals reveal">
         <div class="lci-visual-card">
@@ -1645,7 +1694,7 @@
       <span class="tag tag-amber">Try It Now - Free</span>
       <h2 id="try-heading">What does your<br/><span>capability profile</span> look like?</h2>
       <p>Answer a few AI-driven questions about your projects, habits, and learning style. ISAC.XP builds your capability map in minutes, with a clear visual profile that feels practical and easy to understand.</p>
-      <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="font-size:16px; padding: 18px 36px;">Start Your Free Capability Profile</a>
+      <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding: 18px 36px;">Explore ISAC.XP Now</a>
     </div>
 
     <!-- DEMO PREVIEW CARD -->
@@ -1657,7 +1706,7 @@
         <span class="frame-title">ISAC.XP - Capability Intelligence Dashboard</span>
       </div>
       <div class="frame-body">
-        <p class="frame-prompt" style="margin-bottom:20px; font-family:'Syne',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile � Automotive Engineering Student</p>
+        <p class="frame-prompt" style="margin-bottom:20px; font-family:'Space Grotesk',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile � Automotive Engineering Student</p>
         <div class="capability-check" id="capBars">
           <div class="cap-row">
             <span class="cap-label">Logic</span>
@@ -1691,7 +1740,7 @@
           </div>
         </div>
         <p class="frame-prompt">AI Summary: <em>"Strong curiosity and learning velocity suggest high potential for R&amp;D and prototyping roles. Execution quotient shows room to grow through structured project completion."</em></p>
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="width:100%; justify-content:center; margin-top:8px;">Build Your Own Profile -&gt;</a>
+        <a href="isac-xp.html" class="btn btn-primary-xp" style="width:100%; justify-content:center; margin-top:8px;">Explore ISAC.XP Now -&gt;</a>
       </div>
     </div>
   </div>
@@ -1935,9 +1984,7 @@
       <h2 id="final-cta-heading">Your capability is bigger<br/>than your marksheet.</h2>
       <p>ISAC.XP takes less than 10 minutes. Get your LCI score, discover your strongest capability dimensions, and start building a portfolio that means something.</p>
       <div class="cta-pair">
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="font-size:16px; padding:18px 36px;">
-          ⚡ Try ISAC.XP — Free
-        </a>
+        <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding:18px 36px;">Explore ISAC.XP Now</a>
         <a href="enquiry.html" class="btn btn-outline-si" style="font-size:15px; padding:18px 32px;">
           Enquire About MRDI Programs
         </a>
@@ -1953,7 +2000,7 @@
     <nav class="footer-links" aria-label="Footer navigation">
       <a href="https://www.mrdiskills.com/programs-offered-at-mrdi/">Programs</a>
       <a href="isac-si-tech.html">ISAC.SI</a>
-      <a href="https://isac.xp.mrdiskills.com">ISAC.XP</a>
+      <a href="isac-xp.html">ISAC.XP</a>
       <a href="https://www.mrdiskills.com/contact/">Contact</a>
       <a href="https://www.mrdiskills.com/blog/">Blog</a>
     </nav>
