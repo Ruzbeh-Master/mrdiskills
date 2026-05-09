@@ -229,7 +229,25 @@
     .proj-thumb { position: relative; width: 100%; height: 270px; overflow: hidden; }
     .proj-card.big .proj-thumb { height: 370px; }
     .proj-thumb img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.75) grayscale(20%); transition: transform .5s, filter .5s; }
+    .proj-thumb.isac-logo {
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(0,194,168,.18) 0%, transparent 34%),
+        radial-gradient(circle at 58% 58%, rgba(245,166,35,.12) 0%, transparent 30%),
+        linear-gradient(135deg, #091a34 0%, #102447 58%, #071326 100%);
+    }
+    .proj-thumb.isac-logo img {
+      width: min(56%, 230px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 22px 28px rgba(0,0,0,.28));
+    }
     .proj-card:hover .proj-thumb img { transform: scale(1.06); filter: brightness(.95) grayscale(0); }
+    .proj-card:hover .proj-thumb.isac-logo img {
+      transform: scale(1.04);
+      filter: drop-shadow(0 24px 30px rgba(0,0,0,.32));
+    }
     .proj-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,25,47,.92) 0%, transparent 60%); }
     .proj-play {
       position: absolute; top: 18px; right: 18px;
@@ -604,8 +622,8 @@
         </div>
       </div>
       <div class="proj-card reveal rd2" data-href="isac-si-tech.html">
-        <div class="proj-thumb">
-          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2026/01/Screenshots.png" alt="ISAC" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=ISAC+Platform'"/>
+        <div class="proj-thumb isac-logo">
+          <img src="assets/images/isac-systems-blue-green.png" alt="ISAC Systems logo" onerror="this.src='isac-systems-logo.png'"/>
           <div class="proj-overlay"></div>
           <div class="proj-info">
             <div class="proj-num">PROJECT 05</div>
@@ -707,7 +725,6 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
-
 
 
 
