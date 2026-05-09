@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" type="image/png" href="mrdi-favicon.png" />
   <link rel="shortcut icon" href="mrdi-favicon.png" />
   <title>ISAC Systems | Capability Intelligence Platform by MRDI</title>
@@ -44,32 +43,18 @@
   }
 }
   </script><!-- ===== SEO META TAGS ===== -->
-  
-  
-  
-  
-  
-
   <!-- Open Graph -->
-  
-  
-  
-  
-  
-
   <!-- Twitter Card -->
-  
-  
-  
   <link rel="stylesheet" href="style.css"/>
-
   <!-- Schema.org structured data -->
-  
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
+=======
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
   <style>
     :root {
       --black: #102447;
@@ -84,11 +69,8 @@
       --border: rgba(255,255,255,0.14);
       --card-bg: rgba(255,255,255,0.08);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background:
         radial-gradient(circle at top left, rgba(245,166,35,.14) 0%, transparent 24%),
@@ -101,17 +83,14 @@
       font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
       overflow-x: hidden;
     }
-
     .topbar,
     header,
     footer {
       font-family: var(--B);
     }
-
     .footer-band {
       display: none;
     }
-
     /* ---- UTILITY ---- */
     .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
     .tag {
@@ -127,9 +106,13 @@
     .tag-teal { background: rgba(0,194,168,0.12); color: var(--si-teal); border: 1px solid rgba(0,194,168,0.25); }
     .tag-amber { background: rgba(245,166,35,0.12); color: var(--xp-amber); border: 1px solid rgba(245,166,35,0.25); }
     .tag-neutral { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.1); }
+<<<<<<< HEAD
 
     h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.15; letter-spacing: -0.025em; text-wrap: balance; }
 
+=======
+    h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
     /* ---- NOISE OVERLAY ---- */
     body::before {
       content: '';
@@ -140,7 +123,6 @@
       z-index: 999;
       opacity: 0.4;
     }
-
     /* ---- HERO ---- */
     .hero {
       position: relative;
@@ -150,7 +132,6 @@
       overflow: hidden;
       padding: 120px 0 80px;
     }
-
     .hero-bg {
       position: absolute;
       inset: 0;
@@ -159,7 +140,6 @@
         radial-gradient(ellipse 50% 60% at 80% 70%, rgba(245,166,35,0.14) 0%, transparent 65%),
         linear-gradient(135deg, #1c4376 0%, #17335e 60%, #102447 100%);
     }
-
     .hero-grid {
       position: absolute;
       inset: 0;
@@ -169,7 +149,6 @@
       background-size: 60px 60px;
       mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
     }
-
     .hero-content {
       position: relative;
       z-index: 2;
@@ -210,7 +189,6 @@
       letter-spacing: -0.02em;
       color: var(--white);
     }
-
     .hero-eyebrow {
       display: flex;
       align-items: center;
@@ -218,7 +196,6 @@
       margin-bottom: 28px;
       animation: fadeUp 0.7s ease both;
     }
-
     .hero h1 {
       font-size: clamp(2.8rem, 6vw, 5.2rem);
       font-weight: 800;
@@ -226,10 +203,8 @@
       margin-bottom: 28px;
       animation: fadeUp 0.7s 0.1s ease both;
     }
-
     .hero h1 em { font-style: normal; color: var(--si-teal); }
     .hero h1 strong { color: var(--xp-amber); }
-
     .hero-desc {
       font-size: 1.15rem;
       color: rgba(245,244,240,0.65);
@@ -237,14 +212,12 @@
       margin-bottom: 44px;
       animation: fadeUp 0.7s 0.2s ease both;
     }
-
     .hero-ctas {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       animation: fadeUp 0.7s 0.3s ease both;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -261,63 +234,53 @@
       transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
     }
     .btn:hover { transform: translateY(-2px); }
-
     .btn-primary-xp {
       background: var(--xp-amber);
       color: #0a0a0c;
       box-shadow: 0 0 0 0 rgba(245,166,35,0.4);
     }
     .btn-primary-xp:hover { box-shadow: 0 8px 30px rgba(245,166,35,0.35); }
-
     .btn-outline-si {
       background: transparent;
       color: var(--si-teal);
       border: 1.5px solid var(--si-teal);
     }
     .btn-outline-si:hover { background: rgba(0,194,168,0.08); }
-
     .btn-ghost {
       background: transparent;
       color: rgba(245,244,240,0.6);
       border: 1.5px solid rgba(255,255,255,0.15);
     }
     .btn-ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.35); }
-
     /* ---- DUAL PRODUCT INTRO ---- */
     .dual-intro {
       padding: 100px 0;
       position: relative;
     }
-
     .section-header {
       text-align: center;
       margin-bottom: 72px;
     }
-
     .section-header h2 {
       font-size: clamp(2rem, 4vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.02em;
       margin: 16px 0 16px;
     }
-
     .section-header p {
       color: rgba(245,244,240,0.55);
       max-width: 520px;
       margin: 0 auto;
       font-size: 1.05rem;
     }
-
     .product-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2px;
     }
-
     @media (max-width: 768px) {
       .product-cards { grid-template-columns: 1fr; }
     }
-
     .product-card {
       background: var(--card-bg);
       padding: 56px 48px;
@@ -325,19 +288,15 @@
       overflow: hidden;
       transition: background 0.3s;
     }
-
     .product-card::after {
       content: '';
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 3px;
     }
-
     .product-card.si::after { background: linear-gradient(90deg, var(--si-teal), transparent); }
     .product-card.xp::after { background: linear-gradient(90deg, var(--xp-amber), transparent); }
-
     .product-card:hover { background: #16161f; }
-
     .product-icon {
       width: 64px; height: 64px;
       border-radius: 12px;
@@ -352,20 +311,16 @@
       border-radius: 12px;
       padding: 6px;
     }
-
     .product-icon.si { background: rgba(0,194,168,0.1); }
     .product-icon.xp { background: rgba(245,166,35,0.1); }
-
     .product-card h3 {
       font-size: 2rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
     }
-
     .product-card.si h3 { color: var(--si-teal); }
     .product-card.xp h3 { color: var(--xp-amber); }
-
     .product-card .tagline {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
@@ -375,14 +330,12 @@
       color: var(--muted);
       margin-bottom: 20px;
     }
-
     .product-card p {
       color: rgba(245,244,240,0.6);
       font-size: 1rem;
       margin-bottom: 32px;
       line-height: 1.75;
     }
-
     .product-card .features {
       list-style: none;
       display: flex;
@@ -390,7 +343,6 @@
       gap: 12px;
       margin-bottom: 40px;
     }
-
     .product-card .features li {
       display: flex;
       align-items: flex-start;
@@ -398,16 +350,15 @@
       font-size: 0.95rem;
       color: rgba(245,244,240,0.75);
     }
-
     .product-card .features li .dot {
       width: 6px; height: 6px;
       border-radius: 50%;
       flex-shrink: 0;
       margin-top: 8px;
     }
-
     .dot-teal { background: var(--si-teal); }
     .dot-amber { background: var(--xp-amber); }
+<<<<<<< HEAD
 
     .product-actions {
       display: flex;
@@ -444,6 +395,54 @@
       height: auto;
     }
 
+=======
+    .si-promo,
+    .xp-promo {
+      margin: 28px 0 22px;
+    }
+    .si-promo-shell,
+    .xp-promo-shell {
+      width: min(100%, 292px);
+      margin: 0 auto;
+      aspect-ratio: 9 / 18.5;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #0f1726;
+      box-shadow: 0 24px 44px rgba(16,36,71,0.08);
+    }
+    .si-promo-shell {
+      border: 1px solid rgba(0,194,168,0.18);
+    }
+    .xp-promo-shell {
+      border: 1px solid rgba(245,166,35,0.18);
+    }
+    .si-promo-shell video,
+    .xp-promo-shell video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: center center;
+      background: #0f1726;
+    }
+    .si-promo-copy,
+    .xp-promo-copy {
+      padding-top: 16px;
+      text-align: center;
+    }
+    .si-promo-copy .tag,
+    .xp-promo-copy .tag {
+      margin-bottom: 10px;
+    }
+    .si-promo-copy p,
+    .xp-promo-copy p {
+      max-width: 280px;
+      margin: 8px auto 0;
+      color: #5f738c;
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
     /* ---- ISAC ECOSYSTEM ---- */
     .ecosystem {
       padding: 80px 0 100px;
@@ -451,7 +450,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .ecosystem::before {
       content: 'ISAC';
       position: absolute;
@@ -466,7 +464,6 @@
       pointer-events: none;
       letter-spacing: -0.05em;
     }
-
     .flow-row {
       display: flex;
       align-items: stretch;
@@ -474,7 +471,6 @@
       position: relative;
       z-index: 2;
     }
-
     .flow-step {
       flex: 1;
       background: var(--card-bg);
@@ -483,11 +479,9 @@
       position: relative;
       transition: border-color 0.3s;
     }
-
     .flow-step:hover { border-color: rgba(255,122,26,0.22); }
-
     .flow-step + .flow-step::before {
-      content: '→';
+      content: "\2192";
       position: absolute;
       left: -16px;
       top: 50%;
@@ -496,7 +490,6 @@
       font-size: 18px;
       z-index: 3;
     }
-
     .step-num {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
@@ -505,54 +498,45 @@
       color: #70839b;
       margin-bottom: 14px;
     }
-
     .flow-step h4 {
       font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 10px;
       color: #171f2b;
     }
-
     .flow-step p {
       font-size: 0.88rem;
       color: #5f738c;
       line-height: 1.65;
     }
-
     @media (max-width: 768px) {
       .flow-row { flex-direction: column; }
-      .flow-step + .flow-step::before { content: '↓'; left: 50%; top: -14px; transform: translateX(-50%); }
+      .flow-step + .flow-step::before { content: "\2192"; left: 50%; top: -14px; transform: translateX(-50%); }
     }
-
     /* ---- LCI SECTION ---- */
     .lci-section {
       padding: 100px 0;
       position: relative;
     }
-
     .lci-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
     }
-
     @media (max-width: 768px) {
       .lci-grid { grid-template-columns: 1fr; gap: 48px; }
     }
-
     .lci-text h2 {
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
       font-weight: 800;
       letter-spacing: -0.02em;
       margin: 16px 0 20px;
     }
-
     .lci-text p {
       color: rgba(245,244,240,0.6);
       margin-bottom: 16px;
     }
-
     .lci-visuals {
       display: grid;
       gap: 18px;
@@ -580,7 +564,6 @@
       text-transform: uppercase;
       color: var(--xp-amber);
     }
-
     /* ---- TRY XP SECTION ---- */
     .try-xp {
       padding: 100px 0;
@@ -588,35 +571,29 @@
       position: relative;
       overflow: hidden;
     }
-
     .try-xp-bg {
       position: absolute;
       inset: 0;
       background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(245,166,35,0.07) 0%, transparent 70%);
     }
-
     .try-xp-inner {
       position: relative;
       z-index: 2;
       text-align: center;
     }
-
     .try-xp h2 {
       font-size: clamp(2rem, 4.5vw, 3.8rem);
       font-weight: 800;
       letter-spacing: -0.025em;
       margin: 16px 0 20px;
     }
-
     .try-xp h2 span { color: var(--xp-amber); }
-
     .try-xp p {
       color: rgba(245,244,240,0.55);
       max-width: 540px;
       margin: 0 auto 40px;
       font-size: 1.05rem;
     }
-
     .try-frame {
       margin: 56px auto 0;
       max-width: 680px;
@@ -625,7 +602,6 @@
       border-radius: 16px;
       overflow: hidden;
     }
-
     .frame-top {
       background: #1a1a22;
       padding: 14px 20px;
@@ -634,12 +610,10 @@
       gap: 8px;
       border-bottom: 1px solid rgba(245,166,35,0.1);
     }
-
     .frame-dot { width: 10px; height: 10px; border-radius: 50%; }
     .fd1 { background: #ff5f57; }
     .fd2 { background: #febc2e; }
     .fd3 { background: #28c840; }
-
     .frame-title {
       margin-left: 10px;
       font-family: 'Space Grotesk', sans-serif;
@@ -648,16 +622,13 @@
       color: var(--muted);
       letter-spacing: 0.1em;
     }
-
     .frame-body { padding: 36px; text-align: left; }
-
     .capability-check {
       display: flex;
       flex-direction: column;
       gap: 14px;
       margin-bottom: 28px;
     }
-
     .cap-row {
       display: flex;
       align-items: center;
@@ -668,37 +639,35 @@
       border-radius: 8px;
       gap: 16px;
     }
-
     .cap-label { font-size: 0.9rem; color: rgba(245,244,240,0.7); }
     .cap-bar-wrap { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
     .cap-bar { height: 100%; border-radius: 3px; }
+<<<<<<< HEAD
     .cap-score { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: var(--xp-amber); }
 
+=======
+    .cap-score { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: var(--xp-amber); }
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
     .frame-prompt {
       font-size: 0.9rem;
       color: rgba(245,244,240,0.45);
       margin-bottom: 20px;
     }
-
     /* ---- USE CASES ---- */
     .use-cases {
       padding: 100px 0;
     }
-
     .case-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
     @media (max-width: 900px) {
       .case-grid { grid-template-columns: 1fr 1fr; }
     }
-
     @media (max-width: 600px) {
       .case-grid { grid-template-columns: 1fr; }
     }
-
     .case-card {
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -706,63 +675,48 @@
       background: var(--card-bg);
       transition: border-color 0.3s, transform 0.3s;
     }
-
     .case-card:hover { border-color: rgba(255,255,255,0.18); transform: translateY(-4px); }
-
     .case-icon { font-size: 32px; margin-bottom: 18px; }
-
     .case-card h4 {
       font-size: 1.05rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
-
     .case-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
-
     /* ---- WHO IS IT FOR ---- */
     .audience {
       padding: 100px 0;
       background: #0d0d14;
     }
-
     .audience-cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2px;
       margin-top: 60px;
     }
-
     @media (max-width: 900px) {
       .audience-cards { grid-template-columns: 1fr 1fr; }
     }
-
     @media (max-width: 500px) {
       .audience-cards { grid-template-columns: 1fr; }
     }
-
     .audience-card {
       background: var(--card-bg);
       padding: 36px 28px;
       transition: background 0.3s;
     }
-
     .audience-card:hover { background: #16161f; }
-
     .audience-card .audience-emoji { font-size: 36px; margin-bottom: 18px; }
-
     .audience-card h4 {
       font-size: 1.05rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
-
     .audience-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-
     /* ---- DIFFERENCE ---- */
     .difference {
       padding: 100px 0;
     }
-
     .compare-table {
       width: 100%;
       border-collapse: collapse;
@@ -770,7 +724,6 @@
       overflow: hidden;
       border-radius: 8px;
     }
-
     .compare-table th {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
@@ -780,27 +733,22 @@
       padding: 18px 24px;
       text-align: left;
     }
-
     .compare-table th:nth-child(1) { background: #12121a; color: var(--muted); }
     .compare-table th:nth-child(2) { background: rgba(0,194,168,0.1); color: var(--si-teal); }
     .compare-table th:nth-child(3) { background: rgba(245,166,35,0.1); color: var(--xp-amber); }
-
     .compare-table td {
       padding: 16px 24px;
       font-size: 0.9rem;
       border-bottom: 1px solid var(--border);
     }
-
     .compare-table tr:last-child td { border-bottom: none; }
     .compare-table tr:nth-child(odd) td { background: rgba(255,255,255,0.015); }
     .compare-table td:nth-child(1) { color: rgba(245,244,240,0.5); }
     .compare-table td:nth-child(2) { color: rgba(245,244,240,0.8); }
     .compare-table td:nth-child(3) { color: rgba(245,244,240,0.8); }
-
     @media (max-width: 600px) {
       .compare-table th, .compare-table td { padding: 14px 14px; font-size: 0.82rem; }
     }
-
     /* ---- VALIDATION BANNER ---- */
     .validation {
       padding: 80px 0;
@@ -809,20 +757,17 @@
       border-bottom: 1px solid var(--border);
       text-align: center;
     }
-
     .validation h2 {
       font-size: clamp(1.6rem, 3vw, 2.4rem);
       font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 16px;
     }
-
     .validation p {
       color: rgba(245,244,240,0.55);
       max-width: 580px;
       margin: 0 auto 40px;
     }
-
     .stats-row {
       display: flex;
       justify-content: center;
@@ -830,9 +775,7 @@
       flex-wrap: wrap;
       margin-top: 48px;
     }
-
     .stat { text-align: center; }
-
     .stat-num {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 2.8rem;
@@ -840,19 +783,21 @@
       letter-spacing: -0.03em;
       display: block;
     }
-
     .stat-num.teal { color: var(--si-teal); }
     .stat-num.amber { color: var(--xp-amber); }
+<<<<<<< HEAD
 
     .stat-label { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Space Grotesk', sans-serif; margin-top: 6px; display: block; }
 
+=======
+    .stat-label { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Syne', sans-serif; margin-top: 6px; display: block; }
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
     /* ---- FINAL CTA ---- */
     .final-cta {
       padding: 120px 0;
       position: relative;
       overflow: hidden;
     }
-
     .final-cta-bg {
       position: absolute;
       inset: 0;
@@ -860,13 +805,11 @@
         radial-gradient(ellipse 50% 70% at 30% 50%, rgba(0,194,168,0.1) 0%, transparent 65%),
         radial-gradient(ellipse 50% 70% at 70% 50%, rgba(245,166,35,0.1) 0%, transparent 65%);
     }
-
     .final-cta-inner {
       position: relative;
       z-index: 2;
       text-align: center;
     }
-
     .final-cta h2 {
       font-size: clamp(2.2rem, 5vw, 4rem);
       font-weight: 800;
@@ -876,30 +819,24 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .final-cta p {
       color: rgba(245,244,240,0.55);
       max-width: 520px;
       margin: 0 auto 48px;
       font-size: 1.05rem;
     }
-
     .cta-pair {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 16px;
     }
-
     /* ---- FAQ ---- */
     .faq { padding: 80px 0 100px; }
-
     .faq-list { max-width: 720px; margin: 56px auto 0; }
-
     .faq-item {
       border-bottom: 1px solid var(--border);
     }
-
     .faq-q {
       width: 100%;
       text-align: left;
@@ -916,16 +853,13 @@
       align-items: center;
       gap: 16px;
     }
-
     .faq-q .arrow {
       font-size: 18px;
       color: var(--muted);
       transition: transform 0.3s;
       flex-shrink: 0;
     }
-
     .faq-item.open .faq-q .arrow { transform: rotate(90deg); color: var(--xp-amber); }
-
     .faq-a {
       max-height: 0;
       overflow: hidden;
@@ -934,19 +868,16 @@
       color: rgba(245,244,240,0.55);
       line-height: 1.8;
     }
-
     .faq-item.open .faq-a {
       max-height: 300px;
       padding-bottom: 24px;
     }
-
     /* ---- FOOTER NAV BAND ---- */
     .footer-band {
       background: #0d0d14;
       border-top: 1px solid var(--border);
       padding: 32px 0;
     }
-
     .footer-inner {
       display: flex;
       align-items: center;
@@ -954,7 +885,6 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-
     .footer-brand {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 13px;
@@ -962,13 +892,11 @@
       color: var(--muted);
       letter-spacing: 0.08em;
     }
-
     .footer-links {
       display: flex;
       gap: 28px;
       flex-wrap: wrap;
     }
-
     .footer-links a {
       font-size: 13px;
       color: var(--muted);
@@ -979,9 +907,7 @@
       text-transform: uppercase;
       transition: color 0.2s;
     }
-
     .footer-links a:hover { color: var(--white); }
-
     /* ---- LIGHT THEME OVERRIDES ---- */
     body {
       background:
@@ -1087,7 +1013,6 @@
       background: linear-gradient(180deg, #ffffff 0%, #f4f6f8 100%);
       border-top: 1px solid rgba(16,36,71,0.1);
     }
-
     /* ---- TYPE READABILITY ---- */
     .tag,
     .hero-kicker,
@@ -1124,7 +1049,6 @@
     .btn {
       letter-spacing: 0.03em;
     }
-
     /* ---- STRONGER LIGHT THEME ---- */
     .hero-brand img,
     .product-card,
@@ -1333,40 +1257,31 @@
       max-width: 310px;
       margin: 16px 0 24px;
     }
-
-
     /* ---- ANIMATIONS ---- */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     .reveal {
       opacity: 0;
       transform: translateY(28px);
       transition: opacity 0.65s ease, transform 0.65s ease;
     }
-
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     /* ---- BAR ANIMATION ---- */
     .cap-bar {
       width: 0;
       transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
-
     @media (max-width: 768px) {
       .container { padding: 0 20px; }
-      .hero {
-        min-height: auto;
-        padding: 84px 0 72px;
-      }
-      .hero-content {
-        max-width: none;
-      }
+    .hero {
+      min-height: auto;
+      padding: 84px 0 72px;
+    }
       .hero-brand {
         gap: 14px;
       }
@@ -1418,7 +1333,6 @@
         min-width: 78px;
       }
     }
-
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
       .hero {
@@ -1530,7 +1444,6 @@
     <div class="hamburger"><span></span><span></span><span></span></div>
   </div>
 </header>
-
 <!-- ==================== HERO ==================== -->
 <section class="hero" aria-label="ISAC Systems overview">
   <div class="hero-bg"></div>
@@ -1551,14 +1464,19 @@
       </div>
       <h1>Measure what <em>really</em> matters.<br/>Beyond grades. Beyond theory.<br/><strong>Real capability.</strong></h1>
       <p class="hero-desc">
-        ISAC is MRDI's capability intelligence ecosystem — two distinct platforms working in tandem to structure learning journeys and map the skills engineers actually carry into the real world.
+        ISAC is MRDI's capability intelligence ecosystem &mdash; two distinct platforms working in tandem to structure learning journeys and map the skills engineers actually carry into the real world.
       </p>
       <div class="hero-ctas">
+<<<<<<< HEAD
         <a href="isac-xp.html" class="btn btn-primary-xp" aria-label="Explore ISAC.XP">
           Explore ISAC.XP Now
+=======
+        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" aria-label="Try ISAC.XP free">
+          &#9889; Try ISAC.XP Free
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
         </a>
         <a href="isac-si-tech.html" class="btn btn-outline-si" aria-label="Learn about ISAC.SI">
-          Explore ISAC.SI →
+          Explore ISAC.SI &rarr;
         </a>
         <a href="#compare" class="btn btn-ghost">
           Compare Both
@@ -1567,7 +1485,6 @@
     </div>
   </div>
 </section>
-
 <!-- ==================== DUAL PRODUCT ==================== -->
 <section class="dual-intro" aria-labelledby="products-heading">
   <div class="container">
@@ -1576,61 +1493,85 @@
       <h2 id="products-heading">Two platforms.<br/>One capability intelligence system.</h2>
       <p>Each product solves a distinct challenge in engineering education. Together, they create a complete picture of learner capability.</p>
     </div>
-
     <div class="product-cards reveal">
       <!-- ISAC.SI -->
       <div class="product-card si" aria-labelledby="si-heading">
         <div class="product-icon si"><img src="isac-si-logo.png" alt="ISAC.SI logo"/></div>
         <h3 id="si-heading">ISAC.SI</h3>
-        <p class="tagline">Structured Intelligence · Learning Management System</p>
+        <p class="tagline">Structured Intelligence &middot; Learning Management System</p>
         <p>
-          ISAC.SI is a capability-based LMS built specifically for MRDI's training programs. It moves beyond conventional grading to track structured learning milestones — giving students, tutors, and directors a shared view of progress that is grounded in competency.
+          ISAC.SI is a capability-based LMS built specifically for MRDI's training programs. It moves beyond conventional grading to track structured learning milestones &mdash; giving students, tutors, and directors a shared view of progress that is grounded in competency.
         </p>
         <ul class="features" aria-label="ISAC.SI key features">
-          <li><span class="dot dot-teal"></span>Role-based dashboards — Student, Tutor, Director</li>
+          <li><span class="dot dot-teal"></span>Role-based dashboards &mdash; Student, Tutor, Director</li>
           <li><span class="dot dot-teal"></span>Capability milestone tracking across modules</li>
-          <li><span class="dot dot-teal"></span>Supabase base-powered, mobile-first architecture</li>
+          <li><span class="dot dot-teal"></span>Supabase-based, mobile-first architecture</li>
           <li><span class="dot dot-teal"></span>Integrated attendance, task and batch management</li>
           <li><span class="dot dot-teal"></span>Validated through SVNIT Surat's SSIP 2.0 initiative</li>
         </ul>
-        <a href="isac-si-tech.html" class="btn btn-outline-si">Learn About ISAC.SI →</a>
+        <figure class="si-promo reveal" aria-label="ISAC.SI promo video">
+          <div class="si-promo-shell">
+            <video controls autoplay muted loop playsinline preload="metadata">
+              <source src="isac-si-promo-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <figcaption class="si-promo-copy">
+            <span class="tag tag-teal">ISAC.SI Promo Video</span>
+            <p>Watch the structured learning flow that tracks milestones, roles, and progress inside MRDI.</p>
+          </figcaption>
+        </figure>
+        <a href="isac-si-tech.html" class="btn btn-outline-si">Learn About ISAC.SI &rarr;</a>
       </div>
-
       <!-- ISAC.XP -->
       <div class="product-card xp" aria-labelledby="xp-heading">
         <div class="product-icon xp"><img src="isac-xp-logo.png" alt="ISAC.XP logo"/></div>
         <h3 id="xp-heading">ISAC.XP</h3>
-        <p class="tagline">Experience Intelligence · AI Capability Profiler</p>
+        <p class="tagline">Experience Intelligence &middot; AI Capability Profiler</p>
         <p>
-          ISAC.XP is an AI-powered capability profiler. It helps engineering students discover and articulate their real-world strengths — not just what they studied, but what they can actually <em>do</em>. Powered by the Learning Capability Index (LCI), ISAC.XP translates experience into measurable, hireable capability.
+          ISAC.XP is an AI-powered capability profiler. It helps engineering students discover and articulate their real-world strengths &mdash; not just what they studied, but what they can actually <em>do</em>. Powered by the Learning Capability Index (LCI), ISAC.XP translates experience into measurable, hireable capability.
         </p>
         <ul class="features" aria-label="ISAC.XP key features">
           <li><span class="dot dot-amber"></span>AI-driven capability mapping through conversational profiling</li>
-          <li><span class="dot dot-amber"></span>LCI scoring — Logic, Velocity, Stability, Consistency, Recall, Confidence</li>
+          <li><span class="dot dot-amber"></span>LCI scoring &mdash; Logic, Velocity, Stability, Consistency, Recall, Confidence</li>
           <li><span class="dot dot-amber"></span>Builds a shareable Capability Portfolio</li>
           <li><span class="dot dot-amber"></span>Identifies hidden strengths industry actually values</li>
           <li><span class="dot dot-amber"></span>Built on Gemini and other LLM models integration</li>
         </ul>
+<<<<<<< HEAD
         <div class="product-actions">
           <a href="isac-xp.html" class="btn btn-primary-xp">Explore ISAC.XP Now</a>
           <a href="https://www.producthunt.com/products/isac-xp?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-isac-xp" target="_blank" rel="noopener noreferrer" class="product-hunt-badge" aria-label="View ISAC.XP on Product Hunt">
             <img alt="ISAC.XP - Measure what actually matters. Upgrade how you learn. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1141485&amp;theme=light&amp;t=1778309802160"/>
           </a>
         </div>
+=======
+        <figure class="xp-promo reveal" aria-label="ISAC.XP promo video">
+          <div class="xp-promo-shell">
+            <video controls autoplay muted loop playsinline preload="metadata">
+              <source src="isac-xp-promo-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <figcaption class="xp-promo-copy">
+            <span class="tag tag-amber">ISAC.XP Promo Video</span>
+            <p>Watch how the app turns answers into an LCI score and a shareable capability profile.</p>
+          </figcaption>
+        </figure>
+        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp">&#9889; Try ISAC.XP Now &mdash; It's Free</a>
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
       </div>
     </div>
   </div>
 </section>
-
 <!-- ==================== ECOSYSTEM FLOW ==================== -->
 <section class="ecosystem" aria-labelledby="flow-heading">
   <div class="container">
     <div class="section-header reveal">
       <span class="tag tag-neutral">How It Works</span>
       <h2 id="flow-heading">The complete capability journey</h2>
-      <p>From enrolling in a program to landing a job — ISAC tracks every step of a learner's real-world capability development.</p>
+      <p>From enrolling in a program to landing a job &mdash; ISAC tracks every step of a learner's real-world capability development.</p>
     </div>
-
     <div class="flow-row reveal" role="list" aria-label="ISAC journey steps">
       <div class="flow-step" role="listitem">
         <div class="step-num">01 / ENROL</div>
@@ -1640,27 +1581,26 @@
       <div class="flow-step" role="listitem">
         <div class="step-num">02 / TRACK</div>
         <h4>ISAC.SI Structures Learning</h4>
-        <p>Every milestone, project, and module is tracked in ISAC.SI — visible to student, tutor, and director in real time.</p>
+        <p>Every milestone, project, and module is tracked in ISAC.SI &mdash; visible to student, tutor, and director in real time.</p>
       </div>
       <div class="flow-step" role="listitem">
         <div class="step-num">03 / MAP</div>
         <h4>ISAC.XP Profiles Capability</h4>
-        <p>AI conversations reveal what the student can actually do — far beyond syllabus completion. LCI score is generated.</p>
+        <p>AI conversations reveal what the student can actually do &mdash; far beyond syllabus completion. LCI score is generated.</p>
       </div>
       <div class="flow-step" role="listitem">
         <div class="step-num">04 / PRESENT</div>
         <h4>Capability Portfolio Built</h4>
-        <p>A shareable, data-backed Capability Portfolio is generated — ready for recruiters, internships, and placement drives.</p>
+        <p>A shareable, data-backed Capability Portfolio is generated &mdash; ready for recruiters, internships, and placement drives.</p>
       </div>
       <div class="flow-step" role="listitem">
         <div class="step-num">05 / PLACE</div>
         <h4>Industry-Ready Placement</h4>
-        <p>Partners like Patel Mobility and OEM dealerships hire from MRDI cohorts, guided by ISAC capability data — not just resumes.</p>
+        <p>Partners like Patel Mobility and OEM dealerships hire from MRDI cohorts, guided by ISAC capability data &mdash; not just resumes.</p>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ==================== LCI ==================== -->
 <section class="lci-section" aria-labelledby="lci-heading">
   <div class="container">
@@ -1668,9 +1608,13 @@
       <div class="lci-text reveal">
         <span class="tag tag-amber">Core Framework</span>
         <h2 id="lci-heading">The Learning Capability Index (LCI)</h2>
-        <p>Grades measure what you memorised. The LCI measures how you learn, adapt, and execute — four behavioral dimensions that predict real-world engineering performance.</p>
+        <p>Grades measure what you memorised. The LCI measures how you learn, adapt, and execute &mdash; four behavioral dimensions that predict real-world engineering performance.</p>
         <p>Developed by MRDI as an alternative to traditional assessment, LCI powers the ISAC.XP scoring engine. It is designed to scale across corporate L&D and global talent markets.</p>
+<<<<<<< HEAD
         <a href="isac-xp.html" class="btn btn-primary-xp" style="margin-top: 16px;">Explore the LCI Framework -&gt;</a>
+=======
+        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="margin-top: 16px;">Discover Your LCI Score &rarr;</a>
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
       </div>
       <div class="lci-visuals reveal">
         <div class="lci-visual-card">
@@ -1685,7 +1629,6 @@
     </div>
   </div>
 </section>
-
 <!-- ==================== TRY XP ==================== -->
 <section class="try-xp" aria-labelledby="try-heading">
   <div class="try-xp-bg"></div>
@@ -1696,7 +1639,6 @@
       <p>Answer a few AI-driven questions about your projects, habits, and learning style. ISAC.XP builds your capability map in minutes, with a clear visual profile that feels practical and easy to understand.</p>
       <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding: 18px 36px;">Explore ISAC.XP Now</a>
     </div>
-
     <!-- DEMO PREVIEW CARD -->
     <div class="try-frame reveal" aria-label="Sample ISAC.XP capability dashboard preview">
       <div class="frame-top">
@@ -1706,7 +1648,11 @@
         <span class="frame-title">ISAC.XP - Capability Intelligence Dashboard</span>
       </div>
       <div class="frame-body">
+<<<<<<< HEAD
         <p class="frame-prompt" style="margin-bottom:20px; font-family:'Space Grotesk',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile � Automotive Engineering Student</p>
+=======
+        <p class="frame-prompt" style="margin-bottom:20px; font-family:'Syne',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile &middot; Automotive Engineering Student</p>
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
         <div class="capability-check" id="capBars">
           <div class="cap-row">
             <span class="cap-label">Logic</span>
@@ -1745,50 +1691,48 @@
     </div>
   </div>
 </section>
-
 <!-- ==================== USE CASES ==================== -->
 <section class="use-cases" aria-labelledby="usecases-heading">
   <div class="container">
     <div class="section-header reveal">
       <span class="tag tag-neutral">Applications</span>
       <h2 id="usecases-heading">ISAC is built for engineering education</h2>
-      <p>Whether you're a student looking for your first job, or an institute trying to prove training outcomes — ISAC has a specific answer for you.</p>
+      <p>Whether you're a student looking for your first job, or an institute trying to prove training outcomes &mdash; ISAC has a specific answer for you.</p>
     </div>
     <div class="case-grid reveal">
       <div class="case-card" role="article">
-        <div class="case-icon">🎓</div>
+          <div class="case-icon">&#127891;</div>
         <h4>Final-Year Engineering Students</h4>
-        <p>Turn your projects and workshop experiences into a structured capability portfolio that speaks to employers — even before your degree is complete.</p>
+        <p>Turn your projects and workshop experiences into a structured capability portfolio that speaks to employers &mdash; even before your degree is complete.</p>
       </div>
       <div class="case-card" role="article">
-        <div class="case-icon">🔧</div>
+          <div class="case-icon">&#128736;</div>
         <h4>Automotive & Mechanical Diploma Holders</h4>
-        <p>Showcase hands-on skills in servicing, diagnostics, and fabrication using ISAC.XP — because your practical knowledge deserves to be visible.</p>
+        <p>Showcase hands-on skills in servicing, diagnostics, and fabrication using ISAC.XP &mdash; because your practical knowledge deserves to be visible.</p>
       </div>
       <div class="case-card" role="article">
-        <div class="case-icon">🏭</div>
+          <div class="case-icon">&#128188;</div>
         <h4>OEM Dealership Recruiters</h4>
         <p>Use LCI-verified capability data from ISAC.SI to make faster, smarter hiring decisions from MRDI's trained cohorts.</p>
       </div>
       <div class="case-card" role="article">
-        <div class="case-icon">🏫</div>
+          <div class="case-icon">&#127979;</div>
         <h4>Engineering Colleges & TPO Cells</h4>
         <p>Integrate ISAC.XP as a pre-placement profiling tool to match graduates with appropriate industry roles based on real capability data.</p>
       </div>
       <div class="case-card" role="article">
-        <div class="case-icon">💡</div>
+          <div class="case-icon">&#128161;</div>
         <h4>Student Innovators & Makers</h4>
-        <p>If you build things, prototype mechanisms, or work on live projects — ISAC.XP can articulate your innovation DNA to the world.</p>
+        <p>If you build things, prototype mechanisms, or work on live projects &mdash; ISAC.XP can articulate your innovation DNA to the world.</p>
       </div>
       <div class="case-card" role="article">
-        <div class="case-icon">📊</div>
+          <div class="case-icon">&#128101;</div>
         <h4>Corporate L&D Teams</h4>
         <p>Use the LCI framework to assess and develop technical workforce capability as an alternative to traditional competency matrices.</p>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ==================== WHO IT'S FOR ==================== -->
 <section class="audience" aria-labelledby="audience-heading">
   <div class="container">
@@ -1798,36 +1742,35 @@
     </div>
     <div class="audience-cards reveal">
       <div class="audience-card">
-        <div class="audience-emoji">🧑‍🎓</div>
+        <div class="audience-emoji">&#127891;</div>
         <h4>Students</h4>
         <p>Discover what you're actually capable of. Build a portfolio that employers trust over a marksheet.</p>
       </div>
       <div class="audience-card">
-        <div class="audience-emoji">👨‍🏫</div>
+        <div class="audience-emoji">&#128218;</div>
         <h4>Tutors & Mentors</h4>
         <p>Track every student's capability growth in real time. Intervene early. Coach with data.</p>
       </div>
       <div class="audience-card">
-        <div class="audience-emoji">🏛️</div>
+        <div class="audience-emoji">&#127979;</div>
         <h4>Institutes & Directors</h4>
         <p>Prove training outcomes with structured capability evidence. Build accreditation-ready reports.</p>
       </div>
       <div class="audience-card">
-        <div class="audience-emoji">🏢</div>
+        <div class="audience-emoji">&#128188;</div>
         <h4>Employers & Recruiters</h4>
         <p>Access LCI-verified talent profiles. Hire based on demonstrated capability, not just certificates.</p>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ==================== COMPARISON ==================== -->
 <section class="difference" id="compare" aria-labelledby="compare-heading">
   <div class="container">
     <div class="section-header reveal">
       <span class="tag tag-neutral">Side by Side</span>
       <h2 id="compare-heading">ISAC.SI vs ISAC.XP</h2>
-      <p>Both products share a core philosophy — but serve distinct purposes in the capability development journey.</p>
+      <p>Both products share a core philosophy &mdash; but serve distinct purposes in the capability development journey.</p>
     </div>
     <div class="reveal compare-wrap" style="overflow-x:auto;">
       <table class="compare-table" role="table" aria-label="Comparison between ISAC.SI and ISAC.XP">
@@ -1856,13 +1799,13 @@
           </tr>
           <tr>
             <td>Output</td>
-            <td>Progress dashboards, Lci-matrix milestone reports</td>
+            <td>Progress dashboards, LCI matrix milestone reports</td>
             <td>LCI Score + Capability Portfolio</td>
           </tr>
           <tr>
             <td>Requires Enrolment?</td>
-            <td>Yes — MRDI program required</td>
-            <td>No — open access, free to try</td>
+            <td>Yes &mdash; MRDI program required</td>
+            <td>No &mdash; open access, free to try</td>
           </tr>
           <tr>
             <td>Assessment Method</td>
@@ -1884,13 +1827,12 @@
     </div>
   </div>
 </section>
-
 <!-- ==================== VALIDATION ==================== -->
 <section class="validation" aria-labelledby="validation-heading">
   <div class="container">
     <span class="tag tag-teal">Validated & Trusted</span>
     <h2 id="validation-heading" style="margin-top:16px;">Built & Validated in Surat.<br/>Scaling across India.</h2>
-    <p>ISAC is not a concept. It is a functioning system running inside MRDI's active cohorts — with placement partnerships and institutional validation already established.</p>
+    <p>ISAC is not a concept. It is a functioning system running inside MRDI's active cohorts &mdash; with placement partnerships and institutional validation already established.</p>
     <div class="stats-row" role="list" aria-label="ISAC achievement statistics">
       <div class="stat" role="listitem">
         <span class="stat-num teal">SSIP 2.0</span>
@@ -1911,7 +1853,6 @@
     </div>
   </div>
 </section>
-
 <!-- ==================== FAQ ==================== -->
 <section class="faq" aria-labelledby="faq-heading">
   <div class="container">
@@ -1920,61 +1861,54 @@
       <h2 id="faq-heading">Common questions about ISAC</h2>
     </div>
     <div class="faq-list reveal" role="list">
-
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq1">
           What is the difference between ISAC.SI and ISAC.XP?
-          <span class="arrow" aria-hidden="true">›</span>
+          <span class="arrow" aria-hidden="true">&#8250;</span>
         </button>
         <div class="faq-a" id="faq1" role="region">
-          ISAC.SI is a Learning Management System designed for use within MRDI's structured training programs. It tracks capability milestones across modules and is accessible to students, tutors, and directors. ISAC.XP is an open AI-powered profiler that anyone — enrolled or not — can use to map their real-world capabilities using the Learning Capability Index framework.
+          ISAC.SI is a Learning Management System designed for use within MRDI's structured training programs. It tracks capability milestones across modules and is accessible to students, tutors, and directors. ISAC.XP is an open AI-powered profiler that anyone &mdash; enrolled or not &mdash; can use to map their real-world capabilities using the Learning Capability Index framework.
         </div>
       </div>
-
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq2">
           Do I need to be enrolled at MRDI to use ISAC.XP?
-          <span class="arrow" aria-hidden="true">›</span>
+          <span class="arrow" aria-hidden="true">&#8250;</span>
         </button>
         <div class="faq-a" id="faq2" role="region">
-          No. ISAC.XP is freely accessible to any engineering student, diploma holder, or professional who wants to discover and map their capabilities. You simply answer a series of AI-driven questions about your experiences, projects, and learning habits — and ISAC.XP generates your LCI score and capability profile.
+          No. ISAC.XP is freely accessible to any engineering student, diploma holder, or professional who wants to discover and map their capabilities. You simply answer a series of AI-driven questions about your experiences, projects, and learning habits &mdash; and ISAC.XP generates your LCI score and capability profile.
         </div>
       </div>
-
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq3">
           What is the Learning Capability Index (LCI)?
-          <span class="arrow" aria-hidden="true">›</span>
+          <span class="arrow" aria-hidden="true">&#8250;</span>
         </button>
         <div class="faq-a" id="faq3" role="region">
-          The LCI is a behavioral measurement framework developed by MRDI to assess real-world engineering capability across six dimensions: Logic, Velocity, Stability, Consistency, Forgetfulness and Confidence Quotient. It is designed as an alternative to grade-based assessment and is the scoring engine behind ISAC.XP.
+          The LCI is a behavioral measurement framework developed by MRDI to assess real-world engineering capability across six dimensions: Logic, Velocity, Stability, Consistency, Recall, and Confidence. It is designed as an alternative to grade-based assessment and is the scoring engine behind ISAC.XP.
         </div>
       </div>
-
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq4">
           Is ISAC.XP suitable for freshers with no industry experience?
-          <span class="arrow" aria-hidden="true">›</span>
+          <span class="arrow" aria-hidden="true">&#8250;</span>
         </button>
         <div class="faq-a" id="faq4" role="region">
-          Absolutely. ISAC.XP is specifically designed for students who have not yet entered industry. The AI profiler assesses capability through academic projects, hands-on work, self-learning habits, and problem-solving behaviors — not years of experience. It is ideal for final-year students preparing for placement.
+          Absolutely. ISAC.XP is specifically designed for students who have not yet entered industry. The AI profiler assesses capability through academic projects, hands-on work, self-learning habits, and problem-solving behaviors &mdash; not years of experience. It is ideal for final-year students preparing for placement.
         </div>
       </div>
-
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq5">
           Can colleges or institutions integrate ISAC?
-          <span class="arrow" aria-hidden="true">›</span>
+          <span class="arrow" aria-hidden="true">&#8250;</span>
         </button>
         <div class="faq-a" id="faq5" role="region">
           Yes. MRDI is open to institutional partnerships for both ISAC.SI and ISAC.XP. Colleges can integrate ISAC.XP as a pre-placement profiling tool, and engineering institutes with training programs can explore ISAC.SI for structured delivery. Contact MRDI directly to discuss partnership models.
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- ==================== FINAL CTA ==================== -->
 <section class="final-cta" aria-labelledby="final-cta-heading">
   <div class="final-cta-bg"></div>
@@ -1984,7 +1918,13 @@
       <h2 id="final-cta-heading">Your capability is bigger<br/>than your marksheet.</h2>
       <p>ISAC.XP takes less than 10 minutes. Get your LCI score, discover your strongest capability dimensions, and start building a portfolio that means something.</p>
       <div class="cta-pair">
+<<<<<<< HEAD
         <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding:18px 36px;">Explore ISAC.XP Now</a>
+=======
+        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="font-size:16px; padding:18px 36px;">
+          &#9889; Try ISAC.XP &mdash; Free
+        </a>
+>>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
         <a href="enquiry.html" class="btn btn-outline-si" style="font-size:15px; padding:18px 32px;">
           Enquire About MRDI Programs
         </a>
@@ -1992,11 +1932,10 @@
     </div>
   </div>
 </section>
-
 <!-- ==================== FOOTER BAND ==================== -->
 <footer class="footer-band" role="contentinfo">
   <div class="container footer-inner">
-    <span class="footer-brand">MRDI — MASTER RESEARCH & DEVELOPMENT INSTITUTE</span>
+    <span class="footer-brand">MRDI &mdash; MASTER RESEARCH & DEVELOPMENT INSTITUTE</span>
     <nav class="footer-links" aria-label="Footer navigation">
       <a href="https://www.mrdiskills.com/programs-offered-at-mrdi/">Programs</a>
       <a href="isac-si-tech.html">ISAC.SI</a>
@@ -2006,7 +1945,6 @@
     </nav>
   </div>
 </footer>
-
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
@@ -2054,7 +1992,6 @@
     <p>54-55 Thakornagar Society, Udhana, Surat 394210 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p>
   </div>
 </footer>
-
 <script>
   // ---- SCROLL REVEAL ----
   const reveals = document.querySelectorAll('.reveal');
@@ -2067,7 +2004,6 @@
     });
   }, { threshold: 0.08 });
   reveals.forEach(r => observer.observe(r));
-
   // ---- CAPABILITY BAR ANIMATION ----
   const barObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -2082,10 +2018,8 @@
       }
     });
   }, { threshold: 0.3 });
-
   const capSection = document.getElementById('capBars');
   if (capSection) barObserver.observe(capSection);
-
   // ---- FAQ ACCORDION ----
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -2105,12 +2039,3 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
