@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -40,9 +40,26 @@
     "url": "https://www.mrdiskills.com/"
   }
 }
-  </script>
-  
-  <link rel="stylesheet" href="style.css"/>
+  </script>`r`n  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.mrdiskills.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Enquiry",
+      "item": "https://www.mrdiskills.com/enquiry.html"
+    }
+  ]
+}
+  </script>`r`n  <link rel="stylesheet" href="style.css"/>
   <style>
     .enquiry-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 56px; align-items: start; }
     .enquiry-form { background: var(--surface); border: 1px solid var(--border); padding: 42px; }
@@ -267,6 +284,7 @@ document.getElementById('enquiry-form').addEventListener('submit', function(e) {
 <script src="mrdi.js"></script>
 </body>
 </html>
+
 
 
 
