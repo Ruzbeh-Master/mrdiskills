@@ -43,18 +43,81 @@
   }
 }
   </script><!-- ===== SEO META TAGS ===== -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between ISAC.SI and ISAC.XP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ISAC.SI is a learning management platform used within MRDI training programs to track capability milestones. ISAC.XP is an open AI-powered profiler that maps real-world capability using the Learning Capability Index."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be enrolled at MRDI to use ISAC.XP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ISAC.XP is accessible to engineering students, diploma holders, and professionals who want to map their capabilities through AI-driven questions and LCI scoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Learning Capability Index (LCI)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LCI is a behavioral capability framework developed by MRDI across six dimensions: Logic, Velocity, Stability, Consistency, Recall, and Confidence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ISAC.XP suitable for freshers with no industry experience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ISAC.XP is designed for students and freshers, evaluating capability from projects, hands-on work, self-learning habits, and problem-solving behavior."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can colleges or institutions integrate ISAC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. MRDI supports institutional partnerships for both ISAC.SI and ISAC.XP, including pre-placement profiling and structured capability delivery models."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.mrdiskills.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ISAC Systems",
+      "item": "https://www.mrdiskills.com/isac-systems-page.html"
+    }
+  ]
+}
+  </script>
   <!-- Open Graph -->
   <!-- Twitter Card -->
   <link rel="stylesheet" href="style.css"/>
   <!-- Schema.org structured data -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<<<<<<< HEAD
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-
-=======
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --black: #102447;
@@ -86,7 +149,7 @@
     .topbar,
     header,
     footer {
-      font-family: var(--B);
+      font-family: 'Space Grotesk', sans-serif;
     }
     .footer-band {
       display: none;
@@ -106,13 +169,7 @@
     .tag-teal { background: rgba(0,194,168,0.12); color: var(--si-teal); border: 1px solid rgba(0,194,168,0.25); }
     .tag-amber { background: rgba(245,166,35,0.12); color: var(--xp-amber); border: 1px solid rgba(245,166,35,0.25); }
     .tag-neutral { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.1); }
-<<<<<<< HEAD
-
-    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.15; letter-spacing: -0.025em; text-wrap: balance; }
-
-=======
     h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
     /* ---- NOISE OVERLAY ---- */
     body::before {
       content: '';
@@ -358,44 +415,6 @@
     }
     .dot-teal { background: var(--si-teal); }
     .dot-amber { background: var(--xp-amber); }
-<<<<<<< HEAD
-
-    .product-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .product-actions .btn {
-      min-height: 54px;
-      padding: 0 28px;
-      border-radius: 6px;
-      box-shadow: 0 14px 30px rgba(245,166,35,0.18);
-    }
-
-    .product-hunt-badge {
-      display: inline-flex;
-      align-items: center;
-      min-height: 54px;
-      line-height: 0;
-      border-radius: 8px;
-      transition: transform 0.2s ease, filter 0.2s ease;
-    }
-
-    .product-hunt-badge:hover {
-      transform: translateY(-2px);
-      filter: drop-shadow(0 12px 22px rgba(255,97,87,0.14));
-    }
-
-    .product-hunt-badge img {
-      display: block;
-      width: 250px;
-      max-width: 100%;
-      height: auto;
-    }
-
-=======
     .si-promo,
     .xp-promo {
       margin: 28px 0 22px;
@@ -442,7 +461,41 @@
       font-size: 0.93rem;
       line-height: 1.65;
     }
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
+    .xp-product-hunt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,97,87,0.35);
+      background: #fff;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .xp-product-hunt:hover {
+      transform: translateY(-2px);
+      filter: drop-shadow(0 12px 22px rgba(255,97,87,0.14));
+    }
+    .xp-product-hunt img {
+      display: block;
+      width: 250px;
+      max-width: 100%;
+      height: auto;
+    }
+    .xp-cta-row {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      .xp-cta-row .btn,
+      .xp-cta-row .xp-product-hunt {
+        width: 100%;
+        justify-content: center;
+      }
+    }
     /* ---- ISAC ECOSYSTEM ---- */
     .ecosystem {
       padding: 80px 0 100px;
@@ -642,12 +695,7 @@
     .cap-label { font-size: 0.9rem; color: rgba(245,244,240,0.7); }
     .cap-bar-wrap { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
     .cap-bar { height: 100%; border-radius: 3px; }
-<<<<<<< HEAD
-    .cap-score { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: var(--xp-amber); }
-
-=======
     .cap-score { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: var(--xp-amber); }
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
     .frame-prompt {
       font-size: 0.9rem;
       color: rgba(245,244,240,0.45);
@@ -785,13 +833,7 @@
     }
     .stat-num.teal { color: var(--si-teal); }
     .stat-num.amber { color: var(--xp-amber); }
-<<<<<<< HEAD
-
-    .stat-label { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Space Grotesk', sans-serif; margin-top: 6px; display: block; }
-
-=======
     .stat-label { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Syne', sans-serif; margin-top: 6px; display: block; }
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
     /* ---- FINAL CTA ---- */
     .final-cta {
       padding: 120px 0;
@@ -1467,13 +1509,8 @@
         ISAC is MRDI's capability intelligence ecosystem &mdash; two distinct platforms working in tandem to structure learning journeys and map the skills engineers actually carry into the real world.
       </p>
       <div class="hero-ctas">
-<<<<<<< HEAD
         <a href="isac-xp.html" class="btn btn-primary-xp" aria-label="Explore ISAC.XP">
-          Explore ISAC.XP Now
-=======
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" aria-label="Try ISAC.XP free">
-          &#9889; Try ISAC.XP Free
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
+          Explore ISAC.XP
         </a>
         <a href="isac-si-tech.html" class="btn btn-outline-si" aria-label="Learn about ISAC.SI">
           Explore ISAC.SI &rarr;
@@ -1538,14 +1575,6 @@
           <li><span class="dot dot-amber"></span>Identifies hidden strengths industry actually values</li>
           <li><span class="dot dot-amber"></span>Built on Gemini and other LLM models integration</li>
         </ul>
-<<<<<<< HEAD
-        <div class="product-actions">
-          <a href="isac-xp.html" class="btn btn-primary-xp">Explore ISAC.XP Now</a>
-          <a href="https://www.producthunt.com/products/isac-xp?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-isac-xp" target="_blank" rel="noopener noreferrer" class="product-hunt-badge" aria-label="View ISAC.XP on Product Hunt">
-            <img alt="ISAC.XP - Measure what actually matters. Upgrade how you learn. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1141485&amp;theme=light&amp;t=1778309802160"/>
-          </a>
-        </div>
-=======
         <figure class="xp-promo reveal" aria-label="ISAC.XP promo video">
           <div class="xp-promo-shell">
             <video controls autoplay muted loop playsinline preload="metadata">
@@ -1558,8 +1587,12 @@
             <p>Watch how the app turns answers into an LCI score and a shareable capability profile.</p>
           </figcaption>
         </figure>
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp">&#9889; Try ISAC.XP Now &mdash; It's Free</a>
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
+        <div class="xp-cta-row">
+          <a href="isac-xp.html" class="btn btn-primary-xp">Explore ISAC.XP</a>
+          <a href="https://www.producthunt.com/products/isac-xp?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-isac-xp" target="_blank" rel="noopener noreferrer" class="xp-product-hunt" aria-label="View ISAC.XP on Product Hunt">
+            <img alt="ISAC.XP on Product Hunt" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1141485&amp;theme=light&amp;t=1778309802160"/>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -1610,11 +1643,7 @@
         <h2 id="lci-heading">The Learning Capability Index (LCI)</h2>
         <p>Grades measure what you memorised. The LCI measures how you learn, adapt, and execute &mdash; four behavioral dimensions that predict real-world engineering performance.</p>
         <p>Developed by MRDI as an alternative to traditional assessment, LCI powers the ISAC.XP scoring engine. It is designed to scale across corporate L&D and global talent markets.</p>
-<<<<<<< HEAD
-        <a href="isac-xp.html" class="btn btn-primary-xp" style="margin-top: 16px;">Explore the LCI Framework -&gt;</a>
-=======
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="margin-top: 16px;">Discover Your LCI Score &rarr;</a>
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
+        <a href="isac-xp.html" class="btn btn-primary-xp" style="margin-top: 16px;">Explore ISAC.XP</a>
       </div>
       <div class="lci-visuals reveal">
         <div class="lci-visual-card">
@@ -1637,7 +1666,7 @@
       <span class="tag tag-amber">Try It Now - Free</span>
       <h2 id="try-heading">What does your<br/><span>capability profile</span> look like?</h2>
       <p>Answer a few AI-driven questions about your projects, habits, and learning style. ISAC.XP builds your capability map in minutes, with a clear visual profile that feels practical and easy to understand.</p>
-      <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding: 18px 36px;">Explore ISAC.XP Now</a>
+      <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding: 18px 36px;">Explore ISAC.XP</a>
     </div>
     <!-- DEMO PREVIEW CARD -->
     <div class="try-frame reveal" aria-label="Sample ISAC.XP capability dashboard preview">
@@ -1648,11 +1677,7 @@
         <span class="frame-title">ISAC.XP - Capability Intelligence Dashboard</span>
       </div>
       <div class="frame-body">
-<<<<<<< HEAD
-        <p class="frame-prompt" style="margin-bottom:20px; font-family:'Space Grotesk',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile · Automotive Engineering Student</p>
-=======
         <p class="frame-prompt" style="margin-bottom:20px; font-family:'Syne',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--xp-amber);">Sample Profile &middot; Automotive Engineering Student</p>
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
         <div class="capability-check" id="capBars">
           <div class="cap-row">
             <span class="cap-label">Logic</span>
@@ -1686,7 +1711,7 @@
           </div>
         </div>
         <p class="frame-prompt">AI Summary: <em>"Strong curiosity and learning velocity suggest high potential for R&amp;D and prototyping roles. Execution quotient shows room to grow through structured project completion."</em></p>
-        <a href="isac-xp.html" class="btn btn-primary-xp" style="width:100%; justify-content:center; margin-top:8px;">Explore ISAC.XP Now -&gt;</a>
+        <a href="isac-xp.html" class="btn btn-primary-xp" style="width:100%; justify-content:center; margin-top:8px;">Explore ISAC.XP</a>
       </div>
     </div>
   </div>
@@ -1918,13 +1943,9 @@
       <h2 id="final-cta-heading">Your capability is bigger<br/>than your marksheet.</h2>
       <p>ISAC.XP takes less than 10 minutes. Get your LCI score, discover your strongest capability dimensions, and start building a portfolio that means something.</p>
       <div class="cta-pair">
-<<<<<<< HEAD
-        <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding:18px 36px;">Explore ISAC.XP Now</a>
-=======
-        <a href="https://isac.xp.mrdiskills.com" class="btn btn-primary-xp" style="font-size:16px; padding:18px 36px;">
-          &#9889; Try ISAC.XP &mdash; Free
+        <a href="isac-xp.html" class="btn btn-primary-xp" style="font-size:16px; padding:18px 36px;">
+          Explore ISAC.XP
         </a>
->>>>>>> 21cfa421098fc69fb2cee3889d58a985154959a9
         <a href="enquiry.html" class="btn btn-outline-si" style="font-size:15px; padding:18px 32px;">
           Enquire About MRDI Programs
         </a>
@@ -2039,3 +2060,4 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
