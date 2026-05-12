@@ -34,10 +34,26 @@
     "url": "https://www.mrdiskills.com/"
   }
 }
-  </script>
-  
-  
-  <link rel="stylesheet" href="style.css"/>
+  </script>`r`n  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.mrdiskills.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Video Viewer",
+      "item": "https://www.mrdiskills.com/video-viewer.html"
+    }
+  ]
+}
+  </script>`r`n  <link rel="stylesheet" href="style.css"/>
   <style>
     .viewer-hero {
       background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
@@ -170,11 +186,11 @@
   <div class="header-inner">
     <a href="index.html" class="logo"><img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI Logo" onerror="this.style.display='none'"/><div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div></a>
     <nav>
-      <div class="nav-item"><a href="programs.html">Programs ▾</a><div class="dropdown"><a href="programs.html">Programs Offered</a><a href="enquiry.html">Enquiry</a></div></div>
+      <div class="nav-item"><a href="programs.html">Programs &#x25BE;</a><div class="dropdown"><a href="programs.html">Programs Offered</a><a href="enquiry.html">Enquiry</a></div></div>
       <div class="nav-item"><a href="online-session.html">Online Session</a></div>
       <div class="nav-item"><a href="knowledge-lab.html">Knowledge Lab</a></div>
       <div class="nav-item"><a href="isac-systems-page.html">ISAC Systems</a></div>
-      <div class="nav-item"><a href="innovation-hub.html">Innovation Hub ▾</a><div class="dropdown"><a href="innovation-hub.html">Project Showcase</a><a href="success-stories.html">Success Stories</a></div></div>
+      <div class="nav-item"><a href="innovation-hub.html">Innovation Hub &#x25BE;</a><div class="dropdown"><a href="innovation-hub.html">Project Showcase</a><a href="success-stories.html">Success Stories</a></div></div>
       <div class="nav-item"><a href="blog.html">Blog</a></div>
       <div class="nav-item"><a href="contact.html">Contact</a></div>
       <a href="enquiry.html" class="nav-cta">Enroll Now</a>
@@ -185,7 +201,7 @@
 
 <div class="viewer-hero">
   <div class="page-hero-inner" style="max-width:1200px;">
-    <div class="breadcrumb" id="viewer-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Video Viewer</span></div>
+    <div class="breadcrumb" id="viewer-breadcrumb"><a href="index.html">Home</a><span>&#x203A;</span><span>Video Viewer</span></div>
     <h1 class="page-title" id="viewer-page-title">MRDI Video Viewer</h1>
     <p class="page-subtitle" id="viewer-subtitle">Opening MRDI video content.</p>
   </div>
@@ -204,7 +220,7 @@
     <div class="footer-col"><h4>Innovation Hub</h4><ul><li><a href="innovation-hub.html">Project Showcase</a></li><li><a href="success-stories.html">Success Stories</a></li><li><a href="knowledge-lab.html">Knowledge Lab</a></li><li><a href="isac-systems-page.html">ISAC Systems</a></li><li><a href="blog.html">Blog</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="tel:+918905636766">+91 8905636766</a></li><li><a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></li><li><a href="https://api.whatsapp.com/send?phone=918905636766" target="_blank">WhatsApp Us</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p>© 2025 Master Research & Development Institute (MRDI). All rights reserved.</p><p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p></div>
+  <div class="footer-bottom"><p>&#xA9; 2025 Master Research & Development Institute (MRDI). All rights reserved.</p><p>54-55 Thakornagar Society, Udhana, Surat 395001 | <a href="mailto:mrdi.development@gmail.com">mrdi.development@gmail.com</a></p></div>
 </footer>
 
 <script>
@@ -330,7 +346,7 @@
       title: 'Electro-Mechanical Centre Stand',
       category: 'Innovation Hub',
       sourcePage: 'innovation-hub.html',
-      description: 'A project spotlight on MRDI’s automatic two-wheeler centre stand concept and the engineering behind it.',
+      description: 'A project spotlight on MRDI&#x2019;s automatic two-wheeler centre stand concept and the engineering behind it.',
       image: 'https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/pxl_20221203_1103470784721489014944663889.webp',
       query: 'MRDI electro mechanical centre stand',
       youtubeUrl: 'https://youtu.be/UwRQDl89xbM'
@@ -435,7 +451,7 @@
     document.title = `${item.title} | MRDI Video Viewer`;
     document.getElementById('viewer-page-title').textContent = item.title;
     document.getElementById('viewer-subtitle').textContent = `${item.category} video content from MRDI.`;
-    document.getElementById('viewer-breadcrumb').innerHTML = `<a href="index.html">Home</a><span>›</span><a href="${item.sourcePage}">${item.category}</a><span>›</span><span>${item.title}</span>`;
+    document.getElementById('viewer-breadcrumb').innerHTML = `<a href="index.html">Home</a><span>&#x203A;</span><a href="${item.sourcePage}">${item.category}</a><span>&#x203A;</span><span>${item.title}</span>`;
 
     const officialUrlMap = {
       'knowledge-lab.html': 'https://mrdiskills.com/content/',
@@ -499,6 +515,7 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
 
 
 
