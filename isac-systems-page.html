@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -428,6 +428,11 @@
       overflow: hidden;
       background: #0f1726;
       box-shadow: 0 24px 44px rgba(16,36,71,0.08);
+    }
+    .recruiter-insights .xp-promo-shell,
+    .learner-insights .xp-promo-shell {
+      width: min(100%, 720px);
+      aspect-ratio: 16 / 9;
     }
     .si-promo-shell {
       border: 1px solid rgba(0,194,168,0.18);
@@ -1566,7 +1571,7 @@
         <h3 id="xp-heading">ISAC.XP</h3>
         <p class="tagline">Experience Intelligence &middot; AI Capability Profiler</p>
         <p>
-          ISAC.XP is an AI-powered capability profiler. It helps engineering students discover and articulate their real-world strengths &mdash; not just what they studied, but what they can actually <em>do</em>. Powered by the Learning Capability Index (LCI), ISAC.XP translates experience into measurable, hireable capability.
+          ISAC.XP is an AI-powered capability profiler built for practical hiring. It helps learners turn projects, habits, and problem solving into a clear, hireable signal powered by the Learning Capability Index (LCI).
         </p>
         <ul class="features" aria-label="ISAC.XP key features">
           <li><span class="dot dot-amber"></span>AI-driven capability mapping through conversational profiling</li>
@@ -1584,7 +1589,7 @@
           </div>
           <figcaption class="xp-promo-copy">
             <span class="tag tag-amber">ISAC.XP Promo Video</span>
-            <p>Watch how the app turns answers into an LCI score and a shareable capability profile.</p>
+            <p>See how answers become a score, a profile, and a signal recruiters can trust.</p>
           </figcaption>
         </figure>
         <div class="xp-cta-row">
@@ -1787,6 +1792,67 @@
         <p>Access LCI-verified talent profiles. Hire based on demonstrated capability, not just certificates.</p>
       </div>
     </div>
+  </div>
+</section>
+<!-- ==================== RECRUITER INSIGHTS ==================== -->
+<section class="recruiter-insights" aria-labelledby="recruiter-insights-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag tag-amber">For Recruiters</span>
+      <h2 id="recruiter-insights-heading">Hire faster with evidence, not guesswork</h2>
+      <p>ISAC.XP compresses learning history, project proof, and LCI scores into a recruiter view that makes shortlisting faster and sharper.</p>
+    </div>
+    <figure class="xp-promo reveal" aria-label="Recruiter data backed insights video">
+      <div class="xp-promo-shell">
+        <video controls playsinline preload="metadata" poster="isac-xp-logo.png">
+          <source src="assets/videos/isac-xp-recruiter-feature.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <figcaption class="xp-promo-copy">
+        <span class="tag tag-amber">Recruiter Data Backed Insights</span>
+        <p>See the score, the proof, and the pattern behind each profile.</p>
+      </figcaption>
+    </figure>
+    <div class="case-grid reveal" style="margin-top:24px;">
+      <div class="case-card" role="article">
+        <div class="case-icon">&#128202;</div>
+        <h4>Fast signal</h4>
+        <p>Spot strong candidates without reading a stack of resumes.</p>
+      </div>
+      <div class="case-card" role="article">
+        <div class="case-icon">&#128269;</div>
+        <h4>Proof attached</h4>
+        <p>Open the profile behind the score and verify the work.</p>
+      </div>
+      <div class="case-card" role="article">
+        <div class="case-icon">&#128188;</div>
+        <h4>Better fit</h4>
+        <p>Move the right people forward with less friction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================== LEARNER INSIGHTS ==================== -->
+<section class="learner-insights" aria-labelledby="learner-insights-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag tag-amber">For Learners</span>
+      <h2 id="learner-insights-heading">Build capability while you learn</h2>
+      <p>The learner video shows how builders use ISAC.XP to turn practice, projects, and problem solving into measurable progress.</p>
+    </div>
+    <figure class="xp-promo reveal" aria-label="Learner insights video">
+      <div class="xp-promo-shell">
+        <video controls playsinline preload="metadata" poster="isac-xp-logo.png">
+          <source src="assets/videos/isac-xp-learners-feature.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <figcaption class="xp-promo-copy">
+        <span class="tag tag-amber">Learner Insights</span>
+        <p>See how learners track progress, close gaps, and grow a profile that actually reflects what they can do.</p>
+      </figcaption>
+    </figure>
   </div>
 </section>
 <!-- ==================== COMPARISON ==================== -->
@@ -2060,4 +2126,13 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 

@@ -352,6 +352,18 @@
       background: #07152a;
     }
 
+    .xp-recruiter-kpi {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .xp-recruiter-kpi .xp-point {
+      padding: 18px 18px 20px;
+      min-height: 150px;
+    }
+
     .xp-duration {
       color: var(--xp-amber);
       white-space: nowrap;
@@ -720,8 +732,8 @@
     <div class="xp-container xp-grid reverse">
       <div class="xp-video-panel reveal">
         <div class="xp-video-top">
-          <span>Credit Score for Your Skills - ISAC.XP Demo</span>
-          <span class="xp-duration">5:01</span>
+          <span>AI That Compound Humans</span>
+          <span class="xp-duration">9:05</span>
         </div>
         <video controls playsinline preload="metadata" poster="isac-xp-logo.png">
           <source src="assets/videos/isac-xp-credit-score-demo.mp4" type="video/mp4"/>
@@ -740,17 +752,66 @@
     </div>
   </section>
 
-  <section class="xp-section alt" aria-labelledby="flow-heading">
-    <div class="xp-container">
-      <div class="xp-copy reveal" style="max-width:760px;">
-        <span class="xp-eyebrow">What the videos ask viewers to do</span>
-        <h2 id="flow-heading">Measure what actually matters. Upgrade how you learn.</h2>
-        <p>ISAC.XP is built for learners who have done more than their marksheet can explain. It turns workshops, projects, self-learning, prototyping, and problem-solving habits into a clear capability narrative.</p>
+  <section class="xp-section alt" id="recruiter-feature" aria-labelledby="recruiter-heading">
+    <div class="xp-container xp-grid">
+      <div class="xp-copy reveal">
+        <span class="xp-eyebrow">For recruiters</span>
+        <h2 id="recruiter-heading">Shortlist faster with a candidate view that shows skill proof, not just claims.</h2>
+        <p>The new recruiter feature gives hiring teams a practical way to scan a learner's ISAC.XP profile, compare capability scores, and understand where the strongest evidence lives before they move into interviews.</p>
+        <p>Instead of reading a flat resume, recruiters get a clearer read on how a person learns, solves, builds, and adapts in real workshop or project settings.</p>
+        <div class="xp-pill-row" aria-label="Recruiter feature benefits">
+          <span class="xp-pill">Score at a glance</span>
+          <span class="xp-pill">Evidence-backed profile</span>
+          <span class="xp-pill">Better role fit</span>
+          <span class="xp-pill">Faster shortlisting</span>
+        </div>
+        <div class="xp-recruiter-kpi" aria-label="Recruiter workflow highlights">
+          <div class="xp-point"><strong>1. Compare candidates</strong><span>See practical readiness quickly instead of reading through scattered documents.</span></div>
+          <div class="xp-point"><strong>2. Check the evidence</strong><span>Open the profile behind the score to understand what the learner has actually done.</span></div>
+          <div class="xp-point"><strong>3. Move with confidence</strong><span>Use a clearer signal for internships, apprenticeships, and first-role hiring.</span></div>
+        </div>
       </div>
-      <div class="xp-points reveal" aria-label="ISAC.XP workflow">
-        <div class="xp-point"><strong>1. Tell your story</strong><span>Answer AI-led prompts about what you have built, fixed, practiced, explored, or struggled through.</span></div>
-        <div class="xp-point"><strong>2. Get your LCI signal</strong><span>ISAC.XP organizes your evidence across the Learning Capability Index dimensions.</span></div>
-        <div class="xp-point"><strong>3. Share the proof</strong><span>Use your profile as a practical skill signal for internships, placements, and career conversations.</span></div>
+      <div class="xp-video-panel reveal">
+        <div class="xp-video-top">
+          <span>Recruiter Insights</span>
+          <span class="xp-duration">New</span>
+        </div>
+        <video controls playsinline preload="metadata" poster="isac-xp-logo.png">
+          <source src="assets/videos/isac-xp-recruiter-feature.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="xp-section alt" aria-labelledby="flow-heading">
+    <div class="xp-container xp-grid">
+      <div class="xp-copy reveal">
+        <span class="xp-eyebrow">For learners</span>
+        <h2 id="flow-heading">Build your capability while you learn, practice, and create.</h2>
+        <p>This new learner video shows how ISAC.XP helps students and builders turn workshop experience, self-learning, and real projects into something measurable and shareable.</p>
+        <p>It is meant for learners who want to see their progress clearly, improve their weak spots, and build a profile that actually reflects what they can do.</p>
+        <div class="xp-pill-row" aria-label="Learner benefits">
+          <span class="xp-pill">Learn by doing</span>
+          <span class="xp-pill">Track capability growth</span>
+          <span class="xp-pill">See practical progress</span>
+          <span class="xp-pill">Build a shareable profile</span>
+        </div>
+        <div class="xp-points reveal" aria-label="ISAC.XP learner workflow">
+          <div class="xp-point"><strong>1. Explore your strengths</strong><span>See which skills and habits already make you valuable.</span></div>
+          <div class="xp-point"><strong>2. Build with intent</strong><span>Use the feedback to practice, improve, and close the gaps.</span></div>
+          <div class="xp-point"><strong>3. Show your progress</strong><span>Share a profile that grows as your capability grows.</span></div>
+        </div>
+      </div>
+      <div class="xp-video-panel reveal">
+        <div class="xp-video-top">
+          <span>Learner Insights</span>
+          <span class="xp-duration">New</span>
+        </div>
+        <video controls playsinline preload="metadata" poster="isac-xp-logo.png">
+          <source src="assets/videos/isac-xp-learners-feature.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </section>
@@ -860,4 +921,9 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
+
+
+
+
 
