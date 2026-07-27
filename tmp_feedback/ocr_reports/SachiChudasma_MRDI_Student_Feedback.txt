@@ -1,0 +1,82 @@
+0.96	ISACSystems
+0.96	by Master Research & Development Institute
+0.75	Mento
+0.98	Feedback Form
+0.95	SECTIoN1IInstitutionProfile
+0.98	Institution/College Name
+0.99	Department/Faculty
+0.80	mechauica).
+0.98	City&State
+0.97	Type of Institution
+0.85	Surat
+0.86	Guianet
+0.89	Educodtroual.
+0.97	Contact Person Name
+0.98	Designation/Role
+0.96	Sachi
+0.85	chudasma
+0.78	Stuclent
+0.98	Email Address
+0.94	Phone/ WhatsApp
+0.89	sachieludesma07@gmarl.com
+0.84	+91
+1.00	9408192567
+0.93	Number of Students Who Used ISAC XP
+0.99	25-50
+1.00	51-100
+1.00	101-250
+0.99	250+
+0.95	Primary Academic Stream/Batch
+0.98	B.E./B.Tech
+0.96	Diploma Engg.
+0.98	M.E./M.Tech
+0.97	MBA/MCA
+0.99	Other
+0.91	SECTIoN 2 I Deployment Context& Use Case
+0.92	Primary purpose for deploying ISAC XP:
+0.93	Pre-Placement Screening  Semester-End Assessment
+0.97	Internship Readiness
+0.85	SkilGap Mapping
+0.99	Other
+0.96	Describe the specific deployment context:
+0.91	(semester,batch,along side what other assessments.duratien of use)
+0.95	tesfs
+0.87	knewledge
+0.66	Ber
+0.66	falevy
+0.69	Chaspecihctopte
+0.84	clecply
+0.51	m0
+0.76	aualyei's
+0.56	edl
+0.75	Hheusen.
+0.57	0
+0.97	Who administered the assessment?
+0.97	Faculy Member
+0.99	Training&PlacementCell
+0.98	HOD/Dean
+0.96	Student Self-Administered
+0.94	How was theLCl Score communicated to students?
+0.84	Directly via platform
+0.95	Facultyprinted&shared
+0.99	Notcommunicatedyet
+0.99	Other
+0.93	SECTloN3I Product Experience&Ratings
+0.96	Overall Platlorm Usability
+0.92	Ease cfnavigation and operalion
+0.90	1-Ven Poor
+0.90	2-Poor
+0.84	3-Avstage
+0.97	4-Good
+0.97	5-Excellent
+0.94	Quality & Relevance of Questions
+0.97	Appropriateness forproficiencymeasurement
+0.96	1-VeryPoor
+0.86	]2-Poor
+0.93	3-Avarage
+0.96	4-Good
+0.93	5-Excellent
+0.93	ISAC Systems-Synthetic Intelligence Platform-Master Research& Development Institute LLP
+0.95	midi.developmentggmail.com-www.mrdiskills.com
+0.96	Confidential Document
+0.96	Not fur distribution without the consent of Master Research & Development Institute LLP

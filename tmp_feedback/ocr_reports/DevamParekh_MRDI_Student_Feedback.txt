@@ -1,0 +1,75 @@
+0.99	ISACSystems
+0.99	byMasterResearch&DevelopmentInstitute
+0.97	Feedback Form
+0.90	SECTION 1 I Institution Profile
+0.95	Institution/ College Name
+0.99	Department/Faculty
+0.97	SCET
+0.94	Meh.Dept
+0.94	City& State
+0.94	Type of Institution
+0.88	Edu.
+0.94	Sunat,
+0.60	Gtujahat
+0.95	Contact Person Name
+0.99	Designation/Role
+0.68	Davem Jd.Panekh
+0.87	Shudent
+0.98	Email Address
+0.98	Phone/WhatsApp
+0.79	deuam20o207@gml.com
+0.56	1bt
+0.87	9159320269
+0.92	Number of StudentsWho Used ISAC xP
+0.93	DUnder25
+0.98	25-50
+1.00	51-100
+1.00	101-250
+0.97	250+
+0.97	Primary AcademicStream/Batch
+0.98	B.E./B.Tech
+0.95	Diploma Engg.
+0.99	M.E./M.Tech
+0.96	MBA/MCA
+0.98	Other
+0.93	SECTiON 2I Deployment Context& Use Case
+0.95	Primary purpose for deploying ISAC XP:
+0.93	Pre-Placement Screening  Semesler-End Assessment
+0.96	Internship Readiness
+0.93	Skill Gap Mapping
+0.98	Other
+0.96	Describe the specific deployment context:
+0.91	(semester,baich,along side what other assessments,duration of use)
+0.78	To
+0.79	amulyze He
+0.76	hzle book oF SAE Baja (India).
+0.78	Dusution
+0.74	use6Monhe
+0.97	Who administered the assessment?
+0.98	Training&Placement Cell
+0.98	HOD/Dean
+0.92	Student Self-Administerea
+0.95	FacultyMember
+0.96	How was the LCl Score communicated to students?
+0.96	Direcllyviaplatorm
+0.89	Faculty printed &sharad
+0.94	Notcommunicated yel
+0.92	SECTION3I Product Experience & Ratings
+0.92	Overall Platform Usability
+0.93	Ease of navigation and operalion
+0.88	C1-Very Poor
+0.80	2-Poo
+0.97	3-Average
+0.84	4-Gcod
+0.94	-Excellent
+0.94	Quality&Relevance of Questions
+0.96	Appropriateness for proficiency measurement
+0.92	]1-VeryPoor
+0.88	2-Poor
+0.97	3-Average
+0.89	-Good
+0.92	-Excellent
+0.94	ISAC Systems-Synthetic IntelligencePlatform-Master Research&Development Institute LLP
+0.93	miai.development@gmail.cum-www.mrdiskills.com
+0.95	Confidential Document
+0.94	Not for dislribution without the consent of Master Research &Development lnstitute LLP

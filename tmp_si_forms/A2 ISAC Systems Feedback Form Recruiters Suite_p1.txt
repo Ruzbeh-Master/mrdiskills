@@ -1,0 +1,61 @@
+0.99	ISAC Systems
+0.95	Master
+0.99	by Master Research & Development Institute
+0.84	Rescarch&
+0.98	pment
+1.00	Feedback Form (Recruiters Suite)
+0.95	SECTlON 1 I Organization Details
+0.98	Organisation / Company Name
+0.99	Industry / Sector
+1.00	Name
+0.99	Designation/ Role
+1.00	Email Address
+0.99	Phone / WhatsApp
+0.99	ISAC XP Account Type
+0.98	Duration of Use
+0.99	Primary use of ISAC XP:
+0.99	Candidate Screening
+0.99	Skill Gap Mapping
+0.99	Hiring Decision Support
+0.95	workforce Upskilling
+0.97	Benchmarking Teams
+0.94	SECTloN 2I Onboarding & Setup Experience
+0.96	Ease of getting started on ISAC XP:
+0.96	1 - Very Difficult
+0.97	2 - Difficult
+0.98	3 -Manageable
+0.99	4 -Easy
+0.94	5 - Effortless
+0.99	Biggest friction points during onboarding:
+0.93	 1 -Very Difficult
+0.98	2-Difficult
+0.99	3 - Manageable
+0.96	4 -Easy
+0.94	5 - Effortless
+0.98	Time for team to become comfortable with the platform:
+0.98	Same day
+0.99	2-3 days
+0.99	1 week
+0.99	2-4 weeks
+0.97	Still not comfortable
+1.00	Describe any onboarding issues not covered above:
+0.96	SECTION 3 I Application Usability & Interface
+0.98	Rate the following aspects of the ISAC XP application:
+0.95	Ease of Navigation
+1.00	Can users find what they need quickly?
+0.96	1-Very Poor
+1.00	2-Poor
+1.00	3-Average
+0.95	4 -Good
+0.99	5 -Excellent
+1.00	Dashboard & Reporting
+0.99	Are results presented clearly and usefully?
+0.94	1 -Very Poor
+0.99	2-Poor
+1.00	3-Average
+0.97	4 -Good
+0.98	5 - Excellent
+0.97	ISAC Systems - Synthetic Intelligence Platform - Master Research & Development Institute LLP
+1.00	mrdi.development@gmail.com-www.mrdiskills.com
+1.00	ConfidentialDocument
+0.95	Not for distribution without the consent of Master Research & Development Institute LLP

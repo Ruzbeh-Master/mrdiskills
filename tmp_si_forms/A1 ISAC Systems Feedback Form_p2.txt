@@ -1,0 +1,50 @@
+0.97	LCl Score Accuracy & Clarity
+0.96	Did thescorereflect actualcapability?
+0.99	1—VeryPoor
+0.96	2—Poor
+0.85	3
+0.94	—Average
+0.90	—Good
+0.98	—Excellent
+0.97	Platform Speed & Reliability
+0.98	Any loading issues, crashes, or delays?
+0.93	-Very Poor
+0.89	-Poor
+0.94	—Average
+0.87	-Good
+0.95	-Excellent
+0.96	Reporting & Score Dashboard
+0.98	Were results clear and actionable?
+0.90	—Very Poor
+0.89	—Poor
+0.96	—Average
+0.87	-Good
+0.96	—Excellent
+0.97	Student Onboarding Experience
+0.99	Smoothnessofsetupand loginprocess
+0.93	1 — Very Poor
+0.98	2—Poor
+0.98	3—Average
+0.87	-Good
+0.98	—Excellent
+0.96	What did students and faculty find most valuable about ISAC XP?
+0.94	SECTloN 4 I Gaps Identified & Modification Requests
+0.97	Top 3 problems/ friction points experienced with ISAC XP:
+1.00	Problem 1:
+0.99	Problem 2:
+1.00	Problem 3:
+0.97	Features ISAC XP currently LACKS that you need:
+0.97	e.g. batch reports, auto-scheduling, faculty dashboard, regional language, APl integration
+0.98	Existing features that should be improved or redesigned:
+0.97	Engineering domains where assessment depth needs to be added:
+1.00	Mechanical
+0.98	Electronics
+1.00	Civil
+1.00	ComputerScience
+1.00	Electrical
+1.00	Other
+0.98	Elaborate on domain-specificgaps:
+0.97	ISAC Systems - Synthetic Intelligence Platform - Master Research & Development Institute LLP
+0.99	mrdi.development@gmail.com-www.mrdiskills.com
+0.98	ConfidentialDocument
+0.95	Not for distribution without the consent of Master Research & Development Institute LLP

@@ -1,13 +1,13 @@
-/* ═══════════════════════════════════════════
-   MRDI — Shared JS — All Pages
-═══════════════════════════════════════════ */
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   MRDI â€” Shared JS â€” All Pages
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 (function () {
   'use strict';
 
   const WA_URL = 'https://api.whatsapp.com/send?phone=918905636766&text=Hi%2C%20I%20got%20your%20WhatsApp%20information%20from%20your%20website.';
 
-  /* ── Hamburger ─────────────────────────── */
+  /* â”€â”€ Hamburger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const ham = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');
   if (ham && nav) {
@@ -23,7 +23,7 @@
     });
   }
 
-  /* ── Active nav link ───────────────────── */
+  /* â”€â”€ Active nav link â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const path = window.location.pathname.split('/').filter(Boolean).pop() || 'index';
   document.querySelectorAll('.nav-item > a').forEach(a => {
     const href = a.getAttribute('href') || '';
@@ -32,7 +32,7 @@
     }
   });
 
-  /* ── Scroll reveal ─────────────────────── */
+  /* â”€â”€ Scroll reveal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const revealObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); }
@@ -40,7 +40,7 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-  /* ── Header frost on scroll ─────────────── */
+  /* â”€â”€ Header frost on scroll â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => {
     if (!header) return;
@@ -48,7 +48,7 @@
       ? '#ffffff' : '#ffffff';
   }, { passive: true });
 
-  /* ── Smooth anchor scroll ───────────────── */
+  /* â”€â”€ Smooth anchor scroll â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href').slice(1);
@@ -57,7 +57,7 @@
     });
   });
 
-  /* ── Enquiry form submit ────────────────── */
+  /* â”€â”€ Enquiry form submit â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const enquiryForm = document.getElementById('enquiry-form');
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', e => {
@@ -71,7 +71,7 @@
     });
   }
 
-  /* ── Contact form ───────────────────────── */
+  /* â”€â”€ Contact form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
@@ -84,7 +84,7 @@
     });
   }
 
-  /* ── Subscribe ──────────────────────────── */
+  /* â”€â”€ Subscribe â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   document.querySelectorAll('.subscribe-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const input = btn.previousElementSibling;
@@ -125,15 +125,15 @@
       }
     });
   });
-
   /* WA float inject */
   if (!document.querySelector('.wa-float')) {
     const wa = document.createElement('a');
     wa.href = WA_URL; wa.target = '_blank';
     wa.className = 'wa-float'; wa.title = 'Chat on WhatsApp';
-    wa.innerHTML = '💬';
+    wa.innerHTML = '<span aria-hidden="true">💬</span>';
     document.body.appendChild(wa);
   }
 
 })();
+
 

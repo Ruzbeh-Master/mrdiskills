@@ -1,0 +1,71 @@
+0.93	ISAC Systems
+0.94	by Master Research & Development Institute
+0.96	Feedback Form
+0.88	SECTION 1I Institution Profile
+0.95	Institution/ College Name
+0.97	Department/Faculty
+0.91	Mechanical
+0.91	City & Slate
+0.93	Type of lnstitution
+0.89	Eclucahonal
+0.96	Surat
+0.76	Cavjarat
+0.97	Contact Person Name
+0.99	Designation/Role
+0.87	student
+0.97	Maanya
+0.88	Padshal
+0.94	Phone/WhalsApp
+0.97	Email Address
+0.86	9979942609
+0.90	Aadshalmaauya@gmail.com
+0.91	Number ot Students Who Used ISAC XP
+0.99	101-250
+0.96	250+
+0.97	Under25
+0.99	51-100
+0.92	25-50
+0.96	Primary Academic Stream/Batch
+0.95	MBA/MCA
+0.99	Other
+0.87	BE./BTech
+0.98	Diploma Engg
+0.95	M.E./M.Tech
+0.94	SECTION 2 I Deployment Context &Use Case
+0.93	Primarypurpose fordeploying ISAC XP:
+0.78	Bkil Gap Mapping
+0.99	Other
+0.97	Internship Readiness
+0.96	Describethe specific deployment context:
+0.89	(semester,batch.along side what other assessmenls duraicn of use)
+0.90	skin aud kuowledge
+0.84	Arsessmuutlike
+0.77	applicohonaucf
+0.72	meuovyyall.
+0.98	Who administered the assessment?
+0.96	Training& PlacementCell
+0.98	HOD/Dean
+0.93	ShueentSelf-Administered
+0.94	Faculty Member
+0.96	How was the LCl Score communicated to students?
+0.96	Directlyviaplatform
+0.96	Facultyprinted&shared
+0.99	Notcommunicatedyet
+0.97	Other
+0.92	SECTIoN 3I Product Experience & Ratings
+0.96	Overall PlalformUsability
+0.91	Ease of navgaticn and operation
+0.89	2-Poor
+0.95	3-Average
+0.96	1-VeryPoor
+0.91	4-Good
+0.85	-Excellernt
+0.94	Quality &Relevance of Questions
+0.94	Appropriateness for profciency measurement
+0.93	2-Poor
+0.97	1-VeryPoor
+0.87	]3-Average
+0.80	Gaod
+0.94	5-Excellent
+0.95	mrdi.development@gmail.com-www.mrdiskills.com
+0.97	Confidential Document

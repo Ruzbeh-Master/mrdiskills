@@ -1,0 +1,54 @@
+0.99	Score Interpretation
+0.96	Is the LCl Score output easy to understand?
+0.98	1 -Very Poor
+1.00	2-Poor
+1.00	3-Average
+0.91	]4 -Good
+1.00	5-Excellent
+0.98	Which part of the app confused your team the most?
+0.97	SECTloN 4 I Core Feature Performance
+0.97	Rate howwell each core featureperformsforyourneeds:
+0.98	LCI Score Generation
+0.99	Accuracy and speed of score delivery
+0.93	1 - Very Poor 2 - Poor 
+1.00	3-Average
+0.97	4-Good[
+0.95	5 - Excellent
+0.98	Candidate Data & Access
+0.99	Smoothness of candidate-side experience
+0.94	1 - Very Poor 2 - Poor
+1.00	3-Average
+1.00	4-Good
+0.99	5-Excellent
+1.00	Result Summaries, Filters & Export
+0.98	Ability to sort, filter, and export data
+0.94	1 -Very Poor 2 -Poor
+1.00	3-Average
+0.98	4-Good5-Excellent
+0.99	Feature that delivers the most value today:
+1.00	Assessment Question Bank
+1.00	Relevanceanddepthofquestions
+0.92	1 -Very Poor 2- Poor
+0.95	]3-Average
+0.99	4-Good
+0.97	]5 - Excellent
+0.99	Batch / Bulk Processing
+0.99	Handling multiple candidates at once
+0.94	]1 - Very Poor 2 -Poor
+1.00	3-Average
+0.99	4-Good
+1.00	5-Excellent
+0.99	Feature that consistently underperforms:
+0.95	SECTloN 5 I Bugs, Errors & Technical Issues
+0.99	Technical issues encountered (tick all that apply):
+1.00	Platform crashes
+0.97	 Slow loading
+0.99	Login / access errors
+0.99	Score not generating
+0.98	Issue / Bug Description
+1.00	Frequency
+0.96	Severity (1=Low, 5=High)
+0.99	ISAC Systems - Synthetic Intelligence Platform - Master Research & Development Institute LLP
+0.99	mrdi.development@gmail.com-www.mrdiskills.com
+0.98	Confidential Document
+0.98	Not for distribution without the consent of Master Research & Development Institute LLP

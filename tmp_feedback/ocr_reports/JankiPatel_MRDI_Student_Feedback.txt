@@ -1,0 +1,72 @@
+0.98	ISACSystems
+0.94	by Master Research & Development Institute
+0.96	Feedback Form
+0.89	SECTioN 1l Institution Protile
+0.94	Institution/ College Name
+0.96	Department/Faculty
+0.77	EarvajanilieColgeoFTenEng(SCET)
+0.91	Mechanicai Engineering Dept
+0.91	City& State
+0.92	Type of Institution
+0.95	Surat,Gujarat
+0.88	Educahionai (Eng.College)
+0.97	Contact Person Name
+0.97	Designation/Role
+0.86	Jank?.Patel
+0.97	Student
+0.92	Email Address
+0.94	Phone/WhatsApp
+0.85	jankimpatel2oo1@gmail.com
+0.98	+918849006979
+0.90	Number of Students Who Used ISACXP
+0.98	nder25
+0.99	25-50
+1.00	51-100
+1.00	101-250
+0.94	250+
+0.95	Primary Academic Stream/Batch
+0.95	6.E./B.Tech
+0.97	Diploma Engg
+0.98	M.E./M.Tech
+0.98	MBA/MCA
+0.98	Other
+0.93	SECTiON2I Deployment Context&Use Case
+0.92	Primary purpose for deploying ISAC XP:
+0.98	Pre-PlacementScreening
+0.98	Semester-End Assessment
+0.93	Intermship Readiness
+0.92	SkllGapMapping
+0.89	other
+0.97	Describe the specific deployment context:
+0.93	(semester batch.along side what other assessments,duration ofuse)
+0.83	RulebookoFSAEBAJASemester-3.DuraHion 6-8monHhI.
+0.82	To analyseHhebasius e uorkinq oFan automobilevehicle.
+0.98	Who administered the assessment?
+0.96	Faculty Member
+0.95	Training &Placement Cell
+0.98	HOD/Dean
+0.92	Budent Self-Administered
+0.94	How was the Lcl Score communicated to students?
+0.92	Directly via platform
+0.95	Facultyprinted&shared
+0.95	Not communicatedyet
+0.97	Other
+0.92	SECTioN3I Product Experience &Ratings
+0.96	Overall Platform Usability
+0.92	Ease cf navigalicn and operation
+0.80	i-Very Pooi
+0.77	2-Poor
+0.97	3-Average
+0.97	4-Good
+0.89	-Excelent
+0.94	Quality & Relevance of Questions
+0.93	Appropriateness for prohiciency measurement
+0.91	1-Very Poor
+0.94	2-Poor
+0.97	3-Average
+0.94	-Good
+0.93	-Excellent
+0.95	SAC Systems-Synthetic Intelligence Platform-Master Research & Development Institute LLP
+0.94	mrai.developmentggmail.com-www.mrdiskilis.com
+0.97	Confidential Document
+0.95	Not for distribution without the consent of Master Research & Development Institute LLP

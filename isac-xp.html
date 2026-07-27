@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -217,12 +217,54 @@
       display: block;
     }
 
-    .xp-hero p {
+        .xp-hero p {
       max-width: 690px;
       color: rgba(255, 255, 255, 0.78);
       font-size: clamp(1rem, 1.35vw, 1.14rem);
       line-height: 1.64;
       margin: 0 0 24px;
+    }
+
+    .xp-objective-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .xp-objective-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248, 251, 255, 0.96));
+      border: 1px solid rgba(16, 36, 71, 0.10);
+      border-radius: 18px;
+      padding: 20px 18px 18px;
+      box-shadow: 0 14px 32px rgba(16, 36, 71, 0.06);
+    }
+
+    .xp-objective-card strong {
+      display: block;
+      color: var(--xp-blue);
+      font-family: var(--H);
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .xp-objective-card span {
+      display: block;
+      color: var(--xp-muted);
+      font-size: 0.92rem;
+      line-height: 1.62;
+    }
+
+    @media (max-width: 1024px) {
+      .xp-objective-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .xp-objective-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .xp-actions,
@@ -535,6 +577,180 @@
       font-size: 0.95rem;
       line-height: 1.64;
       margin: 0;
+    }    .xp-feedback-shell {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      align-items: start;
+      margin-top: 32px;
+    }
+
+    .xp-feedback-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .xp-feedback-stat {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248, 251, 255, 0.96));
+      border: 1px solid rgba(16, 36, 71, 0.10);
+      border-radius: 18px;
+      padding: 22px 22px 20px;
+      box-shadow: 0 14px 32px rgba(16, 36, 71, 0.06);
+      overflow: hidden;
+      min-height: 100%;
+    }
+
+    .xp-feedback-stat::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--xp-amber), var(--xp-orange));
+    }
+
+    .xp-feedback-stat strong {
+      display: block;
+      color: var(--xp-blue);
+      font-family: var(--H);
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .xp-feedback-stat span {
+      display: block;
+      color: var(--xp-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .xp-feedback-column {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .xp-feedback-card {
+      position: relative;
+      border: 1px solid rgba(16, 36, 71, 0.10);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248, 251, 255, 0.96));
+      padding: 24px 24px 22px;
+      box-shadow: 0 14px 34px rgba(16, 36, 71, 0.06);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .xp-feedback-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--xp-amber), var(--xp-orange));
+    }
+
+    .xp-feedback-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(232, 93, 4, 0.18);
+      box-shadow: 0 18px 42px rgba(16, 36, 71, 0.10);
+    }
+
+    .xp-feedback-card h3 {
+      color: var(--xp-blue);
+      font-size: 1.06rem;
+      margin: 0 0 10px;
+    }
+
+    .xp-feedback-card p {
+      color: var(--xp-muted);
+      font-size: 0.96rem;
+      line-height: 1.72;
+      margin: 0;
+    }
+
+    .xp-feedback-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .xp-feedback-meta span,
+    .xp-feedback-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      font-family: var(--H);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .xp-feedback-meta span {
+      padding: 7px 11px;
+      border: 1px solid rgba(16, 36, 71, 0.10);
+      color: var(--xp-blue);
+      background: rgba(16, 36, 71, 0.03);
+    }
+
+    .xp-feedback-meta span:first-child {
+      background: rgba(245, 166, 35, 0.14);
+      border-color: rgba(245, 166, 35, 0.22);
+      color: #8f4e00;
+    }
+
+    .xp-feedback-link {
+      justify-content: center;
+      padding: 10px 14px;
+      color: #101014;
+      text-decoration: none;
+      background: rgba(245, 166, 35, 0.18);
+    }
+
+    .xp-feedback-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    @media (max-width: 1080px) {
+      .xp-feedback-shell {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .xp-feedback-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+    .xp-feedback-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--xp-line);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .xp-feedback-item strong {
+      display: block;
+      color: var(--xp-blue);
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+
+    .xp-feedback-item span {
+      color: var(--xp-muted);
+      font-size: 0.88rem;
     }
 
     .xp-final {
@@ -602,8 +818,18 @@
 
       .xp-points,
       .xp-dimensions,
-      .xp-audience {
+      .xp-audience,
+      .xp-feedback-stats {
         grid-template-columns: 1fr;
+      }
+
+      .xp-feedback-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .xp-feedback-item {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
       .xp-point,
@@ -680,6 +906,22 @@
             <img alt="ISAC.XP - Measure what actually matters. Upgrade how you learn. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1141485&amp;theme=light&amp;t=1778309802160"/>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="xp-section alt" id="objectives" aria-labelledby="objectives-heading">
+    <div class="xp-container">
+      <div class="xp-copy reveal" style="max-width:820px;">
+        <span class="xp-eyebrow">Page roadmap</span>
+        <h2 id="objectives-heading">See the purpose of ISAC.XP before you explore the details.</h2>
+        <p>This page is organized to help visitors move from a quick overview into the learner flow, recruiter flow, capability visuals, and feedback in a simple sequence. If you are new here, this is the fastest way to understand what the platform is meant to do.</p>
+      </div>
+      <div class="xp-objective-grid reveal" aria-label="ISAC.XP page objectives">
+        <article class="xp-objective-card"><strong>1. Show capability clearly</strong><span>Explain how ISAC.XP turns practical skill and learning habits into a readable capability profile.</span></article>
+        <article class="xp-objective-card"><strong>2. Help learners grow</strong><span>Show learners how to reflect, improve, and present real project ability with more confidence.</span></article>
+        <article class="xp-objective-card"><strong>3. Help recruiters shortlist</strong><span>Give hiring teams a faster way to compare practical readiness instead of scanning only resumes.</span></article>
+        <article class="xp-objective-card"><strong>4. Capture real feedback</strong><span>Summarize how students and employers used the platform so the visitor can see its real-world value.</span></article>
       </div>
     </div>
   </section>
@@ -853,6 +1095,152 @@
         <article class="xp-audience-card"><h3>Diploma holders</h3><p>Translate hands-on workshop exposure into a structured, visible profile.</p></article>
         <article class="xp-audience-card"><h3>Colleges</h3><p>Use capability profiling before placement drives to guide better student-role fit.</p></article>
         <article class="xp-audience-card"><h3>Recruiters</h3><p>Read capability signals that are closer to practical readiness than marks alone.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="xp-section" id="feedback" aria-labelledby="feedback-heading">
+    <div class="xp-container">
+      <div class="xp-copy reveal" style="max-width:880px;">
+        <span class="xp-eyebrow">Feedback from the field</span>
+        <h2 id="feedback-heading">Organized feedback from engineering students and hiring teams.</h2>
+        <p>This section distills the uploaded ISAC.XP feedback forms into readable summaries. The learner cards are grouped as mechanical and electrical engineering student feedback, and the recruiter cards capture what hiring teams said about onboarding, shortlisting, and capability visibility.</p>
+      </div>
+            <div class="xp-feedback-stats reveal" aria-label="ISAC.XP feedback summary">
+        <article class="xp-feedback-stat">
+          <strong>9</strong>
+          <span>Engineering student feedback forms captured from the MRDI cohort.</span>
+        </article>
+        <article class="xp-feedback-stat">
+          <strong>3</strong>
+          <span>Recruiter-suite submissions from hiring teams and organisations.</span>
+        </article>
+        <article class="xp-feedback-stat">
+          <strong>30-35%</strong>
+          <span>Reported reduction in time-to-hire in the clearest recruiter responses.</span>
+        </article>
+      </div>
+      <div class="xp-feedback-shell reveal">
+        <div class="xp-feedback-column" aria-label="Learner feedback">
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>Semester-2 assessment</span>
+            </div>
+            <h3>Mechanical engineering student feedback for a semester-2 skill and knowledge assessment.</h3>
+            <p>The form shows ISAC.XP being deployed for a semester-2 skill and knowledge check. The response indicates the platform was understood well, and the question set was seen as relevant for proficiency measurement.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>SAE Baja</span>
+            </div>
+            <h3>Mechanical engineering student feedback on a Formula-style project build and knowledge trail.</h3>
+            <p>The submission ties ISAC.XP to a six-month SAE Baja deployment, using it to analyze the basics of how an automobile vehicle works. The feedback shows a practical, project-driven use case.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>Semester-3 / SAE Baja</span>
+            </div>
+            <h3>Mechanical engineering student feedback focused on the working basics of an automobile vehicle.</h3>
+            <p>The form references a Semester-3 SAE Baja rulebook context and a 6-8 month duration, using ISAC.XP to analyze the basics of working automotive systems and to test knowledge in a structured way.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>Skill-gap mapping</span>
+            </div>
+            <h3>Mechanical engineering student feedback combining skills, knowledge, and a learning-gap view.</h3>
+            <p>The submission points to a skill and knowledge exercise used alongside learning-gap analysis. The overall rating marks the platform as usable and relevant for proficiency measurement.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Electrical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>Electrical engineering</span>
+            </div>
+            <h3>Electrical engineering student feedback around a semester-based deployment.</h3>
+            <p>The OCR shows an electrical-engineering student from Surat, Gujarat using ISAC.XP in a semester-based deployment. The form signals that the questions and platform experience were viewed as strong enough for the use case.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>SAE Baja rulebook</span>
+            </div>
+            <h3>Mechanical engineering student feedback used to strengthen understanding of the SAE Baja rulebook.</h3>
+            <p>Om's feedback maps ISAC.XP to a learning exercise centered on the SAE Baja rulebook. The form shows the platform being used as a support tool for understanding and revising the project knowledge base.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>Knowledge check</span>
+            </div>
+            <h3>Mechanical engineering student feedback used for testing knowledge and clarifying understanding.</h3>
+            <p>This student feedback form comes from Surat, Gujarat. The response text suggests the assessment was used for knowledge testing and that the question set was understandable enough to support the workflow.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>Learning support</span>
+            </div>
+            <h3>Mechanical engineering student feedback used as a learning aid to boost study and workshop readiness.</h3>
+            <p>The submission describes using the platform to support learning and strengthen workshop-style understanding. The response suggests the system helped make the learning process more structured.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Mechanical Engineering Students</span>
+              <span>Engineering Student</span>
+              <span>Engineering college</span>
+            </div>
+            <h3>Mechanical engineering student feedback used in an engineering-college setting for pre-placement and learning review.</h3>
+            <p>This form shows ISAC.XP being used in a mechanical-engineering college context. The response indicates the platform was accessible and that the question flow supported the evaluation process.</p>
+          </article>
+        </div>
+        <div class="xp-feedback-column" aria-label="Recruiter feedback">
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>GREPL</span>
+              <span>Recruiter suite</span>
+              <span>Renewable sector</span>
+            </div>
+            <h3>Best value: candidate screening, shortlisting, and LCI score generation.</h3>
+            <p>The GREPL submission says onboarding was smooth, the platform was easy to understand, and the strongest value came from candidate screening and score generation. It also reports better shortlisting, improved skill visibility, faster hiring decisions, and an estimated 30% reduction in time-to-hire.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Nanavati Toyota</span>
+              <span>Automotive dealership</span>
+              <span>Recruiter suite</span>
+            </div>
+            <h3>Strong recommendation from an automotive hiring context.</h3>
+            <p>The Nanavati Toyota form shows a strong willingness to recommend ISAC.XP and highlights better shortlisting, faster hiring, and improved skill visibility. It positions the platform as useful for dealership hiring where role fit matters.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>Samrat</span>
+              <span>Biotech / R&amp;D</span>
+              <span>Recruiter suite</span>
+            </div>
+            <h3>Quick onboarding and a clear lift in recruitment efficiency.</h3>
+            <p>Samrat's form says the onboarding process was quick and well guided, with no major confusion in the application flow. The strongest reported impact was better shortlisting, faster hiring decisions, and roughly 35% faster hiring overall.</p>
+          </article>
+          <article class="xp-feedback-card">
+            <div class="xp-feedback-meta">
+              <span>What recruiters asked for</span>
+              <span>Across forms</span>
+            </div>
+            <h3>Custom thresholds, role-specific questions, bulk import, and API access.</h3>
+            <p>Across the recruiter submissions, the strongest wishlist items were custom score thresholds, role-specific questions, ATS or HRMS integration, bulk candidate import, and API access. Those requests point to where the platform can keep growing next.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>

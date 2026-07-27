@@ -1,0 +1,66 @@
+0.94	ISAC Systems
+0.96	Feedback Form
+0.90	SECTION 1I Institution Profile
+0.92	Institution/ College Name
+0.73	SawvejcmikcollegeoTechEs
+0.99	Department/Faculty
+0.84	Mechemica
+0.91	City& Stale
+0.67	Smut
+0.87	Type ot Institution
+0.86	Emgimeerimg
+0.97	Contacl Person Name
+0.96	Designation /Role
+0.71	Vaemi
+0.66	Studemt:
+0.98	Email Address
+0.96	Phone/WhatsApp
+0.74	Maznidhamelije 9sgmei.com
+0.86	P2442 61966
+0.89	Number of Students Who Used ISAC XP
+0.88	onder 25
+1.00	101-250
+0.98	250-
+0.98	25-50
+0.99	51-100
+0.94	Primary Academic Stream / Batch
+0.82	B.E/B.Tech
+0.97	 Diploma Engg.
+0.95	M.E./M.Tech
+0.94	MBA/MCA
+0.98	Other
+0.94	SECTiON2I Deployment Context & Use Case
+0.94	Primary purpose for deploying ISACXP:
+0.93	Pre-Placement Screening  Semester-End Assessment 
+0.98	Internship Readiness
+0.79	SkilI Gap Mapping
+0.97	Other
+0.96	Describe the specific deployment context:
+0.91	(semester,batch.along side whatother assessments,duration ofuse)
+0.97	Who administered the assessment?
+0.97	FacultyMember
+0.98	Training&Placement Cell
+0.98	HOD/Dean
+0.96	Student Self-Administered
+0.94	How was the LCl Score communicaled to students?
+0.97	Facultyprinted&shared
+0.97	Not communicated yet
+0.91	Dirctlyvia platform
+0.99	Other
+0.92	SECTION3I Product Experience & Ratings
+0.97	Overall PlatformUsability
+0.91	Ease of navigation and operation
+0.86	2-Poor
+0.96	3-Average
+0.88	-eryPoor
+0.88	-Good
+0.97	5-Excellent
+0.96	Quality&Relevance of Questions
+0.97	Approprateness for proficiency measurement
+0.81	2-Poor
+0.92	3-Avarage
+0.89	-Good
+0.94	1—VeryPoor
+0.96	5-Excellent
+0.92	md.development@gmail.com-www.mrdiskils.com
+0.98	Confidential Document

@@ -1,0 +1,70 @@
+0.96	ISAC Systems
+0.50	Mala
+0.95	by Master Research &Development Institute
+0.98	Feedback Form
+0.91	SECTIoN 1lInstitution Profile
+0.95	Institution/ College Name
+0.98	Department/Faculty
+0.57	SavgnkCallgtegeMeel
+0.89	City& State
+0.91	Type of Institution
+0.85	Edurclioncel
+0.71	porns
+0.57	Cajcyat
+0.93	Contact Person Name
+0.99	Designation/Role
+0.71	Pechl
+0.63	MNyushPeunhshei
+0.82	Studont
+0.98	Email Address
+0.93	Phone/WhaisApp
+0.74	ayushpalel1o@omuil.Com
+0.76	199060254101
+0.89	Number of Students Who Used ISAC XP
+0.96	Under25
+0.93	25-50
+0.99	51-100
+0.99	101-250
+0.99	250+
+0.95	Primary Academic Stream/Batch
+0.87	8.E./BTech
+0.98	Diploma Engg.
+0.98	M.E./M.Tech
+0.98	MBA/MCA
+0.91	SECTIoN2I Deployment Context &Use Case
+0.90	Primary purpose for deploying ISACXP:
+0.96	Pre-Placement Screening Semester-End Assessment
+0.96	Internship Readiness
+0.95	SkillGapMapping
+0.98	Describe the specific deployment context:
+0.90	(semester,baichalong side what other assessments,duration of use)
+0.77	Semrshry- 2, ski11q knouwoledge
+0.86	asesment Gmemory
+0.98	Who administered the assessment?
+0.95	Faculty Member
+0.94	Training&Placement Cell
+0.92	HOD/Dean
+0.94	Student Self-Administered
+0.93	How was the LCl Scorecommunicated to students?
+0.93	Directly viaplatform
+0.89	Faculty printed & shared
+0.97	Notcommunicatedyet
+0.96	Other
+0.91	SECTION3I Product Experience & Ratings
+0.95	Overall Platform Usability
+0.91	Ease of navigalicn and operalon
+0.96	1-VeryPoor
+0.91	2-Poor
+0.92	G-Average
+0.90	4-Good
+0.95	Excellant
+0.96	Quality&Relevance oi Questions
+0.92	Appropriateness forproficiency measurement
+0.95	1-VeryPoor
+0.76	2-Poor
+0.96	3-Average
+0.94	4-Good
+0.95	Excellent
+0.97	mrdi.development@gmail.com-www.mrciskills.com
+0.98	Confidential Document
+0.96	Not for distribution without the consent of Master Research &Development Institute LLP

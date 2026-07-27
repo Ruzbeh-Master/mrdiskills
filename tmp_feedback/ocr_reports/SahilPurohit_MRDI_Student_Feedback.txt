@@ -1,0 +1,81 @@
+0.95	ISAC Systems
+0.76	R
+0.96	by Master Research&Development Institute
+0.96	Feedback Form
+0.94	SECTION 1I Institution Profile
+0.96	Institution/ College Name
+0.98	Department/Faculty
+0.91	ElechoicalEngineeaing
+0.93	City& State
+0.94	Typeof Institution
+0.90	SURAT ,
+0.91	GUjARAT
+0.93	Eclucation
+0.99	institution
+0.99	Contact Person Name
+0.97	Designation/Role
+0.94	STUDENT
+0.78	DAHIL
+0.96	PUROHIT
+0.99	Email Address
+0.96	Phone/WhatsApp
+0.89	Sahi1puvohit 393 gmail.com
+0.96	6359656547
+0.94	Number of Students Who Used ISACXP
+0.99	Under25
+0.99	25-50
+1.00	51-100
+1.00	101-250
+0.98	250+
+0.94	Primary Academic Stream/ Batch
+0.97	B.E./B.Tech
+0.93	Diploma Engg.
+0.99	M.E./M.Tech
+0.98	MBA/MCA
+0.98	Other
+0.92	SECTION2I Deployment Context & Use Case
+0.92	Primary purpose for deploying ISACXP:
+0.91	skil Gap Mapping
+0.98	Other
+0.97	Describe the specific deployment context:
+0.90	(semester,batch.aleng side what other assessments,durationof use)
+0.85	uoing
+0.98	this
+0.73	Sogtwave
+0.82	the
+0.84	boainstrains mosethan juo+
+0.91	While
+0.81	fach
+0.84	tooi to boostleuning.
+0.84	and Coeate
+0.63	C
+0.81	wbeointegvated
+0.98	Who administered the assessment?
+0.97	Training &PlacementCell
+0.98	HOD/Dean
+0.96	Student Self-Administered
+0.92	Faculty Member
+0.94	How was the LCl Score communicated to students?
+0.93	Faculty printed& shared
+0.96	Not communicated yet
+0.98	Other
+0.95	Directlyvia platform
+0.91	SECTIoN3I Product Experience & Ratings
+0.96	Overall Platform Usability
+0.91	Ease of navigation and operatlon
+0.89	2-Poor
+0.97	3-Average
+0.95	Good
+0.95	5-Excellent
+0.98	1-VeryPoor
+0.97	Quality&Relevanceof Questions
+0.95	Appropriatenessforproficienicy measurement
+0.89	2-Poor
+0.95	3-Average
+0.84	4-G0od
+0.95	Excellent
+0.92	1-VeryPoor
+0.94	ISAC Systems-Synthetic Intelligence Platform-Master Research&Development Institute LLP
+0.94	mrdi.developmentagnail.com-www.mrdiskills.com
+0.96	Confidenlial Document
+0.94	Not for distribution without the consent of Master Research & Developiment Institute LLP

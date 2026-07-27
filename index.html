@@ -233,7 +233,7 @@
     .proj-card.big { grid-column: span 2; }
     .proj-thumb { position: relative; width: 100%; height: 270px; overflow: hidden; }
     .proj-card.big .proj-thumb { height: 370px; }
-    .proj-thumb img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.75) grayscale(20%); transition: transform .5s, filter .5s; }
+    .proj-thumb img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.86) grayscale(8%); transition: transform .5s, filter .5s; }
     .proj-thumb.isac-logo {
       display: grid;
       place-items: center;
@@ -248,12 +248,12 @@
       object-fit: contain;
       filter: drop-shadow(0 22px 28px rgba(0,0,0,.28));
     }
-    .proj-card:hover .proj-thumb img { transform: scale(1.06); filter: brightness(.95) grayscale(0); }
+    .proj-card:hover .proj-thumb img { transform: scale(1.06); filter: brightness(1) grayscale(0); }
     .proj-card:hover .proj-thumb.isac-logo img {
       transform: scale(1.04);
       filter: drop-shadow(0 24px 30px rgba(0,0,0,.32));
     }
-    .proj-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,25,47,.92) 0%, transparent 60%); }
+    .proj-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,25,47,.78) 0%, rgba(10,25,47,.24) 48%, transparent 72%); }
     .proj-play {
       position: absolute; top: 18px; right: 18px;
       padding: 8px 12px;
@@ -584,7 +584,7 @@
     <div class="proj-grid">
       <div class="proj-card big reveal" data-href="video-viewer.html?id=hub-centric-steering">
         <div class="proj-thumb">
-          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/pxl_20221203_1103470784721489014944663889.webp" alt="Electric Motorcycle" onerror="this.src='https://placehold.co/800x370/112240/e85d04?text=Electric+Motorcycle'"/>
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/02/pxl_20221203_1103470784721489014944663889.webp" alt="Electric Motorcycle" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/800x370/112240/e85d04?text=Electric+Motorcycle'"/>
           <div class="proj-overlay"></div><div class="proj-play">View Project</div>
           <div class="proj-info">
             <div class="proj-num">PROJECT 01</div>
@@ -595,7 +595,7 @@
       </div>
       <div class="proj-card reveal rd1" data-href="video-viewer.html?id=motorcycle-built-from-scratch">
         <div class="proj-thumb">
-          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG_20200417_210032_148hd.webp" alt="Concept to Creation" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Concept+to+Creation'"/>
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG_20200417_210032_148hd.webp" alt="Concept to Creation" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Concept+to+Creation'"/>
           <div class="proj-overlay"></div><div class="proj-play">View Project</div>
           <div class="proj-info">
             <div class="proj-num">PROJECT 02</div>
@@ -606,7 +606,7 @@
       </div>
       <div class="proj-card reveal rd1" data-href="video-viewer.html?id=jawa-solar-ev">
         <div class="proj-thumb">
-          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG-20200114-WA0029.jpg" alt="Jawa EV" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Jawa+Solar+EV'"/>
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/IMG-20200114-WA0029.jpg" alt="Jawa EV" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Jawa+Solar+EV'"/>
           <div class="proj-overlay"></div><div class="proj-play">View Project</div>
           <div class="proj-info">
             <div class="proj-num">PROJECT 03</div>
@@ -617,7 +617,7 @@
       </div>
       <div class="proj-card reveal rd2" data-href="video-viewer.html?id=bobber-build">
         <div class="proj-thumb">
-          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/11/IMG_20171219_120811_393-1.webp" alt="Custom Bobber" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Custom+Bobber'"/>
+          <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/11/IMG_20171219_120811_393-1.webp" alt="Custom Bobber" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Custom+Bobber'"/>
           <div class="proj-overlay"></div><div class="proj-play">View Project</div>
           <div class="proj-info">
             <div class="proj-num">PROJECT 04</div>
@@ -730,6 +730,7 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
+
 
 
 
