@@ -117,6 +117,43 @@
       gap: 12px;
       margin-top: 24px;
     }
+    .project-videos {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .project-videos h3 {
+      font-family: var(--H);
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .project-video-links {
+      display: grid;
+      gap: 10px;
+    }
+    .project-video-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 15px;
+      color: var(--white);
+      background: rgba(10,25,47,.52);
+      border: 1px solid var(--border);
+      font-family: var(--S);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+    .project-video-link:hover {
+      color: var(--orange);
+      background: rgba(232,93,4,.08);
+      border-color: var(--orange);
+    }
     .viewer-panel h3 {
       font-family: var(--H);
       font-size: 1rem;
@@ -387,6 +424,20 @@
       query: 'MRDI electric motorcycle hub centric steering',
       youtubeUrl: 'https://youtu.be/Re7Gn8mlxjk'
     },
+    'arka-mini-baja': {
+      title: 'ARKA - SAE Mini Baja Project Consultancy for SCET College Students',
+      category: 'Innovation Hub',
+      sourcePage: 'innovation-hub.html',
+      description: 'A project showcase for the ARKA SAE Mini Baja consultancy conducted at MRDI for SCET college students. The card links to the main project video, with companion short clips highlighted on the showcase page.',
+      image: 'assets/images/arka-mini-baja-cover.jpg',
+      query: 'ARKA SAE Mini Baja Project Consultancy SCET College Students',
+      youtubeUrl: 'https://www.youtube.com/watch?v=ZQne9JN0jJY',
+      videos: [
+        { caption: 'ARKA Mini Baja Project - Full Video', url: 'https://www.youtube.com/watch?v=ZQne9JN0jJY' },
+        { caption: 'ARKA Mini Baja Project - Short Clip 01', url: 'https://youtube.com/shorts/HmWvEkWG4Fc?si=1AwsjTa-s4MsKPIK' },
+        { caption: 'ARKA Mini Baja Project - Short Clip 02', url: 'https://youtube.com/shorts/pmCdcnSwfRk?si=IaJmChvRE5-CAsXk' }
+      ]
+    },
     'from-passion-to-profession': {
       title: 'From Passion to Profession',
       category: 'Success Stories',
@@ -493,6 +544,14 @@
               : isLocalFile
               ? 'Because this website is being opened locally, YouTube blocks inline embeds here. Use the YouTube button below and the video will open directly on your channel.'
               : 'This item is linked to the matching video on your YouTube channel by exact title, so it opens the correct channel result instead of the MRDI page.'}</p>
+            ${item.videos ? `
+              <section class="project-videos" aria-label="ARKA project videos">
+                <h3>Project Videos</h3>
+                <div class="project-video-links">
+                  ${item.videos.map((video) => `<a class="project-video-link" href="${video.url}" target="_blank" rel="noopener noreferrer"><span>${video.caption}</span><span aria-hidden="true">&#x2197;</span></a>`).join('')}
+                </div>
+              </section>
+            ` : ''}
             <div class="viewer-actions">
               <a href="${youtubeUrl}" target="_blank" class="btn-orange">Open on YouTube</a>
               <a href="${item.sourcePage}" class="btn-outline">Back to ${item.category}</a>

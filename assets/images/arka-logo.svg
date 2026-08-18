@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">ARKA Mini Baja logo</title>
+  <desc id="desc">Abstract ARKA project mark for the SAE Mini Baja consultancy card.</desc>
+  <defs>
+    <linearGradient id="blueStroke" x1="180" y1="80" x2="420" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#42d3ff"/>
+      <stop offset="0.55" stop-color="#2e75c7"/>
+      <stop offset="1" stop-color="#0f6b4e"/>
+    </linearGradient>
+    <linearGradient id="greenStroke" x1="320" y1="170" x2="590" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4fb83d"/>
+      <stop offset="0.55" stop-color="#4a9a31"/>
+      <stop offset="1" stop-color="#2b6b21"/>
+    </linearGradient>
+    <radialGradient id="gold" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffef87"/>
+      <stop offset="0.5" stop-color="#ffba2b"/>
+      <stop offset="1" stop-color="#a95b00"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(0 10)">
+    <path d="M214 360 L332 138 L397 72 L439 108 L378 172 L286 330 Z" fill="url(#blueStroke)"/>
+    <path d="M384 196 C462 88 560 116 599 188 C625 235 611 282 579 315 C540 356 474 345 431 304 L362 242 C383 230 396 216 412 195 Z" fill="url(#greenStroke)"/>
+    <path d="M395 214 C430 188 470 186 506 199 C541 212 568 239 583 272 C600 309 588 354 548 386 C507 418 451 410 418 379 C387 349 377 305 392 268 C399 251 399 236 395 214 Z" fill="none" stroke="#2f7a1f" stroke-width="38" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
+    <path d="M365 146 L403 185 L442 146 L403 106 Z" fill="url(#gold)"/>
+    <path d="M400 111 L412 150 L451 164 L412 177 L400 216 L388 177 L349 164 L388 150 Z" fill="url(#gold)"/>
+    <text x="400" y="448" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="9">ARKA</text>
+    <text x="400" y="482" text-anchor="middle" fill="#c9d7ef" font-family="Space Grotesk, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="2">SAE MINI BAJA</text>
+  </g>
+</svg>
