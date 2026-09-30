@@ -116,6 +116,7 @@
     .hero-eyebrow::before, .hero-eyebrow::after {
       content: ''; width: 36px; height: 1px; background: var(--orange); opacity: .5;
     }
+    .hero-brand-mark { display:block; width:142px; height:142px; object-fit:contain; margin:0 0 14px; }
     .hero-title {
       font-family: var(--H);
       font-size: clamp(2.6rem, 8vw, 6.5rem);
@@ -373,6 +374,7 @@
     }
     @media(max-width:480px){
       .social-card{flex:1 1 100%;}
+      .hero-brand-mark{width:108px;height:108px;margin-bottom:10px;}
       .hero-actions{flex-direction:column;align-items:stretch;}
       .hero-content{padding:118px 20px 68px;}
       .hero-eyebrow{letter-spacing:1px;gap:10px;}
@@ -404,6 +406,15 @@
     .scroll-mouse::after { background:var(--orange2); border-radius:0; }
     #about,#projects,#socials { background:var(--bg); }
     #programs,#success { background:var(--surface2); }
+    #podcast { background:var(--orange); padding:88px 0; }
+    .podcast-home-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:5vw; align-items:center; }
+    .podcast-home-copy .sec-label { color:var(--text2); }
+    .podcast-home-copy .sec-title { color:var(--text2); }
+    .podcast-home-copy p { max-width:560px; color:rgba(17,18,15,.78); line-height:1.8; margin:0 0 26px; }
+    .podcast-home-video { display:block; width:100%; aspect-ratio:16/9; background:#111; border:1px solid var(--text2); }
+    .podcast-home-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    #podcast .btn-orange { background:var(--text2); border-color:var(--text2); }
+    #podcast .btn-outline { border-color:var(--text2); color:var(--text2); }
     .about-grid { gap:10vw; }
     .about-img-wrap img { height:560px; border:0; box-shadow:none; filter:saturate(1.08) contrast(1.05); }
     .about-badge { bottom:-1px; right:-1px; background:var(--orange); }
@@ -446,6 +457,7 @@
     .subscribe-row input { background:transparent; border-color:var(--text2); color:var(--text2); }
     .subscribe-row button { background:var(--text2); color:var(--white); font-family:var(--S); }
     @media(max-width:900px){.proj-card.big{grid-column:span 1;}.proj-card.big .proj-thumb{height:330px;}.social-card:last-child{border-right:1px solid var(--text2);}}
+    @media(max-width:768px){.podcast-home-grid{grid-template-columns:1fr;gap:32px;}#podcast{padding:64px 0;}}
     @media(max-width:768px){.hero-content{padding:128px 22px 72px;}.hero-title{font-size:clamp(2.5rem,12vw,4.4rem);}.about-img-wrap img{height:400px;}.social-row{border-right:0;}}
   </style>
   <!-- Vercel Web Analytics -->
@@ -467,7 +479,7 @@
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI Logo" onerror="this.style.display='none'"/>
+      <img src="mrdi-favicon.png" alt="MRDI Logo" onerror="this.style.display='none'"/>
       <div class="logo-text">
         <span class="logo-name">MRDI</span>
         <span class="logo-tag">Bridging Gaps of Learning</span>
@@ -492,6 +504,7 @@
         </div>
       </div>
       <div class="nav-item"><a href="blog.html">Blog</a></div>
+      <div class="nav-item"><a href="future-ready-podcast.html">Podcast</a></div>
       <div class="nav-item"><a href="contact.html">Contact</a></div>
       <a href="enquiry.html" class="nav-cta">Enroll Now</a>
     </nav>
@@ -510,6 +523,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-shell">
+      <img class="hero-brand-mark" src="mrdi-favicon.png" alt="Master Research and Development Institute logo"/>
       <p class="hero-eyebrow">Master Research & Development Institute</p>
       <h1 class="hero-title">Industry-ready skills<br/><em>built through real work</em></h1>
       <p class="hero-sub">Hands-on automotive, EV, prototyping, and capability-based learning experiences designed to move students from classroom knowledge to workshop confidence.</p>
@@ -517,6 +531,7 @@
         <a href="programs.html" class="btn-orange">Explore Programs</a>
         <a href="innovation-hub.html" class="btn-outline">See Our Work</a>
         <a href="isac-systems-page.html" class="btn-outline">ISAC Systems</a>
+        <a href="future-ready-podcast.html" class="btn-outline">Future Ready Podcast</a>
       </div>
       <div class="hero-note">
         <span>Automotive Learning</span>
@@ -732,6 +747,19 @@
   </div>
 </section>
 
+<!-- PODCAST FEATURE -->
+<section id="podcast" aria-labelledby="home-podcast-title">
+  <div class="wrap podcast-home-grid">
+    <div class="podcast-home-copy reveal">
+      <p class="sec-label">MRDI Podcast · Future Ready</p>
+      <h2 class="sec-title" id="home-podcast-title">The Next-Gen Skills Show</h2>
+      <p>Meet the show exploring the skills that help the next generation learn, build, and thrive. Watch the intro, discover short clips from the conversations, and explore the full episodes.</p>
+      <div class="podcast-home-actions"><a href="future-ready-podcast.html" class="btn-orange">Explore the Podcast &#8594;</a><a href="https://youtube.com/playlist?list=PLKkqouuqH0B4&amp;si=1zdBVaHf0J9_9SuU" target="_blank" rel="noopener noreferrer" class="btn-outline">Full YouTube Playlist &#8599;</a></div>
+    </div>
+    <video class="podcast-home-video reveal rd1" controls preload="metadata" playsinline aria-label="Future Ready: The Next-Gen Skills Show intro"><source src="assets/podcast/Podcast%20Intro%20Short.mp4" type="video/mp4"/>Your browser does not support this video.</video>
+  </div>
+</section>
+
 <!-- SOCIAL LINKS -->
 <section id="socials" class="section-pad" style="padding:60px 0;">
   <div class="wrap">
@@ -768,7 +796,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       <a href="index.html" class="logo">
-        <img src="https://i0.wp.com/mrdiskills.com/wp-content/uploads/2025/09/cropped-mrdi_logo_100x96_px-removebg-preview.webp" alt="MRDI" style="height:40px;" onerror="this.style.display='none'"/>
+        <img src="mrdi-favicon.png" alt="MRDI" style="height:40px;" onerror="this.style.display='none'"/>
         <div class="logo-text"><span class="logo-name">MRDI</span><span class="logo-tag">Bridging Gaps of Learning</span></div>
       </a>
       <p>Master Research & Development Institute &mdash; skill development for automotive maintenance, prototyping, and EV innovation in Surat, Gujarat.</p>
@@ -786,6 +814,7 @@
       <li><a href="knowledge-lab.html">Knowledge Lab</a></li>
 <li><a href="isac-systems-page.html">ISAC Systems</a></li>
       <li><a href="blog.html">Blog</a></li>
+      <li><a href="future-ready-podcast.html">Podcast</a></li>
     </ul></div>
     <div class="footer-col"><h4>Contact</h4><ul>
       <li><a href="contact.html">Contact Us</a></li>
@@ -803,6 +832,3 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
-
-
-

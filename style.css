@@ -684,9 +684,13 @@ header {
 }
 .header-inner { max-width: none; padding: 0 3vw; height: 78px; }
 .logo { gap: 10px; }
+header .logo { gap:11px; padding:0; background:transparent; }
+header .logo img { width:48px; height:48px; padding:3px; background:var(--white); border:1px solid var(--border); object-fit:contain; }
 .logo img { height: 42px; }
 .logo-name { color: var(--text2); font-family: var(--H); font-size: .92rem; letter-spacing: -.06em; }
+header .logo-name { color:var(--text2); font-size:1rem; }
 .logo-tag { font-family: var(--S); font-size: .55rem; color: var(--text); }
+header .logo-tag { color:var(--text); font-size:.6rem; }
 nav { gap: 4px; }
 .nav-item > a {
   color: var(--text2);
@@ -857,4 +861,7 @@ footer .footer-bottom p { color: rgba(255,253,248,.78); }
 footer .footer-socials a { border-color: rgba(255,253,248,.48); color: var(--white); }
 @media (max-width: 768px) {
   header, nav { background: var(--bg); }
+  header .logo img { width:40px; height:40px; }
+  header .logo-name { font-size:.94rem; }
+  header .logo-tag { font-size:.54rem; }
 }
