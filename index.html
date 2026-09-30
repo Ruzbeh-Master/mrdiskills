@@ -385,6 +385,68 @@
       .hero-note span::before{width:14px;}
       .about-badge{right:0;bottom:-16px;}
     }
+    /* Editorial home treatment. */
+    #hero { background:#efe5d8; min-height:calc(100vh - 42px); }
+    .hero-video-bg video { opacity:.78; filter:saturate(1.08) contrast(1.02) brightness(1.04); }
+    .hero-overlay { background:linear-gradient(90deg,rgba(251,248,241,.95) 0%,rgba(251,248,241,.84) 42%,rgba(251,248,241,.18) 100%),linear-gradient(0deg,rgba(251,248,241,.52) 0%,transparent 55%); }
+    .hero-content { max-width:none; padding:164px 7vw 90px; }
+    .hero-shell { max-width:1000px; }
+    .hero-eyebrow { color:var(--orange); font-family:var(--S); font-size:.7rem; letter-spacing:.16em; }
+    .hero-eyebrow::before,.hero-eyebrow::after { background:var(--orange); }
+    .hero-title { color:var(--text2); font-family:var(--H); font-size:clamp(2.7rem,7.5vw,7.7rem); font-weight:600; line-height:1.02; letter-spacing:-.08em; max-width:12ch; }
+    .hero-title em { color:var(--orange2); }
+    .hero-sub { color:var(--text); font-family:var(--B); max-width:590px; }
+    .hero-note span { color:var(--text); font-family:var(--S); font-size:.68rem; letter-spacing:.08em; }
+    .hero-note span::before { background:var(--orange); }
+    .scroll-hint { right:4vw; }
+    .scroll-hint span { color:var(--text2); font-family:var(--S); }
+    .scroll-mouse { border-color:rgba(48,41,35,.5); border-radius:0; }
+    .scroll-mouse::after { background:var(--orange2); border-radius:0; }
+    #about,#projects,#socials { background:var(--bg); }
+    #programs,#success { background:var(--surface2); }
+    .about-grid { gap:10vw; }
+    .about-img-wrap img { height:560px; border:0; box-shadow:none; filter:saturate(1.08) contrast(1.05); }
+    .about-badge { bottom:-1px; right:-1px; background:var(--orange); }
+    .about-badge .b-num { color:var(--text2); font-family:var(--H); font-size:1.55rem; letter-spacing:-.07em; }
+    .about-badge .b-lbl { color:var(--text2); font-family:var(--S); }
+    .feat-pills { gap:0; border-top:1px solid var(--text2); border-left:1px solid var(--text2); }
+    .pill { padding:14px; border:0; border-right:1px solid var(--text2); border-bottom:1px solid var(--text2); background:transparent; color:var(--text2); font-family:var(--S); font-size:.68rem; }
+    .pill:hover { background:var(--orange); }
+    .pill .pi { color:var(--text2); }
+    .prog-grid,.success-grid,.proj-grid { gap:0; border-top:1px solid var(--text2); border-left:1px solid var(--text2); }
+    .prog-card,.story-card { border:0; border-right:1px solid var(--text2); border-bottom:1px solid var(--text2); box-shadow:none; }
+    .prog-card:hover,.story-card:hover { transform:none; background:var(--orange); box-shadow:none; border-color:var(--text2); }
+    .prog-card .prog-img { height:230px; }
+    .prog-card .prog-img img { filter:saturate(1.08) contrast(1.04) brightness(.94); }
+    .prog-body { padding:28px; }
+    .prog-body h3,.story-card h3 { font-family:var(--H); font-size:.95rem; letter-spacing:-.06em; }
+    .proj-header { margin-bottom:38px; }
+    .proj-card { border-right:1px solid var(--text2); border-bottom:1px solid var(--text2); }
+    .proj-card.big { grid-column:span 2; }
+    .proj-thumb { height:330px; }
+    .proj-card.big .proj-thumb { height:500px; }
+    .proj-thumb img { filter:saturate(1.1) contrast(1.06) brightness(.82); }
+    .proj-overlay { background:linear-gradient(to top,rgba(17,18,15,.96) 0%,rgba(17,18,15,.22) 63%,transparent 100%); }
+    .proj-play { top:auto; bottom:20px; right:20px; background:var(--orange); border:1px solid var(--orange); color:var(--text2); border-radius:0; font-family:var(--S); }
+    .proj-card:hover .proj-play { background:var(--white); border-color:var(--white); }
+    .proj-num { color:var(--orange); font-family:var(--S); }
+    .proj-title { font-family:var(--H); letter-spacing:-.05em; font-size:.9rem; }
+    .proj-sub { color:rgba(251,250,245,.68); }
+    .story-card { padding:32px 28px; }
+    .social-row { gap:0; border:1px solid var(--text2); border-bottom:0; }
+    .social-card { background:transparent; border:0; border-right:1px solid var(--text2); border-bottom:1px solid var(--text2); box-shadow:none; }
+    .social-card:last-child { border-right:0; }
+    .social-card:hover { background:var(--orange); border-color:var(--text2); box-shadow:none; transform:none; }
+    #cta { background:var(--orange); padding:130px 40px; }
+    #cta::before { background:none; }
+    #cta h2 { color:var(--text2); font-family:var(--H); font-size:clamp(2.2rem,6vw,6rem); letter-spacing:-.08em; }
+    #cta p { color:rgba(17,18,15,.72); }
+    #cta .btn-orange { background:var(--text2); border-color:var(--text2); }
+    #cta .btn-outline { border-color:var(--text2); color:var(--text2); }
+    .subscribe-row input { background:transparent; border-color:var(--text2); color:var(--text2); }
+    .subscribe-row button { background:var(--text2); color:var(--white); font-family:var(--S); }
+    @media(max-width:900px){.proj-card.big{grid-column:span 1;}.proj-card.big .proj-thumb{height:330px;}.social-card:last-child{border-right:1px solid var(--text2);}}
+    @media(max-width:768px){.hero-content{padding:128px 22px 72px;}.hero-title{font-size:clamp(2.5rem,12vw,4.4rem);}.about-img-wrap img{height:400px;}.social-row{border-right:0;}}
   </style>
   <!-- Vercel Web Analytics -->
   <script>
@@ -741,10 +803,6 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
-
-
-
-
 
 
 

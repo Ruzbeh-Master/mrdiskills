@@ -1441,6 +1441,34 @@
         font-size: 0.95rem;
       }
     }
+    /* MRDI shared-site visual bridge. */
+    :root {
+      --black: #302923;
+      --white: #fffdf8;
+      --off-white: #f5f0e7;
+      --si-teal: #5c7066;
+      --si-teal-dim: #42564c;
+      --xp-amber: #b96843;
+      --xp-amber-dim: #93482e;
+      --mid-gray: #64584d;
+      --muted: #74685d;
+      --border: rgba(57,44,34,.18);
+      --card-bg: #fffdf8;
+    }
+    body { background: #f5f0e7; color: #51473f; }
+    .hero { min-height: auto; padding: 128px 0 96px; }
+    .hero-bg { background: linear-gradient(135deg,#fbf8f1 0%,#eadfce 100%); }
+    .hero-grid { background-image: linear-gradient(rgba(57,44,34,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(57,44,34,.05) 1px,transparent 1px); }
+    .hero h1,.hero-brand-copy strong,.section-header h2,.lci-text h2,.validation h2,.final-cta h2 { color: #302923; }
+    .hero-desc,.hero-brand-copy span,.section-header p,.lci-text p { color: #62564c; }
+    .dual-intro,.lci-section,.use-cases,.audience,.difference,.faq { background: transparent; }
+    .product-card,.case-card,.audience-card,.flow-step,.lci-visual-card,.frame-window,.faq-item { background: #fffdf8; border-color: rgba(57,44,34,.18); box-shadow: none; border-radius: 0; }
+    .product-card:hover,.case-card:hover,.audience-card:hover,.flow-step:hover { background: #f4e9dc; border-color: #b96843; }
+    .btn { border-radius: 0; font-family: var(--S); letter-spacing: .05em; }
+    .btn-primary-xp { background: #b96843; border-color: #b96843; }
+    .btn-primary-xp:hover { background: #93482e; border-color: #93482e; }
+    .btn-outline-si { border-color: #5c7066; color: #42564c; }
+    .btn-outline-si:hover { background: #5c7066; color: #fffdf8; }
   </style>
   <!-- Vercel Web Analytics -->
   <script>
@@ -2126,7 +2154,6 @@
 <script src="mrdi.js"></script>
 </body>
 </html>
-
 
 
 
