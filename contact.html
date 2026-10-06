@@ -88,6 +88,14 @@
   <link rel="stylesheet" href="style.css"/>
   <style>
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .founder-profile { padding-block: clamp(48px, 8vw, 104px); background: var(--bg2); }
+    .founder-profile-grid { display: grid; grid-template-columns: minmax(230px, .78fr) minmax(0, 1.22fr); gap: clamp(28px, 7vw, 96px); align-items: center; }
+    .founder-profile-photo { display: block; width: 100%; max-height: 640px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 28%; border: 1px solid var(--border); background: var(--surface); }
+    .founder-profile-copy { max-width: 760px; }
+    .founder-profile-copy .sec-title { margin-bottom: 12px; }
+    .founder-profile-role { margin-bottom: 26px; color: var(--orange); font-family: var(--S); font-size: .78rem; font-weight: 700; letter-spacing: .04em; line-height: 1.65; }
+    .founder-profile-copy > p:not(.sec-label):not(.founder-profile-role) { color: var(--muted); font-size: 1rem; line-height: 1.85; }
+    .founder-vision { margin-top: 28px; padding: 18px 22px; border-left: 3px solid var(--orange); background: var(--surface); color: var(--text2); font-size: 1.05rem; line-height: 1.7; }
     .contact-info-card { background: var(--surface); border: 1px solid var(--border); padding: 36px; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 20px; transition: border-color .3s; }
     .contact-info-card:hover { border-color: rgba(232,93,4,.4); }
     .ci-icon { font-size: 2rem; flex-shrink: 0; }
@@ -102,7 +110,7 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .submit-btn { width: 100%; padding: 14px; background: var(--orange); color: #fff; font-family: var(--S); font-size: .9rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; cursor: pointer; margin-top: 8px; transition: background .2s; }
     .submit-btn:hover { background: var(--orange2); }
-    @media(max-width:768px){ .contact-grid,.form-row{grid-template-columns:1fr;} }
+    @media(max-width:768px){ .contact-grid,.form-row,.founder-profile-grid{grid-template-columns:1fr;} .founder-profile-photo{width:min(100%,420px);max-height:560px;} }
   </style>
   <!-- Vercel Web Analytics -->
   <script>
@@ -139,12 +147,16 @@
   </div>
 </div>
 
-<section class="founder-note section-pad" aria-labelledby="founder-note-title">
-  <div class="wrap founder-note-inner">
-    <p class="sec-label">The Story Behind MRDI</p>
-    <h2 class="sec-title" id="founder-note-title">Built from hands-on experience.</h2>
-    <p>MRDI grew from its founder’s own path: after leaving school, he learned through motorcycle repair and practical work. The institute now brings that same hands-on approach to students building skills for automotive, EV, and prototyping careers.</p>
-    <a href="success-stories.html" class="text-link">Read a student success story <span aria-hidden="true">&#8599;</span></a>
+<section class="founder-profile" aria-labelledby="founder-profile-title">
+  <div class="wrap founder-profile-grid">
+    <img class="founder-profile-photo" src="assets/images/sections/contact/founder-ruzbeh-gav-master.jpg" alt="Ruzbeh Gav Master, Founder and Managing Director of MRDI" loading="lazy" decoding="async"/>
+    <div class="founder-profile-copy">
+      <p class="sec-label">The Founder</p>
+      <h2 class="sec-title" id="founder-profile-title">Ruzbeh Gav Master</h2>
+      <p class="founder-profile-role">Founder &amp; Managing Director, Master Research and Development Institute</p>
+      <p>Ruzbeh Gav Master is an engineer, innovator, designer and skill-development entrepreneur focused on turning knowledge into practical capability. As the Founder of Master Research and Development Institute (MRDI), he works at the intersection of engineering, education, product development and emerging technology, building systems that help people learn, create and become industry-ready.</p>
+      <p class="founder-vision">Through MRDI, his vision is simple: <strong>bridge the gap between learning and real-world execution.</strong></p>
+    </div>
   </div>
 </section>
 

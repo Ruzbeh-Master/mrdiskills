@@ -129,30 +129,21 @@
       color: var(--white);
       margin-bottom: 14px;
     }
-    .project-video-links {
+    .project-video-embeds {
       display: grid;
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 18px;
+      margin-top: 20px;
     }
-    .project-video-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 13px 15px;
-      color: var(--white);
-      background: rgba(10,25,47,.52);
+    .project-video-embed {
+      min-width: 0;
+      background: var(--surface);
       border: 1px solid var(--border);
-      font-family: var(--S);
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      transition: border-color .2s, color .2s, background .2s;
     }
-    .project-video-link:hover {
-      color: var(--orange);
-      background: rgba(232,93,4,.08);
-      border-color: var(--orange);
+    .project-video-embed h4 {
+      padding: 12px 14px;
+      color: var(--text2);
+      font-size: .9rem;
     }
     .viewer-panel h3 {
       font-family: var(--H);
@@ -511,28 +502,20 @@
       'success-stories.html': 'https://mrdiskills.com/success-stories/'
     };
     const officialUrl = officialUrlMap[item.sourcePage] || 'https://mrdiskills.com/';
-    const youtubeUrl = item.youtubeUrl || `https://www.youtube.com/@MRDI_LLP/search?query=${encodeURIComponent(item.title)}`;
-    const watchMatch = youtubeUrl.match(/[?&]v=([^&]+)/);
-    const directEmbedUrl = watchMatch ? `https://www.youtube.com/embed/${watchMatch[1]}` : '';
-    const isLocalFile = window.location.protocol === 'file:';
-    const canEmbedDirectly = Boolean(directEmbedUrl) && !isLocalFile;
+    const youtubeUrl = item.youtubeUrl || '';
+    const videoMatch = youtubeUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:shorts\/|embed\/|watch\?(?:[^#]*&)?v=))([\w-]{11})/i);
+    const directEmbedUrl = videoMatch ? `https://www.youtube-nocookie.com/embed/${videoMatch[1]}?rel=0&playsinline=1` : '';
+    const canEmbedDirectly = Boolean(directEmbedUrl);
 
     app.innerHTML = `
       <div class="viewer-shell">
         <div>
           <div class="video-frame reveal in">
             ${canEmbedDirectly
-              ? `<iframe class="video-embed" src="${directEmbedUrl}" title="${item.title}" allowfullscreen loading="lazy"></iframe>`
-              : isLocalFile
-              ? `<div class="viewer-empty" style="padding:48px 24px;">
-                   <h2 style="font-size:1.6rem;">Open Video on YouTube</h2>
-                   <p>Embedded playback is blocked in local file mode, so this item opens directly on your YouTube channel to show the correct video without the MRDI page wrapper.</p>
-                   <a href="${youtubeUrl}" target="_blank" class="btn-orange">Watch Video</a>
-                 </div>`
+              ? `<iframe class="video-embed" src="${directEmbedUrl}" title="${item.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`
               : `<div class="viewer-empty" style="padding:48px 24px;">
-                   <h2 style="font-size:1.6rem;">Open Video on YouTube</h2>
-                   <p>This item is linked to the matching video on your YouTube channel. Use the button below to open the exact channel result for this title.</p>
-                   <a href="${youtubeUrl}" target="_blank" class="btn-orange">Watch Video</a>
+                   <h2 style="font-size:1.6rem;">Video unavailable</h2>
+                   <p>This video does not have a valid YouTube video ID yet.</p>
                  </div>`
             }
           </div>
@@ -540,21 +523,20 @@
             <span class="viewer-kicker">${item.category}</span>
             <h2 class="viewer-title">${item.title}</h2>
             <p class="viewer-desc">${item.description}</p>
-            <p class="viewer-copy">${canEmbedDirectly
-              ? 'This item has a verified direct YouTube watch link, so it can be shown here as an embedded video.'
-              : isLocalFile
-              ? 'Because this website is being opened locally, YouTube blocks inline embeds here. Use the YouTube button below and the video will open directly on your channel.'
-              : 'This item is linked to the matching video on your YouTube channel by exact title, so it opens the correct channel result instead of the MRDI page.'}</p>
+            <p class="viewer-copy">Watch the video here in the MRDI player.</p>
             ${item.videos ? `
               <section class="project-videos" aria-label="ARKA project videos">
                 <h3>Project Videos</h3>
-                <div class="project-video-links">
-                  ${item.videos.map((video) => `<a class="project-video-link" href="${video.url}" target="_blank" rel="noopener noreferrer"><span>${video.caption}</span><span aria-hidden="true">&#x2197;</span></a>`).join('')}
+                <div class="project-video-embeds">
+                  ${item.videos.map((video) => {
+                    const match = video.url.match(/(?:youtu\.be\/|youtube\.com\/(?:shorts\/|embed\/|watch\?(?:[^#]*&)?v=))([\w-]{11})/i);
+                    const embedUrl = match ? `https://www.youtube-nocookie.com/embed/${match[1]}?rel=0&playsinline=1` : '';
+                    return embedUrl ? `<article class="project-video-embed"><iframe class="video-embed" src="${embedUrl}" title="${video.caption}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><h4>${video.caption}</h4></article>` : '';
+                  }).join('')}
                 </div>
               </section>
             ` : ''}
             <div class="viewer-actions">
-              <a href="${youtubeUrl}" target="_blank" class="btn-orange">Open on YouTube</a>
               <a href="${item.sourcePage}" class="btn-outline">Back to ${item.category}</a>
             </div>
           </div>

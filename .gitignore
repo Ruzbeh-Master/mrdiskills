@@ -6,6 +6,10 @@ dist/
 build/
 .next/
 .vercel/
+/.local-tools/
+/assets/originals/
+/tmp_feedback/
+/tmp_si_forms/
 
 # Logs
 *.log

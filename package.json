@@ -1,23 +1,9 @@
 {
-  "name": "primary",
+  "name": "mrdi-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "mrdi.js",
+  "private": true,
+  "description": "Static MRDI website. The deployment build uses only Node.js built-ins.",
   "scripts": {
-    "test": "echo \"No automated tests configured yet\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ruzbeh-Master/mrdiskills.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ruzbeh-Master/mrdiskills/issues"
-  },
-  "homepage": "https://github.com/Ruzbeh-Master/mrdiskills#readme",
-  "dependencies": {
-    "@vercel/analytics": "^2.0.1"
+    "build": "node scripts/build-site.mjs"
   }
 }
