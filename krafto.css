@@ -586,6 +586,9 @@ body{word-spacing:.09em}
   #hero .hero-title{font-size:clamp(36px,10vw,44px)!important}
 }
 
-/* Starfield Motion stays above section backgrounds and below all page content. */
-#starfield-motion-background{position:fixed;inset:0;z-index:1;display:block;pointer-events:none;contain:strict}
+/* Starfield Motion canvas fills the page behind the site surfaces and content tiles. */
+html{background:#f5f7f5!important}
+body{position:relative;isolation:isolate;background:transparent!important}
+#starfield-motion-background{position:fixed;inset:0;z-index:-1;display:block;pointer-events:none;contain:strict}
+body>section:not(#hero),main>section:not(#hero),.page-hero,.section-pad,#about,#programs,#projects,#success,#socials,#articles,#podcast,#faq,#reviews,.reviews-section,#contact-showcase,#cta,.blog-showcase,.founder-note,.isac-launch{background:rgba(245,247,245,.72)!important}
 header .header-inner,.wrap,.page-hero-inner,.footer-top,.footer-bottom,#hero,.topbar{position:relative;z-index:2}

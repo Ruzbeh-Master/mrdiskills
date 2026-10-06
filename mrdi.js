@@ -7,6 +7,91 @@
 
   const WA_URL = 'https://api.whatsapp.com/send?phone=918905636766&text=Hi%2C%20I%20got%20your%20WhatsApp%20information%20from%20your%20website.';
 
+  /* Full-page Starfield Motion background. */
+  const starfield = document.createElement('canvas');
+  starfield.id = 'starfield-motion-background';
+  starfield.setAttribute('aria-hidden', 'true');
+  document.body.prepend(starfield);
+  const starCtx = starfield.getContext('2d', { alpha: true });
+  if (starCtx) {
+    let width = 0, height = 0, dpr = 1, points = [];
+    let pointer = { x: -1000, y: -1000, active: false };
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const spacing = () => innerWidth < 700 ? 25 : 21;
+
+    const resizeStarfield = () => {
+      dpr = Math.min(devicePixelRatio || 1, 1.5);
+      width = innerWidth;
+      height = innerHeight;
+      starfield.width = Math.round(width * dpr);
+      starfield.height = Math.round(height * dpr);
+      starfield.style.width = `${width}px`;
+      starfield.style.height = `${height}px`;
+      starCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const gap = spacing();
+      points = [];
+      for (let y = 8; y < height; y += gap) {
+        for (let x = 8; x < width; x += gap) {
+          points.push({ x, y, phase: Math.random() * Math.PI * 2, size: .7 + Math.random() * .65 });
+        }
+      }
+    };
+    resizeStarfield();
+    addEventListener('resize', resizeStarfield, { passive: true });
+    addEventListener('pointermove', event => {
+      pointer = { x: event.clientX, y: event.clientY, active: event.pointerType !== 'touch' };
+      if (reducedMotion && starCtx) drawStarfield(0);
+    }, { passive: true });
+    addEventListener('pointerleave', () => {
+      pointer.active = false;
+      if (reducedMotion && starCtx) drawStarfield(0);
+    }, { passive: true });
+    addEventListener('pointerdown', event => {
+      if (event.pointerType === 'touch') pointer = { x: event.clientX, y: event.clientY, active: true };
+      if (reducedMotion && starCtx) drawStarfield(0);
+    }, { passive: true });
+    addEventListener('pointerup', event => {
+      if (event.pointerType === 'touch') pointer.active = false;
+      if (reducedMotion && starCtx) drawStarfield(0);
+    }, { passive: true });
+
+    const drawStarfield = time => {
+      starCtx.clearRect(0, 0, width, height);
+      const seconds = reducedMotion ? 0 : time * .001;
+      const radius = 138;
+      for (const point of points) {
+        let dx = 0, dy = 0, influence = 0;
+        if (pointer.active) {
+          const px = point.x - pointer.x, py = point.y - pointer.y;
+          const distance = Math.hypot(px, py);
+          if (distance < radius) {
+            influence = 1 - distance / radius;
+            const push = influence * influence * 13;
+            const angle = distance ? Math.atan2(py, px) : 0;
+            dx = Math.cos(angle) * push;
+            dy = Math.sin(angle) * push;
+          }
+        }
+        const twinkle = reducedMotion ? .5 : .5 + .5 * Math.sin(seconds * 1.15 + point.phase);
+        const alpha = .3 + twinkle * .32 + influence * .38;
+        starCtx.fillStyle = `rgba(20, 52, 42, ${alpha})`;
+        starCtx.beginPath();
+        starCtx.arc(point.x + dx, point.y + dy, point.size + influence * 1.15, 0, Math.PI * 2);
+        starCtx.fill();
+      }
+      if (pointer.active) {
+        const shade = starCtx.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, 190);
+        shade.addColorStop(0, 'rgba(14, 31, 27, .62)');
+        shade.addColorStop(.58, 'rgba(14, 31, 27, .3)');
+        shade.addColorStop(1, 'rgba(14, 31, 27, 0)');
+        starCtx.fillStyle = shade;
+        starCtx.fillRect(pointer.x - 190, pointer.y - 190, 380, 380);
+      }
+      if (!reducedMotion) requestAnimationFrame(drawStarfield);
+    };
+    drawStarfield(0);
+  }
+
   /* â”€â”€ Hamburger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const ham = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');
@@ -264,5 +349,3 @@
   }
 
 })();
-
-
