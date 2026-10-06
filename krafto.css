@@ -585,3 +585,7 @@ body{word-spacing:.09em}
   #hero{height:clamp(610px,170vw,760px)!important;min-height:610px!important}
   #hero .hero-title{font-size:clamp(36px,10vw,44px)!important}
 }
+
+/* Starfield Motion stays above section backgrounds and below all page content. */
+#starfield-motion-background{position:fixed;inset:0;z-index:1;display:block;pointer-events:none;contain:strict}
+header .header-inner,.wrap,.page-hero-inner,.footer-top,.footer-bottom,#hero,.topbar{position:relative;z-index:2}
