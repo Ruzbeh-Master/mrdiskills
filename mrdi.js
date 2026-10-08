@@ -245,10 +245,9 @@
     });
   }
 
-  /* Review entries are shown immediately in this visit; no external service is configured. */
-  const reviewForm = document.getElementById('review-form');
+  /* Google reviews carousel controls. */
   const reviewList = document.getElementById('review-list');
-  if (reviewForm && reviewList) {
+  if (reviewList) {
     const reviewViewport = reviewList.closest('.review-viewport');
     const previousReviews = document.querySelector('.review-prev');
     const nextReviews = document.querySelector('.review-next');
@@ -269,24 +268,6 @@
     reviewViewport?.addEventListener('scroll', syncReviewControls, { passive: true });
     window.addEventListener('resize', syncReviewControls);
     syncReviewControls();
-    reviewForm.addEventListener('submit', event => {
-      event.preventDefault();
-      if (!reviewForm.reportValidity()) return;
-      const formData = new FormData(reviewForm);
-      const card = document.createElement('article');
-      card.className = 'review-entry';
-      const heading = document.createElement('h4');
-      heading.textContent = String(formData.get('reviewName') || '').trim() || 'MRDI learner';
-      const stars = document.createElement('div');
-      stars.className = 'review-stars';
-      stars.setAttribute('aria-label', `${formData.get('rating')} out of 5 stars`);
-      stars.textContent = `${'★'.repeat(Number(formData.get('rating')))}${'☆'.repeat(5 - Number(formData.get('rating')))}`;
-      card.append(heading, stars);
-      reviewList.prepend(card);
-      if (reviewViewport) reviewViewport.scrollTo({ left: 0, behavior: 'smooth' });
-      reviewForm.reset();
-      reviewForm.querySelector('.review-note').textContent = 'Thank you for sharing your review. Your rating is shown above.';
-    });
   }
 
   /* â”€â”€ Subscribe â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */

@@ -518,18 +518,12 @@ input,select,textarea,button{max-width:100%}
 .isac-launch-inner>a{flex:0 0 auto;border:1px solid #17382f;transition:background .2s,transform .2s}
 .isac-launch-inner>a:hover{background:#245647;transform:translateY(-2px)}
 
-/* Review form and locally visible review cards before the FAQ. */
+/* Google reviews before the FAQ. */
 .reviews-section{background:#f3f6f3!important}
-.reviews-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,6vw,84px);align-items:start}
-.reviews-intro{position:sticky;top:120px}
+.reviews-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,6vw,84px);align-items:start}
+.reviews-intro{position:static}
 .reviews-intro h2{margin:18px 0;font-size:clamp(38px,5.3vw,68px)!important;line-height:1!important}
 .reviews-intro>p:last-child{max-width:420px;color:#57675f}
-.review-form-card{padding:clamp(22px,4vw,42px);border:1px solid #d7e2db;background:#fff}
-.review-form-card h3{margin:0 0 24px;font-size:clamp(25px,3vw,36px)!important}
-.review-form-card .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.review-form-card textarea{width:100%;resize:vertical}
-.review-form-card .submit-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;background:#17382f!important;color:#fff!important;border:0!important}
-.review-note{margin:12px 0 0;font-size:11px;line-height:1.5}
 .reviews-carousel{margin-top:22px;min-width:0}
 .review-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px;color:#53645b;font:500 9px var(--M);letter-spacing:.07em;text-transform:uppercase}
 .review-controls>div{display:flex;gap:7px}
@@ -548,6 +542,7 @@ input,select,textarea,button{max-width:100%}
 .google-rating-score{grid-row:span 2;font-size:30px;font-weight:600;line-height:1}
 .google-rating-stars{color:#b65e35;letter-spacing:.1em}
 .google-rating-count{font:500 9px var(--M);letter-spacing:.04em;color:#53645b}
+.google-review-cta{display:inline-flex;align-items:center;gap:10px;margin-top:14px;text-decoration:none}
 .google-review-meta{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 12px}
 .google-review-meta h4{margin:0}
 .review-source{font:500 9px var(--M);letter-spacing:.04em;color:#64766d}
@@ -559,7 +554,6 @@ input,select,textarea,button{max-width:100%}
   .reviews-grid{grid-template-columns:minmax(0,1fr)}
   .review-entry{flex-basis:min(82vw,390px);min-height:190px}
   .reviews-intro{position:static}
-  .review-form-card .form-row{grid-template-columns:minmax(0,1fr)}
   .isac-launch-inner{align-items:flex-start!important}
   .isac-launch-mark{flex-basis:60px;width:60px;height:60px}
   .isac-launch-copy{flex-basis:calc(100% - 80px)}
