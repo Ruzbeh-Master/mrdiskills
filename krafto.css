@@ -112,7 +112,7 @@ body{counter-reset:site-section}
 .contact-showcase-form textarea{min-height:110px}
 .contact-showcase-form .submit-btn{width:100%;min-height:50px;background:var(--ink)!important;color:white!important;border:0!important}
 .form-note{font-size:11px;margin:12px 0 0;text-align:center}
-.contact-showcase-copy>p{max-width:500px;font-size:16px}
+.contact-showcase-copy>p{max-width:500px;font-size:16px;margin-top:12px}
 .contact-points{margin:32px 0;border-top:1px solid #d4e0d9}
 .contact-points a{display:flex;flex-direction:column;gap:5px;padding:16px 0;border-bottom:1px dashed #b7cbbf;text-decoration:none}
 .contact-points span{font:9px var(--M);text-transform:uppercase;letter-spacing:.09em;color:#78857e}

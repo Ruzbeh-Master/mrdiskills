@@ -239,8 +239,12 @@
       e.preventDefault();
       const name = contactForm.querySelector('[name="cname"]').value.trim();
       const msg  = contactForm.querySelector('[name="cmsg"]').value.trim();
+      const phone = contactForm.querySelector('[name="cphone"]')?.value.trim();
+      const email = contactForm.querySelector('[name="cemail"]')?.value.trim();
+      const subject = contactForm.querySelector('[name="csubject"]')?.value.trim();
       if (!name || !msg) { alert('Please fill all fields.'); return; }
-      const text = `Hi, I'm ${name}. ${msg}`;
+      const details = [subject && `Enquiry: ${subject}`, phone && `Phone: ${phone}`, email && `Email: ${email}`].filter(Boolean).join('\n');
+      const text = `Hi, I'm ${name}.${details ? `\n${details}` : ''}\n${msg}`;
       window.open(`https://api.whatsapp.com/send?phone=918905636766&text=${encodeURIComponent(text)}`, '_blank');
     });
   }
