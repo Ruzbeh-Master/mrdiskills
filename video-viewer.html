@@ -42,7 +42,8 @@
     "url": "https://www.mrdiskills.com/"
   }
 }
-  </script>`r`n  <script type="application/ld+json">
+  </script>
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -61,7 +62,8 @@
     }
   ]
 }
-  </script>`r`n  <link rel="stylesheet" href="style.css"/>
+  </script>
+  <link rel="stylesheet" href="style.css"/>
   <style>
     .viewer-hero {
       background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
@@ -187,6 +189,16 @@
       margin-top: 18px;
       filter: brightness(.86);
     }
+    .news-feature { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .news-feature h3, .news-feature h4 { color: var(--white); font-family: var(--H); margin: 26px 0 10px; }
+    .news-feature h3 { font-size: 1rem; text-transform: uppercase; }
+    .news-feature h4 { font-size: .94rem; }
+    .news-feature p, .news-feature li { color: var(--muted); font-size: .92rem; line-height: 1.8; margin-bottom: 14px; }
+    .news-feature figure { margin: 22px 0; }
+    .news-feature figure img { width: 100%; height: auto; display: block; border: 1px solid var(--border); }
+    .news-feature figcaption, .news-feature .news-source { color: var(--muted); font-size: .78rem; line-height: 1.6; margin-top: 8px; }
+    .news-feature .news-source { padding: 12px 16px; border-left: 3px solid var(--orange); background: rgba(232,93,4,.05); }
+    .news-feature ol { padding-left: 22px; }
     .viewer-empty {
       text-align: center;
       padding: 90px 24px;
@@ -426,11 +438,12 @@
       youtubeUrl: 'https://youtu.be/Re7Gn8mlxjk'
     },
     'arka-mini-baja': {
-      title: 'ARKA - SAE Mini Baja Project Consultancy for SCET College Students',
+      title: 'SCET Students Build an Off-Road Electric Car in Five Months',
       category: 'Innovation Hub',
       sourcePage: 'innovation-hub.html',
-      description: 'A project showcase for the ARKA SAE Mini Baja consultancy conducted at MRDI for SCET college students. The card links to the main project video, with companion short clips highlighted on the showcase page.',
+      description: 'SCET students in Surat built an off-road electric Mini Baja car in five months through the Mini Baja SAE Club initiative, with practical guidance from MRDI faculty.',
       image: 'assets/images/arka-mini-baja-cover.jpg',
+      newsFeature: true,
       query: 'ARKA SAE Mini Baja Project Consultancy SCET College Students',
       youtubeUrl: 'https://www.youtube.com/watch?v=ZQne9JN0jJY',
       videos: [
@@ -505,6 +518,44 @@
     document.getElementById('viewer-subtitle').textContent = `${item.category} video content from MRDI.`;
     document.getElementById('viewer-breadcrumb').innerHTML = `<a href="index.html">Home</a><span>&#x203A;</span><a href="${item.sourcePage}">${item.category}</a><span>&#x203A;</span><span>${item.title}</span>`;
 
+    if (item.newsFeature) {
+      const canonicalUrl = 'https://www.mrdiskills.com/video-viewer?id=arka-mini-baja';
+      document.querySelector('meta[name="robots"]').content = 'index, follow, max-image-preview:large, max-snippet:-1';
+      document.querySelector('link[rel="canonical"]').href = canonicalUrl;
+      document.querySelector('meta[property="og:type"]').content = 'article';
+      document.querySelector('meta[property="og:title"]').content = item.title;
+      document.querySelector('meta[property="og:description"]').content = item.description;
+      document.querySelector('meta[property="og:url"]').content = canonicalUrl;
+      document.querySelector('meta[property="og:image"]').content = 'https://www.mrdiskills.com/assets/images/arka-mini-baja-cover.jpg';
+      document.querySelector('meta[name="twitter:title"]').content = item.title;
+      document.querySelector('meta[name="twitter:description"]').content = item.description;
+      document.querySelector('meta[name="twitter:image"]').content = 'https://www.mrdiskills.com/assets/images/arka-mini-baja-cover.jpg';
+      document.querySelector('meta[property="article:published_time"]') || (() => {
+        const meta = document.createElement('meta'); meta.setAttribute('property', 'article:published_time'); meta.content = '2026-11-07'; document.head.appendChild(meta);
+      })();
+      const newsSchema = {
+        '@context': 'https://schema.org', '@type': 'NewsArticle', headline: item.title,
+        description: item.description,
+        image: ['https://www.mrdiskills.com/assets/images/arka-mini-baja-cover.jpg', 'https://www.mrdiskills.com/assets/images/news/arka-mini-baja-electric-car.jpg'],
+        datePublished: '2026-11-07', dateModified: '2026-11-08', inLanguage: 'en-IN',
+        author: { '@type': 'Organization', name: 'Master Research & Development Institute (MRDI)', url: 'https://www.mrdiskills.com/' },
+        publisher: { '@type': 'Organization', name: 'Master Research & Development Institute (MRDI)', logo: { '@type': 'ImageObject', url: 'https://www.mrdiskills.com/assets/images/logos/mrdi-favicon.png' } },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+        about: [{ '@type': 'Thing', name: 'SAE Mini Baja' }, { '@type': 'Thing', name: 'Electric vehicles' }, { '@type': 'Place', name: 'Surat, Gujarat, India' }],
+        contentLocation: { '@type': 'Place', name: 'Surat, Gujarat, India', address: { '@type': 'PostalAddress', addressLocality: 'Surat', addressRegion: 'Gujarat', addressCountry: 'IN' } }
+      };
+      const schemaTag = document.createElement('script'); schemaTag.type = 'application/ld+json'; schemaTag.textContent = JSON.stringify(newsSchema); document.head.appendChild(schemaTag);
+      const faqSchema = {
+        '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+          ['What did SCET students build in Surat?', 'They built an off-road-capable electric car through the Mini Baja SAE Club initiative.'],
+          ['How long did the ARKA Mini Baja build take?', 'The reported build took five months.'],
+          ['Where did the students receive project guidance?', 'The project was guided by faculty members Samip Shah, Shabbir Bohra and Amit Patel, in collaboration with MRDI in Surat, Gujarat.'],
+          ['What practical skills did students gain?', 'The report describes hands-on vehicle fabrication and learning to use tools and machinery, along with vehicle manufacturing and competition-related technical skills.']
+        ].map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } }))
+      };
+      const faqTag = document.createElement('script'); faqTag.type = 'application/ld+json'; faqTag.textContent = JSON.stringify(faqSchema); document.head.appendChild(faqTag);
+    }
+
     const officialUrlMap = {
       'knowledge-lab.html': 'https://mrdiskills.com/content/',
       'innovation-hub.html': 'https://mrdiskills.com/innovation-hub/',
@@ -533,6 +584,25 @@
             <h2 class="viewer-title">${item.title}</h2>
             <p class="viewer-desc">${item.description}</p>
             <p class="viewer-copy">Watch the video here in the MRDI player.</p>
+            ${item.newsFeature ? `
+              <article class="news-feature" aria-label="ARKA Mini Baja news feature">
+                <p><strong>Surat, Gujarat:</strong> Students from SCET College built an off-road-capable electric car in five months as part of the “Mini Baja SAE Club” initiative. The project gave participating students hands-on experience in vehicle manufacturing, fabrication, tools and machinery, alongside the technical skills needed for competitions.</p>
+                <figure><img src="assets/images/arka-mini-baja-cover.jpg" alt="SCET engineering students involved in the ARKA off-road electric Mini Baja car project at MRDI in Surat" width="2865" height="2250" fetchpriority="high"/><figcaption>The SCET student team behind the ARKA Mini Baja project, working with MRDI in Surat.</figcaption></figure>
+                <h3>Learning vehicle fabrication through a real build</h3>
+                <p>Students took part in the vehicle’s fabrication and learned to use workshop tools and machinery during the five-month build. The project connected mechanical and electrical engineering practice with vehicle manufacturing and competition preparation.</p>
+                <figure><img src="assets/images/news/arka-mini-baja-electric-car.jpg" alt="The tubular frame and wheels of the off-road electric Mini Baja car built by SCET students in Surat" width="595" height="615" loading="lazy"/><figcaption>The off-road vehicle prototype built by the student team.</figcaption></figure>
+                <h3>Student team and faculty guidance</h3>
+                <p>The students named in the newspaper report are Ayush Patel, Sachi Chudasama, Manya Padshah, Janki Patel, Devam Parekh, Om Sonani, Sahil Purohit, Varni Dhamelia and Nitant Desai. Faculty members Samip Shah, Shabbir Bohra and Amit Patel guided the project in collaboration with the Master Research and Development Institute (MRDI).</p>
+                <h3>About the ARKA SAE Mini Baja project</h3>
+                <p>ARKA is MRDI’s hands-on SAE Mini Baja prototype consultancy and student training project. It supports practical learning through designing, fabricating and assembling a vehicle prototype. The SCET build shows how project-based engineering learning can help students apply mechanical and electrical concepts in a workshop setting.</p>
+                <h3>Frequently asked questions</h3>
+                <h4>What did SCET students build in Surat?</h4><p>They built an off-road-capable electric car through the Mini Baja SAE Club initiative.</p>
+                <h4>How long did the ARKA Mini Baja build take?</h4><p>The reported build took five months.</p>
+                <h4>Where did the students receive project guidance?</h4><p>The project was guided by faculty members Samip Shah, Shabbir Bohra and Amit Patel, in collaboration with MRDI in Surat, Gujarat.</p>
+                <h4>What practical skills did students gain?</h4><p>The report describes hands-on participation in vehicle fabrication and learning to use tools and machinery, along with vehicle manufacturing and competition-related technical skills.</p>
+                <p class="news-source">Coverage source: Divya Bhaskar, Surat-City Bhaskar, dated 7 November 2026. This MRDI feature summarizes the reported project details.</p>
+              </article>
+            ` : ''}
             ${item.videos ? `
               <section class="project-videos" aria-label="ARKA project videos">
                 <h3>Project Videos</h3>
