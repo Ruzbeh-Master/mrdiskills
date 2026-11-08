@@ -4,7 +4,7 @@
    Background: #0a192f | Single-color MRDI branding
 ════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Unbounded:wght@400;500;600;700;800&display=swap');
+/* Use installed system fonts to avoid a render-blocking third-party font request. */
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -20,9 +20,9 @@
   --text2:    #171f2b;
   --muted:    #66788f;
   --white:    #ffffff;
-  --H: 'Space Grotesk', sans-serif;
-  --S: 'Space Grotesk', sans-serif;
-  --B: 'Manrope', sans-serif;
+  --H: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --S: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --B: system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -659,9 +659,9 @@ select.form-control { cursor: pointer; }
   --text2: #2b2926;
   --muted: #706a62;
   --white: #fbfaf5;
-  --H: 'Unbounded', sans-serif;
-  --S: 'DM Mono', monospace;
-  --B: 'Manrope', sans-serif;
+  --H: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --S: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+  --B: system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 body {
