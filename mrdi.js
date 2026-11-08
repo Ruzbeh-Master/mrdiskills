@@ -168,7 +168,8 @@
   const path = window.location.pathname.split('/').filter(Boolean).pop() || 'index';
   document.querySelectorAll('.nav-item > a').forEach(a => {
     const href = a.getAttribute('href') || '';
-    if (href.includes(path) || (path === 'index' && href === 'index.html')) {
+    const linkPath = new URL(href, window.location.href).pathname.split('/').filter(Boolean).pop() || 'index';
+    if (linkPath.replace(/\.html$/, '') === path.replace(/\.html$/, '')) {
       a.classList.add('active');
     }
   });

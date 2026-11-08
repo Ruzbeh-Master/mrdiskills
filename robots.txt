@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /video-viewer.html
 
 Sitemap: https://www.mrdiskills.com/sitemap.xml
