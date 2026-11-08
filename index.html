@@ -11,6 +11,9 @@
     gtag('config', 'G-27R53GSMXD');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="image" href="assets/images/mrdi-workshop.webp" fetchpriority="high"/>
     <link rel="icon" type="image/png" href="assets/images/logos/mrdi-favicon.png" />
   <link rel="shortcut icon" href="assets/images/logos/mrdi-favicon.png" />
   <title>MRDI | Engineering Skills Training &amp; Project Consultancy in Surat</title>
@@ -525,10 +528,24 @@
 <!-- HERO -->
 <section id="hero" aria-label="MRDI workshop video">
   <div class="hero-media">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/images/mrdi-workshop.jpg" aria-label="MRDI students building and repairing motorcycles">
-      <source src="assets/videos/web/mrdi-hero-intro.mp4" type="video/mp4"/>
+    <video id="home-hero-video" muted loop playsinline preload="none" poster="assets/images/mrdi-workshop.webp" aria-label="MRDI students building and repairing motorcycles">
+      <source data-src="assets/videos/web/mrdi-hero-intro.mp4" type="video/mp4"/>
       
     </video>
+    <script>
+      (() => {
+        const video = document.getElementById('home-hero-video');
+        const source = video?.querySelector('source[data-src]');
+        if (!video || !source || !matchMedia('(min-width: 761px) and (prefers-reduced-motion: no-preference)').matches) return;
+        const startVideo = () => {
+          source.src = source.dataset.src;
+          video.load();
+          video.play().catch(() => {});
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(startVideo, { timeout: 1800 });
+        else window.addEventListener('load', startVideo, { once: true });
+      })();
+    </script>
   </div>
   <div class="hero-content">
     <div class="hero-shell">
@@ -573,7 +590,7 @@
   <div class="wrap">
     <div class="about-grid">
       <div class="about-img-wrap reveal">
-        <img src="assets/images/mrdi-workshop.jpg" alt="MRDI workshop participant working on a motorcycle"/>
+        <img src="assets/images/mrdi-workshop.webp" alt="MRDI workshop participant working on a motorcycle" loading="lazy" decoding="async"/>
         <div class="about-badge"><div class="b-num">MRDI</div><div class="b-lbl">Since 2017</div></div>
       </div>
       <div>
@@ -603,20 +620,20 @@
     <div class="news-marquee" role="region" aria-roledescription="carousel" aria-label="MRDI news and features carousel">
       <div class="news-marquee-track">
         <div class="news-marquee-group">
-          <article class="news-feature-card"><img src="assets/images/news/surat-city-bhaskar-scet-e-baja.jpg" alt="Surat City Bhaskar feature about SCET students building an off-road electric car in five months" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Student innovation · Surat</span><h3>SCET Students Build an Off-Road Electric Car</h3><p>SCET students completed an off-road electric Mini Baja car in five months with practical guidance from MRDI faculty.</p><a href="video-viewer.html?id=arka-mini-baja" class="text-link">Read the feature <span aria-hidden="true">↗</span></a></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/gujarati-press-all-wheel-drive-bike.jpg" alt="Gujarati newspaper coverage of an all-wheel-drive motorcycle and its patent recognition" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · All-wheel drive</span><h3>All-Wheel-Drive Bike Featured in Gujarati Press</h3><p>Gujarati press coverage highlights the all-wheel-drive motorcycle project and its patent recognition.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/limca-book-record-hybrid-motorcycle.jpg" alt="Limca Book of Records certificate for Ruzbeh Gav Master's hybrid motorcycle" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Record · Hybrid motorcycle</span><h3>A Hybrid Motorcycle in the Limca Book of Records</h3><p>The record entry describes a hybrid motorcycle concept combining electric battery and petrol power, completed by Ruzbeh Gav Master in 2016.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/innovative-car-enthusiast-profile.jpg" alt="Newspaper profile of an early tubular-frame transport vehicle project" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · Vehicle prototyping</span><h3>An Early Vehicle Prototype in the Press</h3><p>A newspaper profile covers the design and fabrication of a tubular-frame transport vehicle built with a group of friends.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/india-book-records-award.jpg" alt="Ruzbeh Master holding India Book of Records award and certificate for an all-wheel-drive motorcycle" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Recognition · India Book of Records</span><h3>All-Wheel-Drive Motorcycle Record Recognition</h3><p>An India Book of Records certificate recognizes an all-wheel-drive motorcycle inspired by a car engine.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/goa-bike-innovation-week-feature.jpg" alt="Newspaper feature reporting Ruzbeh Master won first prize at Bike Innovation Week in Goa" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Award · Goa Bike Innovation Week</span><h3>First Prize at Bike Innovation Week in Goa</h3><p>Newspaper coverage reports Ruzbeh Master won first prize; three of the five selected bikes were remodelled by him.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/surat-city-bhaskar-scet-e-baja.webp" alt="Surat City Bhaskar feature about SCET students building an off-road electric car in five months" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Student innovation · Surat</span><h3>SCET Students Build an Off-Road Electric Car</h3><p>SCET students completed an off-road electric Mini Baja car in five months with practical guidance from MRDI faculty.</p><a href="video-viewer.html?id=arka-mini-baja" class="text-link">Read the feature <span aria-hidden="true">↗</span></a></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/gujarati-press-all-wheel-drive-bike.webp" alt="Gujarati newspaper coverage of an all-wheel-drive motorcycle and its patent recognition" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · All-wheel drive</span><h3>All-Wheel-Drive Bike Featured in Gujarati Press</h3><p>Gujarati press coverage highlights the all-wheel-drive motorcycle project and its patent recognition.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/limca-book-record-hybrid-motorcycle.webp" alt="Limca Book of Records certificate for Ruzbeh Gav Master's hybrid motorcycle" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Record · Hybrid motorcycle</span><h3>A Hybrid Motorcycle in the Limca Book of Records</h3><p>The record entry describes a hybrid motorcycle concept combining electric battery and petrol power, completed by Ruzbeh Gav Master in 2016.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/innovative-car-enthusiast-profile.webp" alt="Newspaper profile of an early tubular-frame transport vehicle project" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · Vehicle prototyping</span><h3>An Early Vehicle Prototype in the Press</h3><p>A newspaper profile covers the design and fabrication of a tubular-frame transport vehicle built with a group of friends.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/india-book-records-award.webp" alt="Ruzbeh Master holding India Book of Records award and certificate for an all-wheel-drive motorcycle" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Recognition · India Book of Records</span><h3>All-Wheel-Drive Motorcycle Record Recognition</h3><p>An India Book of Records certificate recognizes an all-wheel-drive motorcycle inspired by a car engine.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/goa-bike-innovation-week-feature.webp" alt="Newspaper feature reporting Ruzbeh Master won first prize at Bike Innovation Week in Goa" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Award · Goa Bike Innovation Week</span><h3>First Prize at Bike Innovation Week in Goa</h3><p>Newspaper coverage reports Ruzbeh Master won first prize; three of the five selected bikes were remodelled by him.</p></div></article>
         </div>
         <div class="news-marquee-group" aria-hidden="true">
-          <article class="news-feature-card"><img src="assets/images/news/surat-city-bhaskar-scet-e-baja.jpg" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Student innovation · Surat</span><h3>SCET Students Build an Off-Road Electric Car</h3><p>SCET students completed an off-road electric Mini Baja car in five months with practical guidance from MRDI faculty.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/gujarati-press-all-wheel-drive-bike.jpg" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · All-wheel drive</span><h3>All-Wheel-Drive Bike Featured in Gujarati Press</h3><p>Gujarati press coverage highlights the all-wheel-drive motorcycle project and its patent recognition.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/limca-book-record-hybrid-motorcycle.jpg" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Record · Hybrid motorcycle</span><h3>A Hybrid Motorcycle in the Limca Book of Records</h3><p>The record entry describes a hybrid motorcycle concept combining electric battery and petrol power, completed by Ruzbeh Gav Master in 2016.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/innovative-car-enthusiast-profile.jpg" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · Vehicle prototyping</span><h3>An Early Vehicle Prototype in the Press</h3><p>A newspaper profile covers the design and fabrication of a tubular-frame transport vehicle built with a group of friends.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/india-book-records-award.jpg" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Recognition · India Book of Records</span><h3>All-Wheel-Drive Motorcycle Record Recognition</h3><p>An India Book of Records certificate recognizes an all-wheel-drive motorcycle inspired by a car engine.</p></div></article>
-          <article class="news-feature-card"><img src="assets/images/news/goa-bike-innovation-week-feature.jpg" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Award · Goa Bike Innovation Week</span><h3>First Prize at Bike Innovation Week in Goa</h3><p>Newspaper coverage reports Ruzbeh Master won first prize; three of the five selected bikes were remodelled by him.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/surat-city-bhaskar-scet-e-baja.webp" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Student innovation · Surat</span><h3>SCET Students Build an Off-Road Electric Car</h3><p>SCET students completed an off-road electric Mini Baja car in five months with practical guidance from MRDI faculty.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/gujarati-press-all-wheel-drive-bike.webp" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · All-wheel drive</span><h3>All-Wheel-Drive Bike Featured in Gujarati Press</h3><p>Gujarati press coverage highlights the all-wheel-drive motorcycle project and its patent recognition.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/limca-book-record-hybrid-motorcycle.webp" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Record · Hybrid motorcycle</span><h3>A Hybrid Motorcycle in the Limca Book of Records</h3><p>The record entry describes a hybrid motorcycle concept combining electric battery and petrol power, completed by Ruzbeh Gav Master in 2016.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/innovative-car-enthusiast-profile.webp" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Press feature · Vehicle prototyping</span><h3>An Early Vehicle Prototype in the Press</h3><p>A newspaper profile covers the design and fabrication of a tubular-frame transport vehicle built with a group of friends.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/india-book-records-award.webp" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Recognition · India Book of Records</span><h3>All-Wheel-Drive Motorcycle Record Recognition</h3><p>An India Book of Records certificate recognizes an all-wheel-drive motorcycle inspired by a car engine.</p></div></article>
+          <article class="news-feature-card"><img src="assets/images/news/goa-bike-innovation-week-feature.webp" alt="" loading="lazy"/><div class="news-feature-copy"><span class="blog-feature-meta">Award · Goa Bike Innovation Week</span><h3>First Prize at Bike Innovation Week in Goa</h3><p>Newspaper coverage reports Ruzbeh Master won first prize; three of the five selected bikes were remodelled by him.</p></div></article>
         </div>
       </div>
     </div>
@@ -631,7 +648,7 @@
     <p class="sec-desc reveal">Hands-on engineering skill development in automotive, electric mobility, and prototyping.</p>
     <div class="prog-grid">
       <div class="prog-card featured reveal" data-href="programs.html">
-        <div class="prog-img"><img src="assets/images/sections/home/2026_09_img_2935.jpg" alt="6-Month Program" onerror="this.src='https://placehold.co/600x200/112240/e85d04?text=6-Month+Program'"/></div>
+        <div class="prog-img"><img src="assets/images/sections/home/6-month-program.webp" alt="6-Month Program" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x200/112240/e85d04?text=6-Month+Program'"/></div>
         <div class="prog-body">
           <span class="prog-tag">&#11088; Flagship</span>
           <h3>6-Month Skill Development Program</h3>
@@ -646,7 +663,7 @@
         </div>
       </div>
       <div class="prog-card reveal rd1" data-href="programs.html">
-        <div class="prog-img"><img src="assets/images/sections/home/2026_05_ef692-img_20200417_210032_148hd.webp" alt="PSP Program" onerror="this.src='https://placehold.co/600x200/112240/e85d04?text=PSP+Program'"/></div>
+        <div class="prog-img"><img src="assets/images/sections/home/2026_05_ef692-img_20200417_210032_148hd.webp" alt="PSP Program" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x200/112240/e85d04?text=PSP+Program'"/></div>
         <div class="prog-body">
           <span class="prog-tag">Prototyping</span>
           <h3>PSP &ndash; Prototyping Skills Program</h3>
@@ -667,7 +684,7 @@
           <p>Meet the show exploring the skills that help the next generation learn, build, and thrive. Watch the intro, discover short clips from the conversations, and explore the full episodes.</p>
           <div class="podcast-home-actions"><a href="future-ready-podcast.html" class="btn-orange">Explore the Podcast &#8594;</a><a href="future-ready-podcast.html#playlist" class="btn-outline">Full Episode Playlist &#8594;</a></div>
         </div>
-        <video class="podcast-home-video" controls preload="metadata" playsinline aria-label="Future Ready: The Next-Gen Skills Show intro"><source src="assets/videos/web/podcast/Podcast%20Intro%20Short.mp4" type="video/mp4"/>Your browser does not support this video.</video>
+        <video class="podcast-home-video" controls preload="none" playsinline aria-label="Future Ready: The Next-Gen Skills Show intro"><source src="assets/videos/web/podcast/Podcast%20Intro%20Short.mp4" type="video/mp4"/>Your browser does not support this video.</video>
       </div>
     </div>
   </div>
@@ -687,7 +704,7 @@
     <div class="proj-grid">
       <div class="proj-card big reveal" data-href="video-viewer.html?id=hub-centric-steering">
         <div class="proj-thumb">
-          <img src="assets/images/sections/home/2026_05_a9ccb-pxl_20221203_110347078.portrait.jpg" alt="Electric Motorcycle" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/800x370/112240/e85d04?text=Electric+Motorcycle'"/>
+          <img src="assets/images/sections/home/electric-motorcycle.webp" alt="Electric Motorcycle" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/800x370/112240/e85d04?text=Electric+Motorcycle'"/>
           <div class="proj-overlay"></div><div class="proj-play">View Project</div>
           <div class="proj-info">
             <div class="proj-num">PROJECT 01</div>
@@ -709,7 +726,7 @@
       </div>
       <div class="proj-card reveal rd1" data-href="video-viewer.html?id=jawa-solar-ev">
         <div class="proj-thumb">
-          <img src="assets/images/sections/home/2026_09_download-2.png" alt="Jawa EV" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Jawa+Solar+EV'"/>
+          <img src="assets/images/sections/home/jawa-solar-ev.webp" alt="Jawa EV" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.src='https://placehold.co/400x270/112240/e85d04?text=Jawa+Solar+EV'"/>
           <div class="proj-overlay"></div><div class="proj-play">View Project</div>
           <div class="proj-info">
             <div class="proj-num">PROJECT 03</div>
