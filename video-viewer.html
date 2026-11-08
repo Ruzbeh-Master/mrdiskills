@@ -442,7 +442,8 @@
       category: 'Innovation Hub',
       sourcePage: 'innovation-hub.html',
       description: 'SCET students in Surat built an off-road electric Mini Baja car in five months through the Mini Baja SAE Club initiative, with practical guidance from MRDI faculty.',
-      image: 'assets/images/arka-mini-baja-cover.jpg',
+      image: 'assets/images/news/arka-mini-baja-newspaper.jpg',
+      imageAlt: 'Divya Bhaskar Surat-City Bhaskar news clipping about SCET students building an off-road electric car in five months',
       newsFeature: true,
       query: 'ARKA SAE Mini Baja Project Consultancy SCET College Students',
       youtubeUrl: 'https://www.youtube.com/watch?v=ZQne9JN0jJY',
@@ -627,7 +628,7 @@
             <li>Source page: ${item.sourcePage.replace('.html', '').replace('-', ' ')}</li>
             <li>Viewer type: direct embedded video</li>
           </ul>
-          <img class="viewer-thumb" src="${item.image}" alt="${item.title}" onerror="this.style.display='none'"/>
+          <img class="viewer-thumb" src="${item.image}" alt="${item.imageAlt || item.title}" onerror="this.style.display='none'"/>
         </div>
       </div>
     `;
