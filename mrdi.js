@@ -276,6 +276,57 @@
   }
 
   /* â”€â”€ Subscribe â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* News and features carousel: circulate each unique card in one direction,
+     with faster movement when the pointer is near either edge. */
+  const newsViewport = document.querySelector('.news-marquee');
+  if (newsViewport) {
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let edgeBoost = false;
+    let visible = true;
+    let focused = false;
+    let previousTime = 0;
+
+    const updateEdgeDirection = event => {
+      if (reducedMotion || event.pointerType === 'touch') return;
+      const bounds = newsViewport.getBoundingClientRect();
+      const edge = Math.max(44, bounds.width * 0.1);
+      edgeBoost = event.clientX <= bounds.left + edge || event.clientX >= bounds.right - edge;
+    };
+    newsViewport.addEventListener('pointermove', updateEdgeDirection, { passive: true });
+    newsViewport.addEventListener('pointerleave', () => { edgeBoost = false; }, { passive: true });
+    newsViewport.addEventListener('focusin', () => { focused = true; });
+    newsViewport.addEventListener('focusout', event => {
+      if (!newsViewport.contains(event.relatedTarget)) focused = false;
+    });
+
+    if (!reducedMotion) {
+      const observer = new IntersectionObserver(entries => {
+        visible = entries[0]?.isIntersecting ?? true;
+        previousTime = 0;
+      });
+      observer.observe(newsViewport);
+
+      const slideNews = time => {
+        const elapsed = previousTime ? Math.min(time - previousTime, 40) : 0;
+        previousTime = time;
+        const group = newsViewport.querySelector('.news-marquee-group');
+        const firstCard = group?.querySelector('.news-feature-card');
+        if (visible && !focused && firstCard && elapsed > 0) {
+          const speed = edgeBoost ? 0.22 : 0.05;
+          newsViewport.scrollLeft += speed * elapsed;
+          const gap = parseFloat(getComputedStyle(group).columnGap) || 0;
+          const cardStep = firstCard.getBoundingClientRect().width + gap;
+          if (cardStep > 0 && newsViewport.scrollLeft >= cardStep) {
+            group.appendChild(firstCard);
+            newsViewport.scrollLeft -= cardStep;
+          }
+        }
+        requestAnimationFrame(slideNews);
+      };
+      requestAnimationFrame(slideNews);
+    }
+  }
+
   document.querySelectorAll('.subscribe-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const input = btn.previousElementSibling;
